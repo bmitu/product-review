@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bmitu.github.io/product-review/sitemap.xml

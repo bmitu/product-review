@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claims nobody has measured</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#1a1a1a;--muted:#5a5a5a;
+  --rule:#e2e0dc;--accent:#8a1c1c;--codebg:#f5f4f2;--quote:#faf9f7}
+@media(prefers-color-scheme:dark){:root{--bg:#16161a;--fg:#e8e8e6;--muted:#a2a29d;
+  --rule:#33333a;--accent:#e09090;--codebg:#1e1e24;--quote:#1c1c22}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:17px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif}
+main{max-width:43rem;margin:0 auto;padding:2.5rem 1rem 5rem}
+h1{font-size:1.9rem;line-height:1.2;margin:0 0 1.4rem}
+h2{font-size:1.3rem;line-height:1.25;margin:3rem 0 .8rem;padding-top:1.8rem;
+  border-top:1px solid var(--rule)}
+h3{font:600 .78rem/1.4 system-ui,sans-serif;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);margin:2rem 0 .6rem}
+p{margin:0 0 1.05rem}
+a{color:inherit;text-underline-offset:2px}
+.frame>p:first-child{font-size:1.14rem}
+.tier{font:.76rem/1.5 system-ui,sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 1.1rem}
+.bottom{font-size:1.06rem}
+blockquote.claim{margin:0 0 1.1rem;padding:.9rem 1.1rem;background:var(--quote);
+  border-left:3px solid var(--accent)}
+blockquote.claim p{margin:0 0 .5rem;font-style:italic}
+blockquote.claim p.src{margin:0;font-style:normal;color:var(--muted);
+  font:.82rem/1.5 system-ui,sans-serif}
+p.stale{font:.9rem/1.55 system-ui,sans-serif;padding:.7rem .9rem;
+  border:1px solid var(--rule);margin:0 0 1.1rem}
+ul.evidence{list-style:none;padding:0;margin:0 0 1.4rem}
+ul.evidence>li{border-top:1px solid var(--rule);padding:1.1rem 0 .1rem}
+p.evhead{font:.84rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .3rem}
+p.evurl{font:.76rem/1.5 ui-monospace,Menlo,Consolas,monospace;
+  word-break:break-all;margin:0 0 .85rem}
+.warn{border-left:3px solid var(--accent);padding-left:.85rem}
+p.evsum{font:italic .92rem/1.55 Georgia,"Iowan Old Style",serif;color:var(--muted);
+  margin:0 0 .85rem}
+ul.method{list-style:none;padding:0;margin:0 0 1.4rem}
+ul.method>li{border-top:1px solid var(--rule);padding:1.1rem 0 .1rem}
+ul.method>li>p:last-child{margin-bottom:1.05rem}
+p.methhead{font:.84rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .5rem}
+ul.dose{margin:0 0 1.05rem;padding-left:1.2rem}
+pre{background:var(--codebg);padding:.8rem .9rem;overflow-x:auto;margin:0 0 1.05rem;
+  font:.79rem/1.5 ui-monospace,Menlo,Consolas,monospace}
+p.more{font:.88rem/1.5 system-ui,sans-serif}
+</style>
+<style>
+header.site,footer.site{font:.9rem/1.5 system-ui,sans-serif;max-width:43rem;
+  margin:0 auto;padding:1rem}
+header.site{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:baseline;
+  border-bottom:1px solid var(--rule)}
+header.site .name{font-weight:700;text-decoration:none;margin-right:auto}
+header.site a{color:var(--muted)}
+footer.site{color:var(--muted);border-top:1px solid var(--rule);margin-top:2rem}
+ul.index{list-style:none;padding:0;margin:0 0 2rem}
+ul.index>li{border-top:1px solid var(--rule);padding:.9rem 0 .2rem}
+ul.index p{margin:0 0 .5rem}
+ul.index .verdict{font:.8rem/1.5 system-ui,sans-serif;color:var(--muted)}
+dl.terms dt{font-weight:700;margin-top:1rem}
+dl.terms dd{margin:0 0 .6rem}
+.controls{font:.9rem/1.5 system-ui,sans-serif;border:1px solid var(--rule);
+  padding:.8rem 1rem;margin:0 0 1.5rem}
+.controls fieldset{border:0;padding:0;margin:0 0 .8rem}
+.controls legend{font-weight:600;padding:0;margin:0 0 .3rem}
+.controls label{display:inline-block;margin:0 1rem .3rem 0}
+.controls .off{color:var(--muted);font-size:.85rem;margin:0}
+.controls select,.controls input{font:inherit}
+ul.field{list-style:none;padding:0;margin:0 0 1rem}
+ul.field>li{border-top:1px solid var(--rule);padding:1rem 0 .3rem}
+ul.field>li[hidden]{display:none}
+ul.field h3{font:700 1.1rem/1.3 Georgia,serif;letter-spacing:0;text-transform:none;
+  color:var(--fg);margin:0 0 .3rem}
+ul.field .why{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .6rem}
+dl.dims{display:grid;grid-template-columns:minmax(8rem,11rem) 1fr;gap:.25rem .9rem;
+  font:.86rem/1.45 system-ui,sans-serif;margin:0 0 .6rem}
+dl.dims dt{color:var(--muted)}
+dl.dims dd{margin:0}
+dl.dims ul{list-style:none;padding:0;margin:0}
+.v-holds{border-left:3px solid #2f7d4f;padding-left:.4rem}
+.v-fails{border-left:3px solid var(--accent);padding-left:.4rem}
+.v-open{border-left:3px solid var(--rule);padding-left:.4rem}
+.none{color:var(--muted)}
+p.count{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted)}
+.opinion{border:1px dashed var(--rule);padding:.8rem 1rem;margin:0 0 1.2rem}
+.opinion .label{font:600 .75rem/1.4 system-ui,sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .4rem}
+@media(max-width:30rem){dl.dims{grid-template-columns:1fr}dl.dims dd{margin-bottom:.4rem}}
+</style>
+<meta name="description" content="These are claims where no evidence exists in either direction — not disputed, just unmeasured. Each one is a test we could run if enough readers want it. Where a price is shown, it is built from a laboratory&#x27;s own published schedule and named in the record; where it says not yet priced, no lab publishes a price for that workflow and we will not guess one — unpriced means unquoted, not cheap.">
+</head>
+<body>
+<header class="site"><a class="name" href="index.html">Product Review</a><a href="all-claims.html">All claims</a><a href="how-we-check.html">How we check</a></header>
+<main>
+<h1>Claims nobody has measured</h1>
+<div class="frame"><p>These are claims where no evidence exists in either direction — not disputed, just unmeasured. Each one is a test we could run if enough readers want it. Where a price is shown, it is built from a laboratory&#x27;s own published schedule and named in the record; where it says not yet priced, no lab publishes a price for that workflow and we will not guess one — unpriced means unquoted, not cheap.</p></div>
+<h2>Caraway Ceramic Cookware Set — Partly measured — never tested in use</h2>
+<blockquote class="claim"><p>Caraway says: “Thoughtfully crafted without PTFE, PFOA, and PFAS, our proprietary non-stick ceramic offers effortless cooking, easy cleanup, and peace of mind at every meal.”</p><p class="src"><a href="https://www.carawayhome.com/products/cookware-sets">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Caraway publishes lab results for its ceramic coating: no PFAS detected in the samples it sent. Nobody has measured what a pan sheds after years of real cooking, and no lab sells that test off the shelf.</p>
+<p><strong>What would settle it:</strong> Food-simulant migration testing on pans put through an accelerated service life — 200 heat cycles to 230 °C, 50 dishwasher cycles and standardised abrasion — assaying total organic fluorine and the 20+ heavy metals in the simulant, against unused controls from the same lot.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — mixed, <strong>funded by Caraway</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/154/938">https://app.lightlabs.com/comprehensive-testing-report/154/938</a></p>
+<p class="evsum">Fetched Caraway&#x27;s Light Labs report on its ceramic coating: PFAS not detected in submitted samples, with no statement of the samples&#x27; age or use.</p>
+<p>This is real testing and it answers half of the claim. ‘Without PTFE, PFOA, and PFAS’ is a statement about what the coating is made of, and on the samples Caraway sent, the lab found none of the 660 PFAS it looked for. ‘Peace of mind at every meal’ is a statement about years of use, and the report says in its own words that it does not reach that far: it describes a snapshot of submitted samples and disclaims future stability. The closest thing to a use test in it is a one-time soak in food simulants, which is not a pan that has been cooked on.</p>
+</li>
+</ul>
+<p>“At every meal” is a claim about a pan&#x27;s whole service life, and no test of an unused pan reaches it. That is the gap every ceramic-coating argument actually turns on, and it is the one nobody has funded — every cookware dataset we have found so far was paid for by the brand selling the pan, Caraway&#x27;s own included. It is also the measurement where a brand-funded result would be least believable, which is precisely why it stays unmade.</p>
+<p>WHAT IT WOULD COST, and why there is no single price. This is not a catalogue test. It is an accelerated-ageing step and a migration step at two different laboratories with an untested handoff between them, so no lab quotes it as one job. The figures below are assembled from published component prices — a build-up, not a quote, and we will not print it as though it were one.</p>
+<p>Build-up for 6 units (3 aged + 3 unused controls from one lot), one pan model. FX as of 2026-09-18: EUR/USD 1.1483, HKD/USD 0.127465. • Accelerated service life — SGS publishes EN 12983-1 at HK$4,700 and EN 12983-2 (ceramic cookware) at HK$3,700, 9–13 days with coating. HK$8,400 ≈ $1,071. This is a PROXY: EN 12983 is a standardised compliance battery, not the 200-heat-cycle / 50-dishwasher / abrasion protocol described above. Overlapping, not equivalent. • Migration — Measurlabs publishes ‘Migration of heavy metals from ceramics, glass, and enameled articles’ at €190/sample. 6 × €190 = €1,140 ≈ $1,309. (Its ‘specific release of elements from metals and alloys intended for repeated use’ at €771/sample may fit an aluminium-cored pan better, and would add ~$5,300 for six units.) • Total organic fluorine in the simulant — Measurlabs publishes €368–630 per sample plus a €97 per-order fee. 6 samples = €2,305–3,877 ≈ $2,647–$4,452. • Indicative total: ~$5,000–$6,800, excluding the pans, shipping, simulant preparation and any re-test.</p>
+<p>One cheaper number that does NOT apply, recorded so nobody budgets against it: the University of Arizona ALEC core facility lists total organic fluorine at $82.00/sample, about a fifth of the commercial rate — but that is internal pricing requiring a University of Arizona account, and the facility says costs differ for outside users. An academic partnership that made it reachable would change this test&#x27;s economics more than any vendor negotiation. That is a route worth chasing, not a price you can pay today.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Retrieved 2026-09-23 from the lab&#x27;s own domain, embedded on carawayhome.com/pages/third-party-testing. 660 PFAS and total organic fluorine reported ‘Not detected’ with no detection limit stated; 25 heavy metals below stated limits; 6 one-time extraction tests into food simulants below stated limits; tested 22 January to 2 March 2026. The lab&#x27;s own disclaimer: ‘Results reflect laboratory analysis of submitted samples at the time of testing… Results do not guarantee future performance, stability, or shelf life.’ Nothing in the report describes a sample as used, heated or aged.</p></li>
+</ul>
+<p class="more"><a href="claims/c-caraway-peace-of-mind-every-meal.html">The full record for this claim →</a></p>
+<h2>GreenPan Thermolon ceramic nonstick coating — Nobody has measured this</h2>
+<blockquote class="claim"><p>GreenPan says: “Even if heated to 850⁰F (454⁰C), our Thermolon coatings do not emit any toxic fumes.”</p><p class="src"><a href="https://www.greenpan.us/pages/safety-of-our-product">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">UNSUPPORTED — no qualifying evidence · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> GreenPan says its coating releases nothing toxic even at 850°F. We found no published measurement of what actually comes off a ceramic pan at that heat — not a contradiction, an absence, and one a single test could start to close.</p>
+<p><strong>What would settle it:</strong> Heat production-run coated pans to 454 °C (850 °F) in a controlled chamber and capture what comes off the surface: volatile and semi-volatile organic compounds speciated by thermal desorption gas chromatography–mass spectrometry, with separate capture for hydrogen fluoride and for ultrafine particles, across three production lots — and publish the resulting compound list together with the detection limit for each analyte, so that what was looked for and not found is as visible as what was found.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence"><li><em>None exists. Nobody has run the measurement described above — that is the finding.</em></li></ul>
+<p>This is the claim in the set we would most like to see measured, and the one nobody appears to have measured.</p>
+<p>It is worth being clear about why the question exists at all. The reason anyone asks what a hot pan gives off is the older problem with traditional non-stick: heat a fluoropolymer coating far enough and it begins to break down and release fumes. Ceramic coatings were brought to market as the answer to precisely that, and the sentence above is the strong form of the answer. The awkward part is that the published emissions work we could find is on fluoropolymer-coated pans, not ceramic ones. The method exists and has been applied to coated cookware — thermal desorption gas chromatography–mass spectrometry, which heats a sample and identifies what comes off it, is documented in the peer-reviewed literature for exactly this purpose. It appears not to have been turned on this kind of coating and published.</p>
+<p>Two features of the sentence make it harder to close than it looks. The first is the word &quot;any&quot;, which is an absolute: a test that finds nothing has established nothing was found above its detection limit, which is not the same as nothing being there. That gap is unavoidable, and it is why the test described below insists the limits be published alongside the results — a &quot;not detected&quot; whose threshold is hidden can mean almost anything. The second is &quot;toxic&quot;, which is not defined here and has no single technical meaning. A measurement can produce a list of compounds and their quantities; deciding which of them count as toxic, and at what exposure, is a further judgement that the compound list alone does not make.</p>
+<p>So the honest position is not that the claim is doubtful. It is that it is currently unmeasured, that a reader has been offered an absolute with no number attached, and that the measurement which would put a number on it is one we know how to specify.</p>
+<p>On price: this one is not priced, and that is a finding rather than an omission. No laboratory we found publishes a rate for this workflow. The published figures that exist nearby cover single analytical runs on prepared samples — one laboratory caps volatile-compound analysis on collection tubes at $468 a sample, and general gas chromatography–mass spectrometry work is commonly quoted between roughly $150 and $800 a sample — but none of those cover the part that makes this test what it is: heating whole pans to 454 °C in a chamber built to capture the output. Adding those numbers together would produce a figure that looks researched and is invented. Unpriced here means unquoted, and unquoted is not the same as cheap.</p>
+<p class="more"><a href="claims/c-greenpan-thermolon-no-toxic-fumes.html">The full record for this claim →</a></p>
+<h2>Hestan NanoBond Titanium Skillets — Nobody has measured this</h2>
+<blockquote class="claim"><p>Hestan Culinary says: “Hestan&#x27;s NanoBond Titanium Skillet cooking surface is non-reactive, and made without PFAS, Nickel, Lead or Cadmium.”</p><p class="src"><a href="https://hestanculinary.com/products/nanobond-clad-skillet-fry-pan">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Hestan says NanoBond&#x27;s titanium cooking surface is made without nickel. The pan beneath it is nickel-bearing steel and Hestan&#x27;s own disclosure lists nickel, but neither contradicts a claim about the surface. Only a test could settle it.</p>
+<p><strong>What would settle it:</strong> A metal-release test on the NanoBond cooking surface: repeated fills of a mild acid food simulant on new production pans and on pans after scouring with steel wool, reporting nickel, lead and cadmium in the simulant against the European limits for food-contact metals. A surface analysis of the finish would show whether any nickel is present at the surface at all.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — mixed, <strong>funded by Hestan Culinary</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/pages/product-disclosures">https://hestanculinary.com/pages/product-disclosures</a></p>
+<p class="evsum">Hestan&#x27;s California and Colorado disclosure page, read in full: both chemical tables and the section saying which product lines each covers.</p>
+<p>This is the document that makes the claim look like a contradiction, and it is worth being exact about why it is not one. California&#x27;s cookware law asks a brand to disclose listed chemicals in the handle or the food-contact surface. Hestan files one table for every stainless line it sells, NanoBond included, and nickel is on it. The same product page tells us the pan is built on 18/10 stainless steel, the grade named for its roughly 10% nickel. So the disclosure tells a reader that nickel is in the handle or the cooking surface of something in that group: the stainless cookware lines, the ovenware, the roasters, the tools and the accessories. It does not say which part of which product. Nickel in a handle, or in any of those other lines, would put it on that table just as surely as nickel in the NanoBond cooking surface, and the claim is only about that surface.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/products/nanobond-clad-skillet-fry-pan">https://hestanculinary.com/products/nanobond-clad-skillet-fry-pan</a></p>
+<p class="evsum">The NanoBond skillet page read in full, plus a search of Hestan&#x27;s own site for any test of the cooking surface; none was found.</p>
+<p>Every time the claim appears, Hestan attaches it to the titanium surface, never to the whole pan. The badge that reads &#x27;Made without PFAS &amp; Nickel&#x27; sits directly under &#x27;Non Reactive Titanium Finish&#x27;, so even the shortest version is tied to the finish. We read it that way, because that is how the brand writes it.</p>
+<p>Read that way, the claim is about a layer of titanium thousands of nano-layers thick on top of a nickel-bearing steel. Whether nickel from the steel beneath reaches, or leaches through, that layer is a question about the surface itself. Nothing Hestan publishes, and nothing we could find anywhere else, answers it.</p>
+</li>
+</ul>
+<p>This one looked like a catch and turned out not to be. At first glance the pieces fit a contradiction neatly. A pan sold as &#x27;made without nickel&#x27; is built on 18/10 stainless steel, and the brand&#x27;s own California chemical disclosure for its stainless cookware lists nickel twice.</p>
+<p>It does not hold up, and the reason is scope. Hestan never says the pan is made without nickel. It says the titanium cooking surface is, every time. The disclosure, meanwhile, is filed once for all of its stainless lines, ovenware, tools and accessories together, and covers handles as well as cooking surfaces. The nickel on that table can come from any of those, and nothing on it places nickel in the titanium surface of this pan.</p>
+<p>That leaves a narrower question that reading cannot answer: does any nickel reach the food from a titanium surface bonded onto nickel-bearing steel, new or after years of metal utensils and dishwasher cycles? Hestan&#x27;s own description, a surface &#x27;four times harder&#x27; than stainless steel and safe for metal utensils, is a claim about exactly that durability. It is a fair question for anyone who has avoided stainless steel because of a nickel allergy, which is the reader this claim is really written for. It is also a cheap one to test, and nobody appears to have tested it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — hestanculinary.com</p>
+<p>Read on 2026-09-26 from the address above, in the HTML the server sends. The page carries two tables. The first is headed &#x27;Hestan Culinary Stainless Steel Cookware, OvenBond, Roasters, Au Gratins, Tools, and Accessories&#x27; and lists, among others, &#x27;Nickel &amp; Nickel Compounds&#x27; and &#x27;Nickel, metallic, and alloys&#x27;. The second covers the nonstick lines. A later section, &#x27;How this applies to Hestan materials and finishes&#x27;, names NanoBond as one of the brand&#x27;s stainless-steel interiors.</p></li>
+<li><p class="methhead">our own desk check — hestanculinary.com</p>
+<p>Read on 2026-09-26. The claim appears twice on the product page: once as the sentence quoted above and once in the feature list as &#x27;Titanium cooking surface is FDA-authorized as safe for food contact and made without PFAS, Nickel, Lead, or Cadmium&#x27;. A feature badge reads &#x27;Non Reactive Titanium Finish&#x27; with &#x27;Made without PFAS &amp; Nickel&#x27; on the line beneath it, inside the same badge. The page describes the construction as &#x27;thousands of titanium nano-layers&#x27; bonded &#x27;to the 18/10 stainless steel construction&#x27;. We swept Hestan&#x27;s site for a published test report (1,905 addresses in its sitemap, 31 pages fetched) and read its NanoBond story and lab-video pages: none reports a measurement of the cooking surface.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hestan-nanobond-made-without-nickel.html">The full record for this claim →</a></p>
+<h2>Hestan TITUM Fusion Nonstick Skillets (and the TITUM nonstick line) — Nobody has measured this</h2>
+<blockquote class="claim"><p>Hestan says: “The innovative TITUM® nonstick cooking surface is reinforced with diamond and titanium particles, delivering reliable nonstick cookware that’s 22x more durable than conventional nonstick, standing up to the rigors of professional-grade cooking while cleaning effortlessly.”</p><p class="src"><a href="https://hestanculinary.com/products/nonstick-skillets">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Hestan says TITUM is 22x more durable than conventional nonstick. It publishes no test, names no comparison pan, and one of its own pages says 20x. Its lifetime warranty excludes normal wear.</p>
+<p><strong>What would settle it:</strong> A standardised abrasion and release test of new TITUM Fusion pans alongside an ordinary PTFE nonstick pan, under the same load and cycle count, reporting cycles to failure for each. Hestan would need to name the comparison pan the 22x is measured against.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/pages/titum-story">https://hestanculinary.com/pages/titum-story</a></p>
+<p class="evsum">The product page and Hestan&#x27;s two TITUM pages read in full: 22x three ways, 20x once, and no test behind either.</p>
+<p>The baseline changes from sentence to sentence (conventional, other, ordinary, standard nonstick), and on one page the number itself changes, from 22 to 20. A figure that came from a test would normally arrive with one number, one baseline and a method. This one arrives with several of the first two and none of the third.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Hestan Culinary</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/pages/warranty">https://hestanculinary.com/pages/warranty</a></p>
+<p class="evsum">Hestan&#x27;s US lifetime warranty, read in full: it covers manufacturing defects and excludes normal wear and tear.</p>
+<p>The product page lists &#x27;Lifetime Warranty&#x27; beside &#x27;22x More Durable&#x27;, and a reader could take one as backing the other. The warranty covers defects, not wear, which is the thing the 22x is about.</p>
+</li>
+</ul>
+<p>Hestan uses &#x27;22x&#x27; across its TITUM pages, and each time the comparison is to something different: conventional nonstick, other nonstick, ordinary nonstick, standard nonstick. On the original TITUM page, a section headed &#x27;22x More Durable&#x27; goes on to say the coating is &#x27;20x more resilient&#x27;. We found no test on Hestan&#x27;s site that produced either number.</p>
+<p>Hestan is open about what the coating is. The product page says TITUM Fusion is a PTFE-based nonstick, reinforced with diamond and titanium particles. So the claim is that this PTFE coating outlasts other PTFE coatings 22-fold, and that is a claim a wear test could settle. The &#x27;Lifetime Warranty&#x27; printed beside it does not settle it: it covers manufacturing defects and excludes normal wear and tear.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — hestanculinary.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The product page says &#x27;22x longer-lasting performance&#x27;, &#x27;22x More Durable vs. Other Nonstick&#x27; and &#x27;22x more durable than conventional nonstick&#x27;. The TITUM Fusion page says &#x27;22x more durable than other nonstick&#x27;. The original TITUM page heads a section &#x27;22x More Durable&#x27; and says, in the same section, &#x27;TITUM®Nonstick is 20x more resilient than standard nonstick.&#x27; None of the pages describes a test, a method or a comparison pan. The product page also states: &#x27;Hestan TITUM® Fusion features a PTFE-based nonstick finish&#x27;. We read Hestan&#x27;s FAQ page, which does not mention the figure, and our sweep of Hestan&#x27;s site (1,905 addresses in its sitemap, 31 pages fetched) found no durability test.</p></li>
+<li><p class="methhead">document — hestanculinary.com</p>
+<p>Read on 2026-09-26. Each piece &#x27;is warranted to the original purchaser to be free from manufacturing defects in materials and workmanship under normal use for the lifetime of the cookware.&#x27; It &#x27;does not cover damage caused by accident, misuse, abuse, normal wear and tear, or cosmetic conditions, including minor scratches, scuffs, surface markings&#x27;. Misuse that voids it includes &#x27;sharp metal utensil or appliance damage on nonstick product surfaces&#x27; and &#x27;using oven cleansers or scouring pads&#x27;.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hestan-titum-22x-more-durable.html">The full record for this claim →</a></p>
+<h2>Hestan TITUM Fusion Nonstick Skillets — Nobody has measured this</h2>
+<blockquote class="claim"><p>Hestan says: “TITUM Nonstick interior and exterior made without PFOA&#x27;s”</p><p class="src"><a href="https://hestanculinary.com/products/nonstick-skillets">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Hestan says its TITUM nonstick is made without PFOA, and says plainly on the same page that the coating is PTFE. It publishes no test, and its own article defines the claim as &#x27;no intentionally added PFOA&#x27;.</p>
+<p><strong>What would settle it:</strong> A targeted PFAS panel on the nonstick interior and exterior of new production TITUM Fusion pans, including PFOA, reported with its detection limit.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/products/nonstick-skillets">https://hestanculinary.com/products/nonstick-skillets</a></p>
+<p class="evsum">The product page says &#x27;made without PFOA&#x27;s&#x27; and, on the same page, that the nonstick finish is PTFE-based. It links no test.</p>
+<p>Unlike most nonstick product pages we have read, this one says what the coating is. A shopper who wants to avoid PTFE has the answer on the page. The PFOA line is the part nobody can check from the outside.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Hestan</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/blogs/news/are-non-toxic-cookware-sets-also-high-performance">https://hestanculinary.com/blogs/news/are-non-toxic-cookware-sets-also-high-performance</a></p>
+<p class="evsum">Hestan&#x27;s own article defines the claim as &#x27;No intentionally added PFOA&#x27; and mentions &#x27;third-party evaluation&#x27; without naming a lab or a result.</p>
+<p>This is Hestan saying what it means: PFOA is not an ingredient. That is a statement about the recipe, not a measurement of the pan, and it is a narrower promise than &#x27;made without&#x27; may sound.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/risk-management-and-polyfluoroalkyl-substances-pfas">https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/risk-management-and-polyfluoroalkyl-substances-pfas</a></p>
+<p class="evsum">EPA says eight leading PFAS makers committed in 2006 to work toward eliminating PFOA from their products by 2015, and that all met the program&#x27;s goals.</p>
+<p>This is context, not a check of Hestan&#x27;s pan. It is part of why &#x27;PFOA-free&#x27; says little about a nonstick pan bought today: the largest makers of these chemicals committed a decade ago to stop putting PFOA in their products. We do not know who supplies Hestan&#x27;s coating, so we cannot say this program covers it.</p>
+</li>
+</ul>
+<p>Hestan does something most nonstick brands here do not: it names the coating. The TITUM Fusion page says the finish is PTFE, which is a PFAS, so nobody reading the whole page is misled about that.</p>
+<p>The &#x27;made without PFOA&#x27;s&#x27; line is harder to weigh. Only a test of the pan could confirm it, and Hestan publishes none. Its own article says what the promise means: PFOA is not an ingredient in the recipe, which is not the same as a measured absence. It also says little. The largest makers of these chemicals committed with the US regulator to work PFOA out of their products by 2015, and the regulator says all of them met the program&#x27;s goals. So the line may well be true, and it tells a shopper little that the PTFE disclosure next to it does not.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — hestanculinary.com</p>
+<p>Read on 2026-09-27 in the HTML the server sends. Under &#x27;Details You&#x27;ll Love&#x27;: &#x27;TITUM Nonstick interior and exterior made without PFOA&#x27;s&#x27;. The page&#x27;s feature strip says &#x27;FDA-Approved PTFE Nonstick&#x27;, and a paragraph headed &#x27;Disclosure&#x27; reads: &#x27;Hestan TITUM® Fusion features a PTFE-based nonstick finish, engineered for outstanding durability and long-lasting performance. Unlike some alternative nonstick materials, PTFE is authorized for food contact under U.S. FDA (21 CFR) and European Union (EFSA) regulations&#x27;. The pans are described as handcrafted in Italy. Our sweep of Hestan&#x27;s site (1,905 addresses in its sitemap, 31 pages fetched) found no test report and named no laboratory.</p></li>
+<li><p class="methhead">document — hestanculinary.com</p>
+<p>Read on 2026-09-27 in the HTML the server sends. It reads: &#x27;No intentionally added PFOA: Hestan TITUM Nonstick and other premium nonstick products are not engineered using PFOA. Hestan TITUM® Nonstick features a PTFE-based nonstick finish&#x27;. Later: &#x27;we practice strict safety, migration testing and third-party evaluation of our materials&#x27;. No laboratory, report, method or result is named or linked. A web-search summary described Hestan&#x27;s nonstick as &#x27;found to be compliant by independent 3rd party laboratory testing&#x27;; that sentence is not on this article, the product page or the TITUM story pages, so we do not rely on it.</p></li>
+<li><p class="methhead">document — epa.gov</p>
+<p>Read on 2026-09-27. Under &#x27;PFOA Stewardship Program&#x27;: &#x27;In 2006, EPA invited eight major leading companies in the per- and PFAS industry to join in a global stewardship program&#x27; with the goals of a 95 percent cut in PFOA &#x27;product content levels&#x27; by 2010 and &#x27;working toward the elimination of these chemicals from emissions and products by 2015.&#x27; Participants named: Arkema, Asahi, BASF, Clariant, Daikin, 3M/Dyneon, DuPont, Solvay Solexis. &#x27;All companies have met the PFOA Stewardship Program goals.&#x27; The page does not name Hestan or its coating supplier, and the program covered only those eight companies.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hestan-titum-made-without-pfoas.html">The full record for this claim →</a></p>
+<h2>Made In ProCoat Non Stick Frying Pan (and the ProCoat nonstick line) — Nobody has measured this</h2>
+<blockquote class="claim"><p>Made In says: “Say goodbye to non stick that needs to be replaced every 6 months. Our FDA-approved coating lasts up to 70x longer.”</p><p class="src"><a href="https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Made In says its nonstick lasts up to 70x longer than pans that need replacing every 6 months, which works out to 35 years. It publishes no durability test, and its warranty covers 2 years and excludes wear.</p>
+<p><strong>What would settle it:</strong> A standardised abrasion and release test of new ProCoat pans alongside the comparison it names: an ordinary PTFE nonstick pan and a ceramic nonstick pan, abraded under the same load and cycle count, with food release measured at intervals until each fails. Only a side-by-side run could put a number on &#x27;70x&#x27;, and the claim would also need its baseline pinned down.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">arithmetic — mixed, <strong>funded by Product Review (this publication)</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/pages/warranty">https://madeincookware.com/pages/warranty</a></p>
+<p class="evsum">Made In&#x27;s own numbers: 70 times a 6-month life is 35 years; its nonstick warranty is 2 years and excludes wear.</p>
+<p>A warranty is not a lifespan, and a 2-year warranty does not prove a pan wears out in 2 years. But the arithmetic shows how far the claim reaches past anything Made In itself stands behind: the multiple implies decades, and the warranty covers two years and excludes the ordinary wear the multiple is about. The page also measures the 70x against two different things, a 6-month nonstick pan in one place and &#x27;ceramic&#x27; in another.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/69/1622">https://app.lightlabs.com/comprehensive-testing-report/69/1622</a></p>
+<p class="evsum">The only third-party report linked from the page, read in full: a PFAS chemical panel with no durability test.</p>
+<p>Made In does publish third-party testing for this pan, but that testing is about chemicals, not wear. Nothing published measures how long the coating lasts, against a 6-month pan, against ceramic, or against anything else.</p>
+</li>
+</ul>
+<p>&#x27;Up to 70x longer&#x27; is a claim only a wear test can settle, and Made In has not published one. The third-party report linked from the page tests for PFAS, not durability. So the number stands on Made In&#x27;s word, and the page cannot keep its own comparison straight: the headline measures it against nonstick that &#x27;needs to be replaced every 6 months&#x27;, while the FAQ lower down says &#x27;70x longer than ceramic&#x27;.</p>
+<p>Made In&#x27;s own paperwork is the useful check. Seventy times six months is 35 years. Made In&#x27;s warranty for the same pan is 2 years, and says that &#x27;no coating will last a lifetime&#x27; and that normal wear is not covered. A warranty is not a prediction of lifespan, and the pan may well outlast cheaper ones. But a buyer weighing &#x27;70x&#x27; should know that the company making the claim does not insure it past year two.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">arithmetic — madeincookware.com</p>
+<p>Read on 2026-09-26. The product page&#x27;s two sentences, taken together, put an ordinary nonstick pan at 6 months and this one at up to 70 times that: 0.5 years × 70 = 35 years. Made In&#x27;s warranty page reads: &#x27;Non Stick cookware comes with a 2-year limited warranty.&#x27; and &#x27;Made In’s non stick coating is professional grade, but no coating will last a lifetime and normal depreciation from use is expected and not covered under warranty.&#x27; The same product page&#x27;s FAQ gives a different baseline for the same multiple: &#x27;The professional-grade coating is durable, last 70x longer than ceramic and is easy to clean.&#x27;</p></li>
+<li><p class="methhead">our own desk check — app.lightlabs.com</p>
+<p>Read on 2026-09-26. The page&#x27;s &#x27;Third-Party Tested For Safety&#x27; widget loads Light Labs&#x27; report for Made In&#x27;s nonstick line (ProCoat Non Stick). It has one test category, PFAS, reporting each substance below a stated detection limit. It contains no abrasion, wear or lifespan test. Our sweep of Made In&#x27;s site (2,487 addresses in its sitemap, 31 pages fetched) found no other test report bearing on durability.</p></li>
+</ul>
+<p class="more"><a href="claims/c-madein-procoat-70x-longer.html">The full record for this claim →</a></p>
+<h2>OLIPOP Vintage Cola, 12 fl oz (355 mL) — Nobody has measured this</h2>
+<blockquote class="claim"><p>OLIPOP says: “higher fiber per can to get more out of every sip”</p><p class="src"><a href="https://drinkolipop.com/products/vintage-cola">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">UNSUPPORTED — no qualifying evidence · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> The can advertises more fiber, but how much of that fiber is the prebiotic kind is a trade secret. One lab assay per batch — about $360 — would turn it into a number anyone can check.</p>
+<p><strong>What would settle it:</strong> Quantify total fructans (inulin + FOS) in sealed cans by AOAC 997.08 (HPLC-RI), three production lots, reported against the declared 9 g of total dietary fiber — turning the undisclosed prebiotic fraction of OLISMART into a published number.<br>Estimated cost: $1,080</p>
+<h3>Evidence</h3>
+<ul class="evidence"><li><em>None exists. Nobody has run the measurement described above — that is the finding.</em></li></ul>
+<p>This is the cheapest decisive test we have found. One assay, one product, one number, and the claim on the next record stops being un-dividable and becomes arithmetic a reader can redo. ‘More fiber per can’ is what the assay bites on: a dose-benefit claim whose dose is published only in aggregate.</p>
+<p>No brand will pay for it, and that is structural rather than cynical. The only thing the result can do is narrow a claim the brand currently gets to leave open. That is the signature of a test that only readers will ever fund.</p>
+<p>THE PRICE, and where it comes from. $1,080 = 3 production lots × $360.00, which is Medallion Labs&#x27; published per-analysis price for Fructans/Inulin by AOAC 997.08 HPLC-RI (7–9 business days, 15 g sample). The figure appears identically in Medallion&#x27;s 2026 price catalog and on its per-test page, so it is the lab&#x27;s own standing price for exactly this analysis. It is not a quote against our samples — no request was sent — and the catalog notes that prices are subject to change without notice.</p>
+<p>Two bracketing sources, for honesty about how firm that number is. LA Testing / EMSL lists fructan (FOS + inulin) by HPLC at $460–920 per sample and by spectrophotometric method at $300–600 — but that schedule is Rev 8.1 dated 2011-07-29, fifteen years stale, so treat it as a bracket and not a price. Measurlabs does not offer fructan or inulin analysis at all; its dietary fiber determination is AOAC 991.43 inside a €380 nutritional package. Two of the three sources converge on Medallion&#x27;s figure being the current one, and the third cannot do the test.</p>
+<p>A DESIGN OPTION we have priced but not included above. The 9 g on the label is TOTAL dietary fiber, and the method behind that number is not disclosed. Medallion states that its Rapid Integrated Method (AOAC 2022.01, $580/analysis) ‘can accurately analyze samples that contain RS2/RS3 fibers, Oligosaccharides, Inulin/Fructans, Polydextrose, and a variety of other fiber ingredients’ — which implies the choice of fiber method matters when fructans are present. Re-measuring the denominator alongside the numerator, 3 lots × ($360 + $580), would cost $2,820 and would check the label&#x27;s own 9 g rather than taking it on trust. It roughly triples the target, so it is a separate decision.</p>
+<p class="more"><a href="claims/c-olipop-fructan-content-per-can.html">The full record for this claim →</a></p>
+<h2>T-fal Professional VX3 Platinum Non-Stick 12-inch fry pan (Platinum nonstick coating) — Nobody has measured this</h2>
+<blockquote class="claim"><p>T-fal says: “Platinum Non-Stick coating: Our longest lasting PTFE non-stick is 10x more resistant compared to T-fal nonstick basic coatings for outstanding performance; making this pan perfect for your kitchen.”</p><p class="src"><a href="https://www.t-fal.com/professional-vx3-platinum-non-stick-12-inch-frypan.html">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> T-fal says its Platinum coating is 10x more resistant than its &#x27;basic&#x27; coatings. It names neither the property nor the baseline, and publishes no test. Its lifetime warranty excludes normal wear.</p>
+<p><strong>What would settle it:</strong> A standardised abrasion and release test run side by side on the Platinum coating and on the T-fal coating the claim calls &#x27;basic&#x27;, under the same load and cycle count, reporting cycles to failure for each. T-fal would first need to say which coating is the baseline and which property &#x27;resistant&#x27; refers to.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/professional-vx3-platinum-non-stick-12-inch-frypan.html">https://www.t-fal.com/professional-vx3-platinum-non-stick-12-inch-frypan.html</a></p>
+<p class="evsum">The product page read in full: &#x27;10x more resistant&#x27; twice, with no test, no named property and no named baseline product.</p>
+<p>The multiple compares one T-fal coating with another T-fal coating that the page does not name, on a property it does not name. The same page declines to put a number of years on any coating&#x27;s life, which is the honest answer, and sits oddly next to a precise-sounding &#x27;10x&#x27;.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by T-fal (Groupe SEB USA)</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/warranty">https://www.t-fal.com/warranty</a></p>
+<p class="evsum">T-fal&#x27;s US cookware warranty, read in full: a limited lifetime warranty that excludes normal wear and tear.</p>
+<p>A lifetime warranty sounds like a durability promise, but it covers manufacturing defects. The wear that a &#x27;10x more resistant&#x27; coating is supposed to hold off is exactly what it excludes.</p>
+</li>
+</ul>
+<p>&#x27;10x more resistant&#x27; has the shape of a measurement without the parts of one. Resistant to what: scratching, abrasion, heat? Compared with which T-fal coating? Tested how? The page answers none of these, and we found no test anywhere on T-fal&#x27;s site. The comparison is also inward-looking: it measures one T-fal pan against another, so even if true it tells a shopper nothing about how this pan compares with anyone else&#x27;s.</p>
+<p>T-fal&#x27;s own FAQ is more careful than its feature list. Asked how long a nonstick coating lasts, it says it is &#x27;difficult to give a number of years&#x27;. And the lifetime warranty, which reads like a durability promise, excludes normal wear and tear, including nonstick damage from utensils and scouring. On a $40 pan the multiple may be true. Nothing published lets a reader check it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The claim appears in the feature list and again in the collection copy as &#x27;10x more resistant vs. basic T-fal coatings&#x27;. The page does not say resistant to what (scratching, abrasion, heat) or which T-fal coating is &#x27;basic&#x27;. Its FAQ, asked &#x27;What is the service life of the non-stick coating?&#x27;, answers: &#x27;It is difficult to give a number of years, because the service life will differ depending on the conditions of usage and frequency of use.&#x27; Our sweep of T-fal&#x27;s site (1,111 addresses in its sitemap, 17 pages fetched) found no durability test. Price on the day: $39.99.</p></li>
+<li><p class="methhead">document — t-fal.com</p>
+<p>Read on 2026-09-26: the warranty page (&#x27;When we say our products last a lifetime, we mean it&#x27;) and the one-page &#x27;T-fal Cookware Limited Lifetime Warranty&#x27; PDF it links. The warranty covers items &#x27;defective in material, construction or workmanship&#x27;. Its exclusions include &#x27;Normal product wear and tear&#x27;, &#x27;Nonstick deterioration … due to high heat, prolonged heat exposure when empty, etc.&#x27;, &#x27;Nonstick damage from metal or sharp utensils&#x27; and damage from &#x27;scouring pads, steel wool, abrasive cleaners&#x27;.</p></li>
+</ul>
+<p class="more"><a href="claims/c-tfal-platinum-10x-more-resistant.html">The full record for this claim →</a></p>
+<h2>Tramontina 3 Pk Fry Pans with Nonstick Interior (SKU 80124/043DS) — Nobody has measured this</h2>
+<blockquote class="claim"><p>Tramontina says: “You can rest easy knowing these fry pans are PFOA free.”</p><p class="src"><a href="https://www.tramontina.com/products/3-pk-fry-pans-with-nonstick-interior">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Tramontina says these nonstick pans are PFOA free, and publishes no test. Its own disclosure, linked from the same page, says its cookware has PFAS added for nonstick properties, without saying which products.</p>
+<p><strong>What would settle it:</strong> A lab analysis of the nonstick interior from new production pans: a targeted PFAS panel that includes PFOA, reported with its detection limit, plus a total-fluorine measurement of the coating, which would show whether the &#x27;premium nonstick interior finish&#x27; is a fluoropolymer at all.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — mixed, <strong>funded by Tramontina USA</strong></p>
+<p class="evurl"><a href="https://tramontina.zendesk.com/hc/en-us/articles/12403339967763-Chemicals-Disclosure">https://tramontina.zendesk.com/hc/en-us/articles/12403339967763-Chemicals-Disclosure</a></p>
+<p class="evsum">Tramontina&#x27;s chemicals disclosure, linked from every product page, read in full: its cookware has intentionally added PFAS.</p>
+<p>This is the whole disclosure. It confirms that Tramontina adds PFAS to cookware for nonstick properties, but it does not say which products or which PFAS, so it cannot tell a reader what is in this particular pan. It says nothing about PFOA.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.tramontina.com/products/3-pk-fry-pans-with-nonstick-interior">https://www.tramontina.com/products/3-pk-fry-pans-with-nonstick-interior</a></p>
+<p class="evsum">The product page read in full: &#x27;PFOA free&#x27;, a &#x27;Premium nonstick interior finish&#x27;, and no word on what that finish is.</p>
+<p>The product page names the one chemical it can say is absent and is silent on what the nonstick interior is actually made of.</p>
+</li>
+</ul>
+<p>&#x27;PFOA free&#x27; can only be checked by testing the pan, and Tramontina publishes no test, so we cannot say whether it is true. What we can say is how little it tells a shopper. The product page does not say what the &#x27;premium nonstick interior finish&#x27; is. The chemicals disclosure linked from its footer says Tramontina adds PFAS to its cookware to make it nonstick, but it names no products and no chemicals.</p>
+<p>So a shopper who reads &#x27;PFOA free&#x27; as &#x27;free of forever chemicals&#x27; is being given the narrowest possible answer to a broader question. The disclosure does not say this particular pan contains PFAS, and we are not saying so either. The page could settle it in one line, and does not.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — tramontina.zendesk.com</p>
+<p>Read on 2026-09-26 through the help centre&#x27;s public article feed (the article page itself refuses automated requests); the text was last updated 2026-09-13. It reads, in full apart from a Spanish translation: &#x27;In compliance with enacted right-to-know legislation, the following information provides information for consumers on certain ingredients used in the manufacture or processing of applicable Tramontina products. As a member of the Cookware &amp; Bakeware Alliance, we are committed to creating safe consumer products and welcome any questions from our customers. For our Colorado consumers: Intentionally added PFAS chemicals present in our cookware products are added to give these products nonstick properties, increased wear resistance, and increased corrosion and chemical resistance.&#x27; It has no table and names no product and no chemical.</p></li>
+<li><p class="methhead">our own desk check — tramontina.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page lists &#x27;Premium nonstick interior finish&#x27; and &#x27;Designed in USA, made in India&#x27;, and its footer links the chemicals disclosure above. Neither PTFE nor PFAS appears on the page. Our sweep of Tramontina&#x27;s site (1,663 addresses in its sitemap, 31 pages fetched) found no test report; the only laboratory the site names is NSF, in blog posts about NSF food-equipment certification, which is not a PFOA test.</p></li>
+</ul>
+<p class="more"><a href="claims/c-tramontina-3pk-pfoa-free.html">The full record for this claim →</a></p>
+</main>
+<footer class="site"><p>Product Review — Brand claims, checked against the documents that decide them. Every verdict links to the documents behind it.</p></footer>
+</body>
+</html>

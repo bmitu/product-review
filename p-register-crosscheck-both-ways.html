@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two brands, the same check, opposite answers</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#1a1a1a;--muted:#5a5a5a;
+  --rule:#e2e0dc;--accent:#8a1c1c;--codebg:#f5f4f2;--quote:#faf9f7}
+@media(prefers-color-scheme:dark){:root{--bg:#16161a;--fg:#e8e8e6;--muted:#a2a29d;
+  --rule:#33333a;--accent:#e09090;--codebg:#1e1e24;--quote:#1c1c22}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:17px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif}
+main{max-width:43rem;margin:0 auto;padding:2.5rem 1rem 5rem}
+h1{font-size:1.9rem;line-height:1.2;margin:0 0 1.4rem}
+h2{font-size:1.3rem;line-height:1.25;margin:3rem 0 .8rem;padding-top:1.8rem;
+  border-top:1px solid var(--rule)}
+h3{font:600 .78rem/1.4 system-ui,sans-serif;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);margin:2rem 0 .6rem}
+p{margin:0 0 1.05rem}
+a{color:inherit;text-underline-offset:2px}
+.frame>p:first-child{font-size:1.14rem}
+.tier{font:.76rem/1.5 system-ui,sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 1.1rem}
+.bottom{font-size:1.06rem}
+blockquote.claim{margin:0 0 1.1rem;padding:.9rem 1.1rem;background:var(--quote);
+  border-left:3px solid var(--accent)}
+blockquote.claim p{margin:0 0 .5rem;font-style:italic}
+blockquote.claim p.src{margin:0;font-style:normal;color:var(--muted);
+  font:.82rem/1.5 system-ui,sans-serif}
+p.stale{font:.9rem/1.55 system-ui,sans-serif;padding:.7rem .9rem;
+  border:1px solid var(--rule);margin:0 0 1.1rem}
+ul.evidence{list-style:none;padding:0;margin:0 0 1.4rem}
+ul.evidence>li{border-top:1px solid var(--rule);padding:1.1rem 0 .1rem}
+p.evhead{font:.84rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .3rem}
+p.evurl{font:.76rem/1.5 ui-monospace,Menlo,Consolas,monospace;
+  word-break:break-all;margin:0 0 .85rem}
+.warn{border-left:3px solid var(--accent);padding-left:.85rem}
+p.evsum{font:italic .92rem/1.55 Georgia,"Iowan Old Style",serif;color:var(--muted);
+  margin:0 0 .85rem}
+ul.method{list-style:none;padding:0;margin:0 0 1.4rem}
+ul.method>li{border-top:1px solid var(--rule);padding:1.1rem 0 .1rem}
+ul.method>li>p:last-child{margin-bottom:1.05rem}
+p.methhead{font:.84rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .5rem}
+ul.dose{margin:0 0 1.05rem;padding-left:1.2rem}
+pre{background:var(--codebg);padding:.8rem .9rem;overflow-x:auto;margin:0 0 1.05rem;
+  font:.79rem/1.5 ui-monospace,Menlo,Consolas,monospace}
+p.more{font:.88rem/1.5 system-ui,sans-serif}
+</style>
+<style>
+header.site,footer.site{font:.9rem/1.5 system-ui,sans-serif;max-width:43rem;
+  margin:0 auto;padding:1rem}
+header.site{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:baseline;
+  border-bottom:1px solid var(--rule)}
+header.site .name{font-weight:700;text-decoration:none;margin-right:auto}
+header.site a{color:var(--muted)}
+footer.site{color:var(--muted);border-top:1px solid var(--rule);margin-top:2rem}
+ul.index{list-style:none;padding:0;margin:0 0 2rem}
+ul.index>li{border-top:1px solid var(--rule);padding:.9rem 0 .2rem}
+ul.index p{margin:0 0 .5rem}
+ul.index .verdict{font:.8rem/1.5 system-ui,sans-serif;color:var(--muted)}
+dl.terms dt{font-weight:700;margin-top:1rem}
+dl.terms dd{margin:0 0 .6rem}
+.controls{font:.9rem/1.5 system-ui,sans-serif;border:1px solid var(--rule);
+  padding:.8rem 1rem;margin:0 0 1.5rem}
+.controls fieldset{border:0;padding:0;margin:0 0 .8rem}
+.controls legend{font-weight:600;padding:0;margin:0 0 .3rem}
+.controls label{display:inline-block;margin:0 1rem .3rem 0}
+.controls .off{color:var(--muted);font-size:.85rem;margin:0}
+.controls select,.controls input{font:inherit}
+ul.field{list-style:none;padding:0;margin:0 0 1rem}
+ul.field>li{border-top:1px solid var(--rule);padding:1rem 0 .3rem}
+ul.field>li[hidden]{display:none}
+ul.field h3{font:700 1.1rem/1.3 Georgia,serif;letter-spacing:0;text-transform:none;
+  color:var(--fg);margin:0 0 .3rem}
+ul.field .why{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .6rem}
+dl.dims{display:grid;grid-template-columns:minmax(8rem,11rem) 1fr;gap:.25rem .9rem;
+  font:.86rem/1.45 system-ui,sans-serif;margin:0 0 .6rem}
+dl.dims dt{color:var(--muted)}
+dl.dims dd{margin:0}
+dl.dims ul{list-style:none;padding:0;margin:0}
+.v-holds{border-left:3px solid #2f7d4f;padding-left:.4rem}
+.v-fails{border-left:3px solid var(--accent);padding-left:.4rem}
+.v-open{border-left:3px solid var(--rule);padding-left:.4rem}
+.none{color:var(--muted)}
+p.count{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted)}
+.opinion{border:1px dashed var(--rule);padding:.8rem 1rem;margin:0 0 1.2rem}
+.opinion .label{font:600 .75rem/1.4 system-ui,sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .4rem}
+@media(max-width:30rem){dl.dims{grid-template-columns:1fr}dl.dims dd{margin-bottom:.4rem}}
+</style>
+<meta name="description" content="Both of these claims were checked the same way, for nothing. A company points at a public list kept by a regulator. The regulator publishes that list. You download it and you count.">
+</head>
+<body>
+<header class="site"><a class="name" href="index.html">Product Review</a><a href="all-claims.html">All claims</a><a href="how-we-check.html">How we check</a></header>
+<main>
+<h1>Two brands, the same check, opposite answers</h1>
+<div class="frame"><p>Both of these claims were checked the same way, for nothing. A company points at a public list kept by a regulator. The regulator publishes that list. You download it and you count.</p>
+<p>We ran that on two cookware brands without knowing in advance what either would show. One brand&#x27;s number was right when it was written and has been quietly wrong since. The other brand&#x27;s disclosure came back right twelve times out of twelve on one official list, twelve out of twelve on a second, and eleven out of twelve on each of four more — sixty-eight of seventy-two in all. All four misses land on the same line of the same table, and none is a gap we can pin on anybody, because the one database that would settle it is the one California refuses to serve.</p>
+<p>We are publishing them together on purpose. A brand does not get a good verdict here for being likeable and does not get a bad one for being a target; it gets the verdict the register gives. The method was fixed before either answer was known, which is the only reason the pair means anything.</p>
+<p>The part worth taking away is not about either company. Every check below cost one download and an afternoon. Nobody had run them.</p></div>
+<h2>GreenPan Thermolon ceramic nonstick coating — Does not hold up</h2>
+<blockquote class="claim"><p>GreenPan says: “We confirm that GreenPan’s™ Thermolon™ coated food contact surface is Free Of: … • And 247 Substances of Very High Concern (SVHC) that are listed under the European REACH (Registration, Evaluation, Authorization and Restriction of Chemicals) Program including the siloxanes of concern, namely D4, D5, D6 and Octamethyltrisiloxane”</p><p class="src"><a href="https://www.greenpan.us/pages/safety-of-our-product">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> GreenPan says its coating is free of the 247 Substances of Very High Concern on Europe’s REACH list. That list held 247 entries for five months in 2025 and holds 253 now. The figure was right when written; the page never says when that was.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://chem.echa.europa.eu/api-obligation-list/v1/candidateList?pageIndex=1&amp;pageSize=200">https://chem.echa.europa.eu/api-obligation-list/v1/candidateList?pageIndex=1&amp;pageSize=200</a></p>
+<p class="evsum">The chemicals agency&#x27;s full Candidate List, all 253 dated entries, matching the register&#x27;s own stated total with every row carrying a distinct identifier.</p>
+<p>The claim names a number that can simply be counted, and the body that maintains the list publishes it. Anyone can repeat this in two commands:</p>
+<pre><code>curl -s &#x27;https://chem.echa.europa.eu/api-obligation-list/v1/candidateList?pageIndex=1&amp;pageSize=200&#x27; -o p1.json
+curl -s &#x27;https://chem.echa.europa.eu/api-obligation-list/v1/candidateList?pageIndex=2&amp;pageSize=200&#x27; -o p2.json</code></pre>
+<p>Each file reports the register’s own total alongside its rows, which is what makes the count checkable rather than merely plausible: if the rows you receive do not add up to the total the register states, you know your download is short before you publish a number from it.</p>
+<p>The result, and the reason the date matters. The list today holds 253 entries. It held 247 between 21 January 2025 and 25 June 2025, and 247 at no other time — before that date there were 242, and after it 250. So the figure on the cookware page is not wrong in the way a typo is wrong. It is an accurate reading of the register taken during a five-month window that closed fifteen months ago, printed in the present tense with no date attached.</p>
+<p>Six entries have been added since:</p>
+<pre><code>25 Jun 2025  1,1,1,3,5,5,5-heptamethyl-3-[(trimethylsilyl)oxy]trisiloxane
+25 Jun 2025  Decamethyltetrasiloxane
+25 Jun 2025  a reactive textile dye (Reactive Brown 51)
+05 Nov 2025  1,1&#x27;-(ethane-1,2-diyl)bis[pentabromobenzene]
+04 Feb 2026  n-hexane
+04 Feb 2026  bisphenol AF and its salts</code></pre>
+<p>Two of those six are siloxanes, added for the same reason — very persistent and very bioaccumulative — as the siloxane the page already names. That is the detail worth a reader’s attention, because the sentence does not stop at a number: it goes on to name “the siloxanes of concern” and lists four of them. The register agrees about all four. D4, D5 and D6 were listed in June 2018, and octamethyltrisiloxane in January 2025. What the page does not say is that the family it singled out grew by two more members five months later.</p>
+<p>One further thing the dates give us, which is unusual in this kind of check. Octamethyltrisiloxane joined the list on 21 January 2025 — the very day the total reached 247. The number and the substance became true together, so the sentence cannot have been written before that date and has not been revisited since the following June. The claim carries no date, but its own contents date it.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.greenpan.us/pages/safety-of-our-product">https://www.greenpan.us/pages/safety-of-our-product</a></p>
+<p class="evsum">Our own fetch of the page on the day quoted; it returned successfully and carries no publication or revision date anywhere.</p>
+<p>Worth being exact about what our own reading of the page does and does not settle. It settles the wording, and it settles that no date is offered with it. It does not settle the other reading available to a fair critic — that “247” might describe a testing panel of 247 named substances rather than the whole list. We think that reading is hard to sustain, because 247 is exactly the register’s total for a specific five-month window and the substance the sentence names was added on the day that window opened. But it is not impossible, and if it were the intended meaning the claim would not be out of date so much as unverifiable, since the 247 substances are never listed.</p>
+</li>
+</ul>
+<p>This is the cheapest kind of check there is, and it is worth showing exactly because it costs nothing. A brand prints a number. The body that maintains the number publishes it. You count.</p>
+<p>GreenPan’s safety statement says its coated cooking surface is free of “247 Substances of Very High Concern (SVHC) that are listed under the European REACH” programme. The European Chemicals Agency keeps that list, adds to it a few times a year, and stamps every entry with the date it was included. We downloaded all 253 current entries and counted them, then used the inclusion dates to count what the list held on any past date.</p>
+<p>247 is real. It is the size of the list between 21 January 2025 and 25 June 2025 — and at no other point in the list’s history. Today the figure is 253. So the sentence was accurate when someone wrote it, and it has been left standing, in the present tense, through three subsequent updates to the thing it describes.</p>
+<p>We want to be careful about what that does and does not mean, because it would be easy to read this as a bigger accusation than it is. Nothing here suggests the coating contains any of the six substances added since. We have not tested the coating and neither, so far as anyone outside the company can tell, has any laboratory whose report you can read — which is the subject of a separate finding. A claim to be free of 247 substances and a claim to be free of 253 are, chemically, almost the same claim.</p>
+<p>What it does mean is narrower and, we think, more useful. A “free of” list is a promise of completeness against an outside standard, and the whole value of pinning it to a regulator’s list is that the list is maintained. A number copied out of a maintained list and then frozen keeps the authority of the source while quietly losing the currency — which is the part the reader was relying on. Six entries have been added since, and two of them are siloxanes listed as very persistent and very bioaccumulative: the same family, and the same stated reason, as the siloxane the sentence itself names. The claim is most out of date precisely where it chose to be most specific.</p>
+<p>In fairness to GreenPan, and this cuts the other way: everything the sentence names, the register confirms. D4, D5, D6 and octamethyltrisiloxane are all on the list, the first three since 2018 and the fourth since January 2025. This is not a brand inventing regulatory cover. It is a brand that got it right and then stopped looking — and, because the page carries no date, gave its readers no way to notice.</p>
+<p>The fix is a sentence long: print the date the count was taken, or drop the number and name the list. “Every substance on the REACH Candidate List” cannot go stale.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — chem.echa.europa.eu</p>
+<p>We retrieved the Candidate List from the European Chemicals Agency’s own register on 2026-09-20 — all 253 entries, with each entry’s official date of inclusion — and counted it ourselves rather than relying on any summary of it. Two checks were run against the download before it was used. The register reports its own total as 253; we received 253 rows, so nothing was lost to paging. Every row carries a distinct registry identifier, so nothing was counted twice. Because each entry is dated, the list can be rewound: counting only the entries whose inclusion date falls on or before 21 January 2025 gives exactly 247.</p></li>
+<li><p class="methhead">our own desk check — greenpan.us</p>
+<p>We fetched the page on 2026-09-20 and it returned successfully. The wording quoted here is what the server sent that day. The page carries no publication or revision date anywhere in what it returns, so a reader has no way to tell when the figure was current; the statement it sits in is signed by the company’s group chief executive and written throughout in the present tense.</p></li>
+</ul>
+<p class="more"><a href="claims/c-greenpan-247-svhc-count.html">The full record for this claim →</a></p>
+<h2>T-fal PTFE nonstick cookware — Does not hold up</h2>
+<blockquote class="claim"><p>T-fal says: “The World Health Organization (WHO), the International Agency for Research on Cancer (IARC), and health authorities in France, Europe (EFSA), and the United States (FDA) have all confirmed that PTFE is harmless to human health.”</p><p class="src"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> T-fal says IARC confirmed PTFE is harmless. IARC put PTFE in Group 3, which by IARC&#x27;s own definition means it could not classify its cancer risk and is not a finding of safety. We checked the IARC part only.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://monographs.iarc.who.int/list-of-classifications">https://monographs.iarc.who.int/list-of-classifications</a></p>
+<p class="evsum">IARC&#x27;s list of classifications, read from the data the page loads: polytetrafluoroethylene is in Group 3, evaluated in 1987.</p>
+<p>IARC evaluates one question only: whether something can cause cancer. It looked at PTFE in a 1979 volume of its Monographs and again in its 1987 update, and placed it in Group 3. That is the group for agents it cannot classify either way. IARC has not said anything about PTFE being harmless, because that is not a question it answers.</p>
+</li>
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://monographs.iarc.who.int/wp-content/uploads/2019/07/Preamble-2019.pdf">https://monographs.iarc.who.int/wp-content/uploads/2019/07/Preamble-2019.pdf</a></p>
+<p class="evsum">IARC&#x27;s Preamble, the document that defines its groups, downloaded and read for the Group 3 definition.</p>
+<p>IARC&#x27;s own definition of Group 3 is &#x27;not classifiable as to its carcinogenicity to humans&#x27;, and the Preamble goes on: &#x27;An evaluation in Group 3 is not a determination of non-carcinogenicity or overall safety. It often means that the agent is of unknown carcinogenic potential and that there are significant gaps in research.&#x27; That is close to the opposite of the confirmation T-fal describes.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — refutes, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">https://www.t-fal.com/ptfe-nonstick-coating-explained</a></p>
+<p class="evsum">T-fal&#x27;s PTFE explainer page read in full on the same day; it describes the IARC classification twice, both times as an all-clear.</p>
+<p>T-fal cites the right volumes and the right group, then reads the group backwards. Group 3 does not recognise that PTFE is not carcinogenic. It says IARC could not classify it.</p>
+</li>
+</ul>
+<p>This is not a claim about whether PTFE nonstick pans are safe to cook with. It is a claim about what a named authority said, and that can be checked by reading what the authority said.</p>
+<p>IARC&#x27;s job is narrow. It asks whether something can cause cancer and sorts the answer into groups. It has never assessed PTFE&#x27;s overall safety, because it assesses nothing but cancer. On cancer, it placed PTFE in the group reserved for agents it cannot classify, and it says in plain words that this group is not a finding of safety. T-fal&#x27;s page cites the right volume and the right group, then presents the group as a clean bill of health.</p>
+<p>The same sentence names the WHO, which is IARC&#x27;s parent body, and food-safety regulators in France, Europe and the United States. We have not checked those. Food regulators do permit PTFE coatings in contact with food, which is a real and relevant fact, but permission to use a material is a regulatory decision, not a finding that it is harmless in every sense. Whether any of them used the word T-fal attributes to them is a separate question, and we have left it open rather than answer it by assumption.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — monographs.iarc.who.int</p>
+<p>Read on 2026-09-26. The list page builds its table in the browser from a data file IARC serves alongside it, and we read that file directly. Its entry reads: polytetrafluoroethylene, CAS 9002-84-0, Group 3, Monographs volume 19 and Supplement 7, evaluated 1987.</p></li>
+<li><p class="methhead">document — monographs.iarc.who.int</p>
+<p>Downloaded on 2026-09-26 and read for its definition of the evaluation groups. This is the current Preamble, adopted in 2019. PTFE was evaluated under an earlier one, but the Group 3 label, &#x27;not classifiable as to its carcinogenicity to humans&#x27;, is the same in both.</p></li>
+<li><p class="methhead">our own desk check — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. Besides the sentence quoted above, the same page says: &#x27;Following a study by the IARC, the WHO classified PTFE in Group 3 [Volume 19, 288 (1979) and Supplement 7.70 (1987)], recognizing that it is not carcinogenic to humans.&#x27;</p></li>
+</ul>
+<p class="more"><a href="claims/c-tfal-iarc-confirmed-ptfe-harmless.html">The full record for this claim →</a></p>
+<h2>Blue Lizard Sensitive Mineral Sunscreen Lotion SPF 50 (3 oz and 5 oz) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Blue Lizard (Crown Laboratories) says: “We ♥ the Reef: This product is made without Oxybenzone or Octinoxate to help protect fragile reef ecosystems.”</p><p class="src"><a href="https://bluelizardsunscreen.com/products/sensitive-mineral-sunscreen-lotion-spf-50">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Blue Lizard says this sunscreen is made without oxybenzone or octinoxate, and the full ingredient list it filed with the government names neither. That is the maker&#x27;s own filing, not a lab test.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by Crown Laboratories (the maker files its own label; the National Library of Medicine publishes it)</strong></p>
+<p class="evurl"><a href="https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=32d78048-d281-1d80-e063-6394a90aec19">https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=32d78048-d281-1d80-e063-6394a90aec19</a></p>
+<p class="evsum">The full ingredient list the maker filed for this sunscreen names neither chemical; the same search finds oxybenzone on a label that contains it.</p>
+<p>Sunscreen in the US is regulated as a drug, so its Drug Facts label is a legal filing, not marketing copy, and the maker has to list every ingredient. That makes the filed label the right document for a &#x27;made without&#x27; claim. Two commands reproduce the finding:</p>
+<pre><code>curl -sL &#x27;https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/32d78048-d281-1d80-e063-6394a90aec19.xml&#x27; | grep -ciE &#x27;oxybenzone|benzophenone|octinoxate|methoxycinnamate&#x27;
+0
+
+curl -sL &#x27;https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/598cfe9e-6ebe-ad18-e063-6294a90ace22.xml&#x27; | grep -ciE &#x27;oxybenzone|benzophenone|octinoxate|methoxycinnamate&#x27;
+4</code></pre>
+<p>The first is this sunscreen, and the answer is zero. The second is an unrelated sunscreen that does contain oxybenzone, and the same search finds it, which shows the search works.</p>
+<p>What this is and is not matters. The label is the maker&#x27;s own statement, filed with the government, and a false one would make the product misbranded under federal law. That is a strong reason for it to be accurate, but it is still the maker describing its own product. Nobody measured what is in the tube, including us. The label shows what the maker says it uses, not a lab result.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9d20b230-2cce-4d90-e053-2995a90a4c03">https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9d20b230-2cce-4d90-e053-2995a90a4c03</a></p>
+<p class="evsum">The product page&#x27;s barcodes belong to an older formula filed under a second label; that formula also names neither chemical.</p>
+<p>The product page describes one formula and scans as another. Its ingredient list, with aloe, matches the newer label. Its barcodes match the older one. Both labels are live on the government database, and the store does not say which formula a given order will contain.</p>
+<p>For this claim it does not matter: neither formula lists oxybenzone or octinoxate, so the claim holds whichever tube arrives. It would matter to anyone buying for a different reason, such as avoiding a particular preservative, because the ingredient list on the product page may not be the one on the tube. The label on the tube you receive is the one to read.</p>
+</li>
+</ul>
+<p>The claim has two halves, and we checked one. The first half is a fact about the formula: the product is made without two particular sunscreen chemicals. That can be checked, because US sunscreens are sold as drugs and the maker must publicly file a complete ingredient list. The filed list for this product names neither chemical, under any of their names, in either of the two formulas currently on file. The brand&#x27;s wider statement that all Blue Lizard sunscreens are free of both also held: none of the 21 Blue Lizard labels on file names either one.</p>
+<p>The second half, &#x27;to help protect fragile reef ecosystems&#x27;, is a statement about why, and about what leaving the two chemicals out does for coral. Hawaii banned both chemicals from sale for that reason, but whether a sunscreen without them is actually better for reefs is a question for marine science, not for a label. This record does not decide it.</p>
+<p>One practical note: the product page shows the newer formula&#x27;s ingredients but carries the older formula&#x27;s barcodes, and both formulas are still on file. If you are choosing this sunscreen for reasons beyond these two chemicals, read the label on the tube you receive.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — dailymed.nlm.nih.gov</p>
+<p>Read on 2026-09-23 from DailyMed, the National Library of Medicine&#x27;s public database of drug labels, through its public API. Sunscreens are sold in the US as drugs, and the maker must file the label, with every active and inactive ingredient, in a structured format. This label is &#x27;Blue Lizard Sensitive SPF 50 Sunscreen&#x27;, effective 31 December 2025. Its active ingredients are zinc oxide (112 mg/mL) and titanium dioxide (89.6 mg/mL); it lists 28 inactive ingredients, including aloe leaf, matching the &#x27;new and improved formula with soothing Aloe Vera&#x27; and the ingredient list on the brand&#x27;s product page. We searched the whole file for oxybenzone and octinoxate under their other names (benzophenone-3, octyl or ethylhexyl methoxycinnamate): no match. As a control, the same search run on another maker&#x27;s label that lists oxybenzone found it 4 times. We did not test the product.</p></li>
+<li><p class="methhead">our own desk check — dailymed.nlm.nih.gov</p>
+<p>Read on 2026-09-23. The brand&#x27;s store lists two sizes, 3 oz and 5 oz, with barcodes 303162046306 and 303162046450. A sunscreen&#x27;s barcode carries its drug product code, and these decode to 0316-2046-30 and 0316-2046-45. Those two package codes are not on the label cited above, which covers 0316-2046-31 (89 mL) and -46 (148 mL). They are on a second, live label for the same product name, effective 12 January 2026, covering -30 (89 mL) and -45 (148 mL). That label has the same active ingredients at the same strengths but a different set of 28 inactive ingredients: no aloe, and it includes phenoxyethanol and chlorphenesin. Searched the same way, it names neither oxybenzone nor octinoxate.</p></li>
+</ul>
+<p class="more"><a href="claims/c-bluelizard-sensitive-spf50-we-love-the-reef.html">The full record for this claim →</a></p>
+<h2>Caraway Cookware, bakeware, kettle, prep set, glass lids, kitchen gadgets and cast iron (California disclosure) — Holds up</h2>
+<blockquote class="claim"><p>Caraway says: “At Caraway, product safety is our utmost concern and we are fully committed to adhering to all relevant regulations governing our products. … The tables linked at the bottom of this webpage outline the cookware items that necessitate such disclosures. … The following items are listed to maintain compliance with California Bill AB-1200 and are compiled from the CalSafer Candidate Chemical list.”</p><p class="src"><a href="https://www.carawayhome.com/pages/ca-ab1200">their own page</a> · read 2026-09-22</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Caraway publishes the chemical disclosure California requires. Across six authoritative lists read in full it is right 68 times out of 72; all four misses sit on its cadmium row, and we cannot say whether the state or the company made them.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>independent</strong></p>
+<p class="evurl"><a href="https://oehha.ca.gov/media/downloads/proposition-65/p65chemicalslist.pdf">https://oehha.ca.gov/media/downloads/proposition-65/p65chemicalslist.pdf</a></p>
+<p class="evsum">California&#x27;s full Proposition 65 list, 23 pages dated 31 July 2026, checked A to Z against its own final page so nothing was cut short.</p>
+<p>The state publishes this list as a single file, and checking a company&#x27;s homework against it costs nothing but the download:</p>
+<pre><code>curl -sL &#x27;https://oehha.ca.gov/media/downloads/proposition-65/p65chemicalslist.pdf&#x27; -o p65.pdf</code></pre>
+<p>What we compared. Caraway&#x27;s disclosure names twelve distinct substances across its product lines, gives a registry number for each, and states for each one which official lists it appears on. Three of the twelve are marked as appearing on Proposition 65: nickel, titanium oxide and cadmium. The other nine are not.</p>
+<p>All twelve agree with the state&#x27;s list.</p>
+<p>Nickel appears as “Nickel (Metallic)”, with the same registry number Caraway gives, listed since October 1989. Cadmium and titanium dioxide are both on the list too, but neither carries a registry number there — cadmium appears twice, as “Cadmium” and as “Cadmium and cadmium compounds”, and titanium dioxide appears in a qualified form, “Titanium dioxide (airborne, unbound particles of respirable size)”. Searching by number alone returns nothing for either, which is worth saying plainly because it is the mistake this check was one step away from making: a company would have looked wrong on two of its three entries purely because of how the state records a family of substances.</p>
+<p>The nine unmarked substances are the more informative half, because getting those right requires care. Caraway lists chromium, and Proposition 65 lists chromium — but only hexavalent chromium, a different chemical form from the metal in stainless steel, and Caraway does not claim it. The same distinction holds three more times: the list carries vanadium pentoxide but not vanadium, molybdenum trioxide but not molybdenum, iron dextran complex but not iron. Manganese, phosphorus, ethyl acetate, boron and butyl alcohol are not on the state&#x27;s list in any form. In every one of those nine cases the absence of a Proposition 65 mark is correct.</p>
+<p>So on the one authoritative list we could check end to end, the disclosure is accurate twelve times out of twelve, including four places where a careless reading of the state&#x27;s list would have produced a wrong answer in the company&#x27;s own favour or against it.</p>
+</li>
+<li>
+<p class="evhead">document — supports, <strong>independent</strong></p>
+<p class="evurl"><a href="https://monographs.iarc.who.int/list-of-classifications">https://monographs.iarc.who.int/list-of-classifications</a></p>
+<p class="evsum">All 1,128 entries of the cancer agency&#x27;s classification list; our copy matches its own published group totals of 135, 98, 329 and 498.</p>
+<p>California&#x27;s rule does not treat the whole cancer agency list as a carcinogen list, and the difference decides this check. The regulation names &quot;Groups 1, 2A, and 2B carcinogens identified by the International Agency for Research on Cancer&quot;. Group 3 — &quot;not classifiable&quot; — is deliberately left out, because being unclassifiable is not a finding of anything.</p>
+<p>All twelve entries agree with the list read that way.</p>
+<p>The three Caraway attributes to the cancer agency are right. Nickel is there twice, as nickel compounds in Group 1 and as metallic nickel in Group 2B, the second with exactly the registry number Caraway prints. Titanium dioxide is in Group 2B, again with the matching number. Cadmium and cadmium compounds are in Group 1, matching number.</p>
+<p>The nine Caraway does not attribute are right too, and one of them is the sharpest case we have seen in this kind of check. Chromium is on the cancer agency&#x27;s list, with the exact registry number Caraway gives for it — as &quot;chromium, metallic&quot;, in Group 3. A checker matching registry numbers would call this a missing attribution and accuse the company of leaving something out. The regulation says the opposite: Group 3 is not one of the groups it counts, so the correct action is not to claim it, which is what Caraway did.</p>
+<p>Five more are near-relatives that the list carries and the company did not claim: iron-dextran complex rather than iron, vanadium pentoxide rather than vanadium, molybdenum trioxide rather than molybdenum, phosphorus-32 rather than phosphorus, and tert-butyl alcohol rather than the different form of butyl alcohol Caraway names. Manganese, boron and ethyl acetate do not appear on the list in any form.</p>
+<p>So on a second authoritative list, checked end to end and independently of the first, the disclosure is again accurate twelve times out of twelve.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://web.archive.org/web/20151005075534/http://ntp.niehs.nih.gov/ntp/roc/content/listed_substances_508.pdf">https://web.archive.org/web/20151005075534/http://ntp.niehs.nih.gov/ntp/roc/content/listed_substances_508.pdf</a></p>
+<p class="evsum">The 2014 federal cancer report the rule names, read in full from an archived capture of the government&#x27;s own address, alongside the current edition.</p>
+<p>This is the list where a gap shows up, and the first thing to say is that the odd-looking part of it is not the company&#x27;s doing.</p>
+<p>Caraway&#x27;s tables cite the &quot;NTP 13th RoC&quot; — the thirteenth edition of a federal cancer report, published in 2014 and superseded twice since, in 2016 and again in 2021. That looks like a company quoting something a decade out of date. It isn&#x27;t. California&#x27;s regulation itself names the thirteenth edition, by number, as the list it counts. The company is quoting the rule exactly. The rule is what stopped in 2014.</p>
+<p>We read that edition anyway, since it is the one that governs, and the current one alongside it.</p>
+<p>Nickel, the one substance Caraway attributes to this report, is on it — as nickel compounds, known to be human carcinogens, and as metallic nickel, reasonably anticipated to be one. That is right, and it is right in the current edition too.</p>
+<p>Cadmium is the gap. Cadmium and cadmium compounds are listed in the thirteenth edition as known to be human carcinogens — the strongest category the report has — and the company&#x27;s own write-up for cadmium records it as first listed in 1980 and listed ever since, so no question of editions explains it. Caraway&#x27;s cadmium row cites twelve separate lists, including the cancer agency&#x27;s and California&#x27;s own, and does not cite this one.</p>
+<p>We cannot tell you whose omission it is, and we are not going to guess. The disclosure says it was compiled from the state&#x27;s candidate chemical database, which is the database that refused every attempt we made to read it. Either the company dropped a line, or the state&#x27;s own record for cadmium is missing it and the company copied what was there. The one document that would settle it is the one California will not let the public open.</p>
+<p>The other ten substances are correctly absent, including the two the report carries in a different form: hexavalent chromium rather than the chromium in stainless steel, and iron dextran complex rather than iron.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="http://publications.europa.eu/resource/celex/02008R1272-20260701">http://publications.europa.eu/resource/celex/02008R1272-20260701</a></p>
+<p class="evsum">All 4,420 substances in the European classification table in force from 1 July 2026, fetched twice byte-for-byte identical with entry numbers unbroken.</p>
+<p>California&#x27;s rule counts a narrow slice of the European list, and the slice decides this check. It counts substances the European Union classifies as causing cancer, inheritable genetic damage or reproductive harm in its two strongest categories, 1A and 1B, in the table annexed to its classification law. The category below those, 2, is not counted.</p>
+<p>Caraway attributes one substance to this list, and it is right — right down to the category letter it prints. The entry is diboron trioxide, and the classification the European Union has given it is reproductive toxicant, category 1B, which is exactly what the company&#x27;s table says.</p>
+<p>It is worth saying what that correctness survived. Caraway names the substance “Boron” and gives the number 1303-86-2. Boron the element is not on this list at all, and that number is not boron&#x27;s — it belongs to one of its oxides. The name is loose and the number is exact, so a reader checking the name would find nothing and conclude the company had invented the attribution. The number is what makes it true.</p>
+<p>Two of the substances Caraway does not attribute are on the European list, with the exact numbers the company prints, and both would read as missing attributions to anyone matching numbers. Nickel is there as a category 2 carcinogen. Titanium dioxide is there as a category 2 carcinogen too. Category 2 is not one of the categories California&#x27;s rule counts, so in both cases the correct action is not to claim the list — which is what Caraway did.</p>
+<p>Cadmium is the gap, and it is the same row that came up short on the federal cancer report. Cadmium is on the European list as a category 1B carcinogen, in both the forms the list carries it in, and this is not a recent addition: a version of the law from December 2013, two months after California&#x27;s rule took effect, classifies it identically, and prints beside it the older European classification it was translated from. Caraway&#x27;s cadmium row does not cite this list.</p>
+<p>So that one row now misses two attributions, from two unrelated lists, while every other substance in the disclosure is right on all four. We still cannot tell you whose omission it is and we are still not going to guess. But the shape of it has changed. Eleven substances right four times over, and one substance wrong twice, points more at the record that row was copied from than at scattered carelessness. The disclosure says it was compiled from the state&#x27;s candidate chemical database — the database that refused every attempt we made to read it. That is still the one document that would settle it, and it is still shut.</p>
+<p>The remaining eight are correctly absent. Three of them — ethyl acetate, butanol and phosphorus — are on the European list, but for catching fire and for irritation, not for cancer or reproductive harm. The other five are not on it in the form Caraway names. Chromium is the one to be careful with: chromium compounds in one particular chemical state are category 1A and 1B here, but the chromium in stainless steel is a different substance with a different number, and the list does not carry it.</p>
+<p>So on a fourth authoritative list, read end to end and independent of the other three, the disclosure is right eleven times out of twelve — forty-six of forty-eight across the four.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://iris.epa.gov/AdvancedSearch/">https://iris.epa.gov/AdvancedSearch/</a></p>
+<p class="evsum">The EPA database&#x27;s whole table of 746 safe-dose values for 528 substances, each with the effect it rests on, plus its 2013 cadmium file.</p>
+<p>California&#x27;s rule does not count everything in this database. It counts &quot;chemicals for which a reference dose or reference concentration has been developed based on neurotoxicity&quot; — a safe daily dose, swallowed or breathed, that the agency set because of harm to the nervous system. The database says, for every figure it publishes, which effect the figure rests on. So the check is not whether a substance is in the database but why its number is there.</p>
+<p>Caraway attributes three substances to this list. Two are right.</p>
+<p>Manganese is right twice over: the swallowed figure rests on effects on the central nervous system and the breathed one on impaired neurobehavioural function, and the agency files both under the nervous system. Butyl alcohol is right: its figure rests on reduced activity and loss of coordination in test animals, also filed under the nervous system.</p>
+<p>Cadmium is not. The database holds one safe-dose figure for cadmium, for swallowing, and it rests on significant proteinuria — protein leaking into the urine, a sign of kidney damage. The agency files it under the urinary system. There is no breathed figure at all; the agency has never set one. Nothing in the cadmium file rests on the nervous system, and the 2013 copy we read says the same, so this is not a case of the list changing after the company wrote its table.</p>
+<p>That makes this the first error in the other direction. Every gap found so far was a list left off; this is a list claimed that the rule does not support. It overstates a hazard rather than hiding one, which matters if you are weighing it, but it is still an inaccurate entry — and it is on the cadmium row again.</p>
+<p>The nine substances Caraway does not attribute are all correctly left off. Ethyl acetate&#x27;s figure rests on deaths and weight loss in test animals, molybdenum&#x27;s on raised uric acid, and white phosphorus&#x27;s on deaths around birth and hair loss. Iron, chromium, nickel, vanadium, titanium dioxide and the boron compound Caraway names are not in the database under the numbers the company prints; their relatives that are — two forms of chromium, soluble nickel salts, vanadium pentoxide, and boron and its compounds — all rest on something other than the nervous system.</p>
+<p>So on a fifth authoritative list the disclosure is right eleven times out of twelve, and the one miss is on the same row as the two before it.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://wwwn.cdc.gov/TSP/substances/ToxOrganListing.aspx?toxid=18">https://wwwn.cdc.gov/TSP/substances/ToxOrganListing.aspx?toxid=18</a></p>
+<p class="evsum">The federal nervous-system list read in full today and in archived copies back to 2010, one of them a week before the date on Caraway&#x27;s page.</p>
+<p>California&#x27;s rule counts &quot;neurotoxicants that are identified in the Agency for Toxic Substances and Disease Registry&#x27;s Toxic Substances Portal, Health Effects of Toxic Substances and Carcinogens, Nervous System&quot;. That names a web page, not an edition of it, and the page has changed. For exactly one of Caraway&#x27;s substances, the change decides the answer.</p>
+<p>Manganese, the only substance Caraway attributes to this list, is on it in every copy from 2010 to today. Right.</p>
+<p>Cadmium was on it in every copy from 2010 to 21 December 2023. That includes the copy in force when California&#x27;s rule took effect in 2013, and the copy from one week before the &quot;Last Updated: December 28, 2023&quot; line on Caraway&#x27;s page. Caraway&#x27;s cadmium row does not cite it.</p>
+<p>Then, between late December 2023 and early February 2024, the agency rebuilt the list in one go: around thirty substances added and five removed. Cadmium was one of those removed. Vanadium, which Caraway discloses in its knife blades, was one of those added. The page gives no reason for either.</p>
+<p>So which entry is missing depends on when the document was written, and the document does not say. The only date the company gives is December 2023. On that date cadmium qualified and is not claimed. If the document was in fact written after February 2024, cadmium is correctly left off and vanadium becomes the missing one. Either way the count is eleven out of twelve; only the row moves. We count it against cadmium because December 2023 is the date the company offers, and we are telling you that is the assumption.</p>
+<p>The other nine substances are not on the list in any copy we read.</p>
+<p>One thing is worth setting beside the previous list. Caraway&#x27;s cadmium row carries exactly one nervous-system label. It is on the one of these two neighbouring lists that cadmium does not qualify for, and it is missing from the one cadmium did qualify for on the company&#x27;s own date. That is what a single entry filed under the wrong one of two neighbouring lists would look like. We cannot see the record it was copied from, so we cannot tell you that is what happened.</p>
+<p>Six authoritative lists, read end to end: sixty-eight comparisons right out of seventy-two. All four misses are on one row.</p>
+</li>
+<li>
+<p class="evhead">document — supports, <strong>funded by Caraway</strong></p>
+<p class="evurl"><a href="https://cdn.shopify.com/s/files/1/0258/6273/3906/files/pack_lp_ca_ab1200_AB1200_Compliance_-_Website_Information_-2_3e521d39.pdf?v=1782262340">https://cdn.shopify.com/s/files/1/0258/6273/3906/files/pack_lp_ca_ab1200_AB1200_Compliance_-_Website_Information_-2_3e521d39.pdf?v=1782262340</a></p>
+<p class="evsum">Caraway&#x27;s own eleven-page disclosure PDF, reached by the single link on its California page and read end to end.</p>
+<p>The disclosure the page promises is a real document and a specific one. It does not say “our products comply”; it names twelve substances, gives each a registry number, says which component of which product line each is in — a handle, a ceramic interior, a stainless steel blade — and attributes each to the official lists that put it there. That level of detail is what makes it checkable at all, and it is why this record could be written for nothing.</p>
+<p>One honest limit on what we read. The document is dated nowhere inside itself, and the page linking it carries the line “Last Updated: December 28, 2023”. That line plainly refers to the page; whether it also describes the PDF, we cannot tell from outside. We looked for a document date and did not find one: the file&#x27;s own properties carry no date, and the modification time the server reports is a caching timestamp that moved to within minutes of our own download, so it says nothing about when the document was written.</p>
+<p>One gap we can describe but not resolve. The product tables do not mention the coffee maker the company was promoting on the same site the day we looked. Under the definition the page itself quotes, cookware covers items used in preparing beverages. But a product is only disclosable if it contains one of the listed substances, so an absence here is equally consistent with there being nothing to disclose. We record it as a question a reader might reasonably ask, not as a finding.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.carawayhome.com/pages/ca-ab1200">https://www.carawayhome.com/pages/ca-ab1200</a></p>
+<p class="evsum">Our own visit to the page: linked from every page&#x27;s footer, loading over ordinary HTTP, with its one document link resolving first try.</p>
+<p>Two things our own visit settles, and one it does not.</p>
+<p>It settles that the disclosure is findable. A reader who wants it does not have to know it exists: the link sits in the footer of every page on the site, next to the privacy and warranty links, and it works. That is a lower bar than it sounds, and it is one the same check has seen missed elsewhere.</p>
+<p>It settles that the page carries a date. The page says “Last Updated: December 28, 2023”. That is nearly three years before we read it, and what it refers to is the page rather than the document linked from it — the document itself carries no date anywhere we could find. A dated page is still better than an undated one: a reader can at least see how old the statement is and decide what to make of it.</p>
+<p>What it does not settle is completeness, and here we hit a wall worth reporting rather than passing over. The disclosure says it was compiled from the state&#x27;s candidate chemical list, which is held in a public database called CalSafer. We tried to read that database and could not. Every address we tried on the state&#x27;s chemical sites returned a refusal page instead of data — to a plain request and to one presenting itself as an ordinary web browser alike — and the refusal came from the front door rather than from any particular page, since addresses that do not exist were refused in exactly the same way. We could not find a published copy of the list elsewhere on the state&#x27;s open data service either.</p>
+<p>So the master list this disclosure was drawn from is one we cannot open, which means we cannot tell you whether anything is missing from it. We could check the disclosure only because a different list, kept by a different state office, is published as a file anyone can download. A reader who wanted to repeat our work would get exactly as far as we did, and stop in the same place.</p>
+</li>
+</ul>
+<p>This is the check that costs nothing, run a second time on a second brand — and this time the company mostly passes.</p>
+<p>California&#x27;s AB 1200 requires cookware sold in the state to disclose, on the manufacturer&#x27;s website, any listed chemical intentionally put into a handle or a food-contact surface. Caraway keeps a page for this and links a document from it. The document names twelve substances across eleven product lines, gives each a chemical registry number, says which part of which product it is in, and — the part that makes this checkable — states for each substance which official lists it appears on. Thirteen different lists are named across the tables.</p>
+<p>Six of those thirteen publish openly enough to be read end to end for nothing. We have read all six.</p>
+<p>On California&#x27;s Proposition 65 list, all twelve entries are right. On the World Health Organization cancer agency&#x27;s list, all twelve are right again. On the federal government&#x27;s report on carcinogens, on the European Union&#x27;s classification table, and on each of two federal lists of substances that harm the nervous system, eleven of the twelve are right. Seventy-two comparisons, sixty-eight right — and all four misses are on the same line of the same table.</p>
+<p>The two clean passes took more care to confirm than they sound. Getting a list membership right is easy; getting the near-misses right is not, and this disclosure is full of them. Proposition 65 carries hexavalent chromium, not the chromium in stainless steel. It carries vanadium pentoxide, not vanadium; molybdenum trioxide, not molybdenum; iron dextran complex, not iron. The cancer agency&#x27;s list repeats every one of those traps and adds phosphorus-32 for phosphorus and a different form of butyl alcohol. In every case the company claimed the substance it actually uses and not its close relative. Those are exactly the distinctions a disclosure written to look thorough rather than to be accurate would get wrong.</p>
+<p>The sharpest case runs the other way. Chromium is on the cancer agency&#x27;s list under the exact registry number Caraway prints — in Group 3, &quot;not classifiable as to its carcinogenicity&quot;. California&#x27;s rule counts Groups 1, 2A and 2B and deliberately leaves Group 3 out, so the right thing to do is not to claim it, which is what the company did. Anyone checking this by matching registry numbers would have accused the company of an omission that the regulation says is correct.</p>
+<p>The gaps are all cadmium. The federal report lists cadmium and its compounds in its strongest category, known to be human carcinogens, and has done since 1980; the European table classifies it in the strongest category the rule counts. Caraway&#x27;s cadmium row cites twelve separate lists and neither of those. On the two nervous-system lists the row carries one label, and it is on the wrong one: cadmium does not qualify for the list the row names, and on the date the company gives it did qualify for the one the row leaves out. Eleven substances are right on all six lists. Cadmium is right on two.</p>
+<p>We are not going to tell you whose error that is, because we cannot find out. The disclosure says it was compiled from the state&#x27;s candidate chemical database — and that database is the one thing in this whole check we could not open. Every attempt to read it was refused at the door. Either the company&#x27;s line for cadmium is wrong, or the state&#x27;s own record for cadmium is wrong and the company copied what was there. Four misses on one line and none on the other eleven looks much more like one bad record than like four separate slips — but that is a reading of the pattern, not something we can see. The document that would settle it is the document California will not let the public read.</p>
+<p>There is one more thing worth saying, because it looks like a mistake and isn&#x27;t. Caraway cites the thirteenth edition of the federal report, published in 2014 and replaced twice since. That is the company quoting California&#x27;s regulation exactly: the regulation names the thirteenth edition, by number, as the list it counts. The rule is what stopped in 2014, not the company.</p>
+<p>None of this is a finding about safety, and nothing here is a measurement of anything. Nickel, cadmium and titanium dioxide are disclosed as present in something — a stainless steel handle, a cast-iron coating. Disclosure is not a finding of harm and this record makes none. What was checked is whether the company described its own products accurately against public standards, and on sixty-eight of the seventy-two comparisons available to us, it did.</p>
+<p>The contrast with the other cookware disclosure we have checked is the useful part. One company printed a regulatory number and left it standing until it went out of date. This one printed twelve entries against thirteen lists and got the fiddly ones right everywhere except one line. Both were checked the same way, for the same amount of money, in an afternoon. That is the point worth taking away: this kind of claim is checkable by anyone, and almost nobody checks it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — oehha.ca.gov</p>
+<p>We downloaded California&#x27;s official Proposition 65 list from the state office that maintains it, on 2026-09-22 — the whole document, 23 pages, dated 31 July 2026 on its own first page — and read it against Caraway&#x27;s disclosure ourselves rather than relying on any summary. Two checks were run on the download before it was used. The list is alphabetical, and the copy we hold begins at A and ends with the last Z entry on a page numbered 23 of 23, so nothing was cut short. Every chemical Caraway discloses was then looked up twice, once by its registry number and once by name, because the state lists some substances as a family with no registry number attached and a number-only search would have missed them.</p></li>
+<li><p class="methhead">document — monographs.iarc.who.int</p>
+<p>We read the World Health Organization cancer agency&#x27;s own list of classified agents on 2026-09-22, in full — all 1,128 entries, covering the agency&#x27;s work through its 142nd volume and carrying its own timestamp of 23 July 2026. The list is published as a searchable table that an ordinary download returns empty, because the data arrives with the page&#x27;s program code rather than with the page. We took it from there, which required no account, no permission and no browser. The copy we hold can be checked against the agency&#x27;s own published summary: it says 135 agents in Group 1, 98 in Group 2A, 329 in Group 2B and 498 in Group 3, and our copy contains exactly those numbers in each group. Every one of Caraway&#x27;s twelve substances was then looked up twice, once by registry number and once by name.</p></li>
+<li><p class="methhead">document — web.archive.org</p>
+<p>We read the federal cancer report the disclosure names — the thirteenth edition, published in 2014 — in full on 2026-09-22: five pages, both of its sections, 245 entries running alphabetically from A to the end in each. Because the government replaced that edition twice since, its own site no longer serves it, and the copy we read is an archived capture of the government&#x27;s original address, taken in October 2015 and self-titled as the thirteenth edition. We also downloaded the current fifteenth edition from the government&#x27;s site directly, along with its individual write-ups for cadmium and for nickel, so that nothing here rests on the archived copy alone. Each of Caraway&#x27;s twelve substances was looked up by name in both editions; this list carries no registry numbers, so the individual write-ups were used to confirm identities.</p></li>
+<li><p class="methhead">document — publications.europa.eu</p>
+<p>We read the European Union&#x27;s classification law itself on 2026-09-22 — the consolidated text of the 2008 regulation as it stands in force from 1 July 2026 — and took the whole of its Annex VI table, all 4,420 substances, rather than a summary or a search box. The law&#x27;s public website answers an ordinary request with an empty page, so we took the same document from the Union&#x27;s own document repository, which serves it without a browser, without an account and without permission; requested twice, it came back byte for byte identical. Three checks were run on the copy before it was used. The table&#x27;s entry numbers run in order from the first to the last with none repeated, so nothing was dropped or duplicated in the middle. The version published before this one holds 4,374 entries against our 4,420 — 53 added and 7 removed, the size of an ordinary update. And every entry that decides this check reads identically in both. Each of Caraway&#x27;s twelve substances was then looked up twice, once by registry number and once by name, and we also read every entry on the list that names a family of substances rather than a single one, because a family entry carries no registry number and a number-only search would have missed it.</p></li>
+<li><p class="methhead">document — iris.epa.gov</p>
+<p>We read the federal environmental agency&#x27;s toxicity database on 2026-09-27, in full. Its search page carries the whole table at once — 746 rows, numbered one to 746 with no gap, covering 528 substances — and each row states the health effect its safe-dose figure is based on, which is exactly what California&#x27;s rule turns on. As a check that the table was complete, we compared it with the database&#x27;s own alphabetical index, which names 572 substances: all 528 in the table are in the index, and none of the 44 index entries missing from the table is one of Caraway&#x27;s twelve. We also opened the individual pages for cadmium, manganese and butyl alcohol, which name the body system each figure concerns. Because the rule was written in 2013, we read the archived October 2013 copy of the cadmium file from the agency&#x27;s former address as well; it says the same thing as today&#x27;s. Each of Caraway&#x27;s twelve substances was looked up by registry number and by name, and every close relative the database carries was read too.</p></li>
+<li><p class="methhead">document — wwwn.cdc.gov</p>
+<p>We read the federal toxic substances agency&#x27;s nervous-system list on 2026-09-27: 108 entries, alphabetical from the first to the last. The page states no total, so we checked it against its own history instead. The Internet Archive holds copies of the same list going back to 2010, at the agency&#x27;s former address and its current one, and we read twenty of them — from October 2010, from February 2013 (months before California&#x27;s rule took effect), from every year from 2014 to 2021, five from 2023 including one taken on 21 December, and from February 2024 and January 2025. That history shows exactly when the list changed: its membership moved in small steps until the end of 2023, then changed all at once between 21 December 2023 and 5 February 2024, and today&#x27;s copy has the same members as February 2024&#x27;s. The list carries no registry numbers, so each of Caraway&#x27;s twelve substances was looked up by name in every copy.</p></li>
+<li><p class="methhead">document — cdn.shopify.com</p>
+<p>Retrieved and read end to end on 2026-09-22: an eleven-page PDF, reached by following the single link on Caraway&#x27;s California disclosure page, downloading over ordinary HTTP with no browser scripting and no account. It sets out a table of product line, component, substance, registry number and the official lists each substance appears on, covering food storage, ceramic non-stick cookware, bakeware, kettle, steamer, prep set, stainless steel cookware, glass lids, kitchen gadgets and cast iron.</p></li>
+<li><p class="methhead">our own desk check — carawayhome.com</p>
+<p>We went looking for this disclosure the way a reader would, on 2026-09-22. It is linked from the footer of every page on the site, as “CA AB1200”, including from the product pages carrying the coating claims. The page loads over ordinary HTTP with no account and no browser scripting, and the single document link on it resolves to the eleven-page PDF on the first attempt. We also attempted the check this page&#x27;s own wording points at — reading the state candidate chemical list the disclosure says it was compiled from — and could not complete it; what happened is described below.</p></li>
+</ul>
+<p class="more"><a href="claims/c-caraway-ab1200-prop65-attribution.html">The full record for this claim →</a></p>
+<h2>Momentous Creatine - 90 Servings (Unflavored, 450 g) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Momentous says: “NSF Certified for Sport®”</p><p class="src"><a href="https://www.livemomentous.com/products/creatine-monohydrate">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Momentous says its creatine is NSF Certified for Sport, and the certifier&#x27;s own register lists it, covering the 450 g tub and all lots. The listing records that testing happened, not the results.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by NSF International (certifier; the listed brand is its customer)</strong></p>
+<p class="evurl"><a href="https://www.nsfsport.com/certified-products/listing-detail.php?id=1285010">https://www.nsfsport.com/certified-products/listing-detail.php?id=1285010</a></p>
+<p class="evsum">The certifier&#x27;s own listing for this product, read in the plain HTML its server sends, with the brand&#x27;s full set of 77 listings as the control.</p>
+<p>The certifier&#x27;s register is the document that decides this claim, and it answers it: the product is listed. Two commands reproduce the finding:</p>
+<pre><code>curl -sL &#x27;https://www.nsfsport.com/certified-products/search-results.php?brand=Momentous&#x27; | grep -c &#x27;results__product-name&quot;&gt;Creatine Monohydrate&lt;&#x27;
+2
+
+curl -sL &#x27;https://www.nsfsport.com/certified-products/listing-detail.php?id=1285010&#x27; | grep -A3 &#x27;Package Size&#x27; | sed &#x27;s/&lt;[^&gt;]*&gt;//g&#x27;
+5 g, 75 g, 150 g, 450 g</code></pre>
+<p>The tub on sale is 90 five-gram servings, which is 450 g, and that size is covered. The listing covers all lots, not a named few.</p>
+<p>What the register is and is not matters here. It is published by the certifier, not the brand, so the brand is not vouching for itself. But the certifier describes the companies it lists as its customers: certification is a service the brand buys. That does not make the listing wrong — a certifier whose seal could be bought without passing would have no seal worth buying — but it is why we do not count it as an independent party with no stake in the answer. And a listing is a record that testing happened, not the test results. Nothing in it tells a reader what was measured in which batch.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.nsfsport.com/certified-products/listing-detail.php?id=1756219">https://www.nsfsport.com/certified-products/listing-detail.php?id=1756219</a></p>
+<p class="evsum">A second listing for the same 450 g tub, read in full, whose label on file still names a creatine source the brand says it no longer uses.</p>
+<p>A reader who searches the register for this exact tub — 450 g, 90 servings — may land on this listing first, and the label shown there is not the label on the tub being sold today. The brand says it changed where its creatine comes from, and this listing still shows the earlier ingredient.</p>
+<p>That is not evidence against the claim. The other listing covers the current label, at 450 g, for every lot. What this shows is how a register goes out of date: a listing tied to named lots of an earlier formula can stay up after the product changes, and the two look the same in the search results. The fix for a reader holding a tub is to read the lot number off the container and check it against the register, which is exactly what the register is built for.</p>
+</li>
+</ul>
+<p>Certification claims are the ones we most often cannot check, for two reasons: the brand names a scheme without pointing to its own entry, or the scheme&#x27;s public register will not open for anyone checking carefully. Neither happened here. The certifier&#x27;s search answers an ordinary request and names the product, so this claim can be settled by anyone in a few minutes, and it comes out in the brand&#x27;s favour.</p>
+<p>What that settles is narrow, and a reader should keep it narrow. The claim is that the product holds a particular certification, and it does. The certifier says what its seal is meant to verify: that a product does not contain unsafe levels of contaminants, prohibited substances or masking agents, and that what is on the label matches what is in the product. We did not test any of that, and the register does not publish results. So this record confirms that the certification is real and current. It does not confirm what the certification claims about the powder.</p>
+<p>The one wrinkle is worth knowing about if you buy this product. The register holds two listings for what looks like the same tub. One matches the label sold today. The other still shows a label naming a creatine supplier the brand says it has stopped using. Both are live. If the certification is part of why you are buying, read the lot number on your container and look it up — that is the check the register is designed for, and it is the only one that covers the tub in your hand rather than the product in general.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — nsfsport.com</p>
+<p>Read on 2026-09-23 from the certifier&#x27;s public product search, which answers an ordinary web request with no challenge page and no browser scripting needed. Searching by brand returned 77 Momentous listings; two of them are unflavoured Creatine Monohydrate. The one cited above lists the brand as Momentous, country of sale United States, package sizes 5 g, 75 g, 150 g and 450 g, a 5 g serving, and lot numbers &#x27;All&#x27;. The label image the certifier keeps on file for it reads &#x27;Creatine Monohydrate (Momentous®)&#x27;, the same wording as the label on the brand&#x27;s product page today. The second listing is described in the commentary. We did not test the product, and nothing here is a measurement of what is in the tub.</p></li>
+<li><p class="methhead">our own desk check — nsfsport.com</p>
+<p>Read on 2026-09-23 from the same public product search. This listing is also unflavoured Creatine Monohydrate from Momentous: 450 g, a 5 g serving, 90 servings, and 24 specific lot numbers rather than &#x27;All&#x27;. The label image the certifier keeps for it reads &#x27;Creapure® creatine monohydrate&#x27;. The brand&#x27;s product page, read the same day, answers the question &#x27;Is Momentous Creatine made with Creapure®?&#x27; with &#x27;Momentous no longer sources creatine from Creapure®.&#x27; The product page&#x27;s own label reads &#x27;Creatine Monohydrate (Momentous®)&#x27;.</p></li>
+</ul>
+<p class="more"><a href="claims/c-momentous-creatine-nsf-certified-for-sport.html">The full record for this claim →</a></p>
+<h2>Thorne Creatine - 90 Servings (Unflavored, 450 g) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Thorne says: “NSF Certified for Sport®”</p><p class="src"><a href="https://www.thorne.com/products/dp/creatine">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Thorne says its creatine is NSF Certified for Sport, and the certifier&#x27;s register lists the 450 g tub for 65 named lots. Check your lot number. The listing records that testing happened, not the results.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by NSF International (certifier; the listed brand is its customer)</strong></p>
+<p class="evurl"><a href="https://www.nsfsport.com/certified-products/listing-detail.php?id=1495542">https://www.nsfsport.com/certified-products/listing-detail.php?id=1495542</a></p>
+<p class="evsum">The certifier&#x27;s own listing for this tub, read in the plain HTML its server sends; it covers the 450 g size for 65 named lots, not for every lot.</p>
+<p>The certifier&#x27;s register is the document that decides this claim, and it answers it: the tub is listed. Three commands reproduce the finding:</p>
+<pre><code>curl -sL &#x27;https://www.nsfsport.com/certified-products/listing-detail.php?id=1495542&#x27; | tr &#x27;\n&#x27; &#x27; &#x27; | sed &#x27;s/&lt;[^&gt;]*&gt;/ /g&#x27; | tr -s &#x27; &#x27; | grep -oE &#x27;Package Size [0-9][^A-Z]*&#x27;
+Package Size 450 g, 900 g
+
+curl -sL &#x27;https://www.nsfsport.com/certified-products/listing-detail.php?id=1495542&#x27; | tr &#x27;\n&#x27; &#x27; &#x27; | sed &#x27;s/&lt;[^&gt;]*&gt;/ /g&#x27; | grep -oE &#x27;Lot # .* Product Form&#x27; | grep -oE &#x27;\b[0-9]{6}\b&#x27; | wc -l
+65</code></pre>
+<p>The tub on sale is 90 five-gram servings, which is 450 g, and that size is covered. Unlike some listings in the same register, this one does not cover &#x27;All&#x27; lots. It covers 65 named ones. A tub whose lot number is on the list is covered by this certification; a tub whose lot is not on the list may be newer than the last update, or may not have been certified, and the register cannot tell you which.</p>
+<p>What the register is and is not matters here. It is published by the certifier, not the brand, so the brand is not vouching for itself. But the certifier describes the companies it lists as its customers: certification is a service the brand buys. That does not make the listing wrong — a certifier whose seal could be bought without passing would have no seal worth buying — but it is why we do not count it as an independent party with no stake in the answer. And a listing is a record that testing happened, not the test results. Nothing in it tells a reader what was measured in which batch.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.nsfsport.com/certified-products/search-results.php?brand=Thorne%C2%AE">https://www.nsfsport.com/certified-products/search-results.php?brand=Thorne%C2%AE</a></p>
+<p class="evsum">The register files this brand under two spellings, and the one with the ® mark does not include the listing above; it shows an older 453 g listing instead.</p>
+<p>A reader who picks the brand name with the ® mark — the way it is printed on the product — finds a creatine powder listing, but not the one that covers the tub on sale now. The 453 g listing covers only 7 lots, and its label differs from today&#x27;s by one word. Someone checking a lot number against that listing alone would probably not find their lot and could conclude the tub is not certified.</p>
+<p>That is not evidence against the claim. The listing that matches today&#x27;s tub exists and is live; it is filed under the other spelling. What this shows is that a register can be correct and still be easy to misread. If you are checking a tub, search both spellings, or search by product type rather than brand, before deciding your lot is missing.</p>
+</li>
+</ul>
+<p>This is the second creatine certification we have checked against the same register, and it comes out the same way: the product is listed, and anyone can confirm that in a few minutes. The certifier&#x27;s search answers an ordinary request and names the product.</p>
+<p>What that settles is narrow, and a reader should keep it narrow. The claim is that the product holds a particular certification, and it does. The certifier says what its seal is meant to verify: that a product does not contain unsafe levels of contaminants, prohibited substances or masking agents, and that what is on the label matches what is in the product. We did not test any of that, and the register does not publish results. So this record confirms that the certification is real and current. It does not confirm what the certification claims about the powder.</p>
+<p>Two details matter if the certification is part of why you are buying. First, the listing covers named lots, not every lot, so the lot number printed on your tub is what decides whether that tub is covered. Second, the register files this brand under two spellings, with and without the ® mark, and the listing for today&#x27;s tub is under the plain one. Search both before concluding that your lot is not there.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — nsfsport.com</p>
+<p>Read on 2026-09-23 from the certifier&#x27;s public product search, which answers an ordinary web request with no challenge page and no browser scripting needed. The listing cited above names the brand as Thorne, country of sale United States, unflavoured powder, package sizes 450 g and 900 g, a 5 g scoop, and 65 specific lot numbers (410274 to 416903). The label image the certifier keeps on file reads &#x27;Creatine Monohydrate 5 g&#x27;, 90 servings, &#x27;manufactured in the USA using US &amp; imported ingredients for: Thorne Research, Inc.&#x27; The label on the brand&#x27;s product page today carries the same ingredient, scoop and maker lines, says &#x27;About 90&#x27; servings, adds a street address, and shows the NSF Certified for Sport seal; the tub&#x27;s front reads &#x27;Net Wt 16 oz (450 g)&#x27;. The brand sells the same product in 90- and 180-serving tubs, and 180 servings of 5 g is the listing&#x27;s 900 g. We did not test the product, and nothing here is a measurement of what is in the tub.</p></li>
+<li><p class="methhead">our own desk check — nsfsport.com</p>
+<p>Read on 2026-09-23 from the same public product search. Its brand menu offers both &#x27;Thorne&#x27; and &#x27;Thorne®&#x27;. Searching &#x27;Thorne&#x27; returned 21 listings, including the one cited above. Searching &#x27;Thorne®&#x27; returned 45 different listings, among them two named &#x27;Thorne® Creatine&#x27;: an unflavoured powder at 453 g with 7 named lots (listing 1204244), and 30 single-serve stick packs (listing 1663109). The label the certifier keeps for the 453 g listing reads &#x27;manufactured in the USA using US &amp; imported ingredients by: Thorne Research, Inc.&#x27;, where the current label and the listing above both read &#x27;for:&#x27;. Neither search returns the other&#x27;s listings.</p></li>
+</ul>
+<p class="more"><a href="claims/c-thorne-creatine-nsf-certified-for-sport.html">The full record for this claim →</a></p>
+</main>
+<footer class="site"><p>Product Review — Brand claims, checked against the documents that decide them. Every verdict links to the documents behind it.</p></footer>
+</body>
+</html>

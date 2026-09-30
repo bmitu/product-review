@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PFAS in cookware: what the brands claim, and what they can show</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#1a1a1a;--muted:#5a5a5a;
+  --rule:#e2e0dc;--accent:#8a1c1c;--codebg:#f5f4f2;--quote:#faf9f7}
+@media(prefers-color-scheme:dark){:root{--bg:#16161a;--fg:#e8e8e6;--muted:#a2a29d;
+  --rule:#33333a;--accent:#e09090;--codebg:#1e1e24;--quote:#1c1c22}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:17px/1.65 Georgia,"Iowan Old Style","Times New Roman",serif}
+main{max-width:43rem;margin:0 auto;padding:2.5rem 1rem 5rem}
+h1{font-size:1.9rem;line-height:1.2;margin:0 0 1.4rem}
+h2{font-size:1.3rem;line-height:1.25;margin:3rem 0 .8rem;padding-top:1.8rem;
+  border-top:1px solid var(--rule)}
+h3{font:600 .78rem/1.4 system-ui,sans-serif;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);margin:2rem 0 .6rem}
+p{margin:0 0 1.05rem}
+a{color:inherit;text-underline-offset:2px}
+.frame>p:first-child{font-size:1.14rem}
+.tier{font:.76rem/1.5 system-ui,sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 1.1rem}
+.bottom{font-size:1.06rem}
+blockquote.claim{margin:0 0 1.1rem;padding:.9rem 1.1rem;background:var(--quote);
+  border-left:3px solid var(--accent)}
+blockquote.claim p{margin:0 0 .5rem;font-style:italic}
+blockquote.claim p.src{margin:0;font-style:normal;color:var(--muted);
+  font:.82rem/1.5 system-ui,sans-serif}
+p.stale{font:.9rem/1.55 system-ui,sans-serif;padding:.7rem .9rem;
+  border:1px solid var(--rule);margin:0 0 1.1rem}
+ul.evidence{list-style:none;padding:0;margin:0 0 1.4rem}
+ul.evidence>li{border-top:1px solid var(--rule);padding:1.1rem 0 .1rem}
+p.evhead{font:.84rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .3rem}
+p.evurl{font:.76rem/1.5 ui-monospace,Menlo,Consolas,monospace;
+  word-break:break-all;margin:0 0 .85rem}
+.warn{border-left:3px solid var(--accent);padding-left:.85rem}
+p.evsum{font:italic .92rem/1.55 Georgia,"Iowan Old Style",serif;color:var(--muted);
+  margin:0 0 .85rem}
+ul.method{list-style:none;padding:0;margin:0 0 1.4rem}
+ul.method>li{border-top:1px solid var(--rule);padding:1.1rem 0 .1rem}
+ul.method>li>p:last-child{margin-bottom:1.05rem}
+p.methhead{font:.84rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .5rem}
+ul.dose{margin:0 0 1.05rem;padding-left:1.2rem}
+pre{background:var(--codebg);padding:.8rem .9rem;overflow-x:auto;margin:0 0 1.05rem;
+  font:.79rem/1.5 ui-monospace,Menlo,Consolas,monospace}
+p.more{font:.88rem/1.5 system-ui,sans-serif}
+</style>
+<style>
+header.site,footer.site{font:.9rem/1.5 system-ui,sans-serif;max-width:43rem;
+  margin:0 auto;padding:1rem}
+header.site{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:baseline;
+  border-bottom:1px solid var(--rule)}
+header.site .name{font-weight:700;text-decoration:none;margin-right:auto}
+header.site a{color:var(--muted)}
+footer.site{color:var(--muted);border-top:1px solid var(--rule);margin-top:2rem}
+ul.index{list-style:none;padding:0;margin:0 0 2rem}
+ul.index>li{border-top:1px solid var(--rule);padding:.9rem 0 .2rem}
+ul.index p{margin:0 0 .5rem}
+ul.index .verdict{font:.8rem/1.5 system-ui,sans-serif;color:var(--muted)}
+dl.terms dt{font-weight:700;margin-top:1rem}
+dl.terms dd{margin:0 0 .6rem}
+.controls{font:.9rem/1.5 system-ui,sans-serif;border:1px solid var(--rule);
+  padding:.8rem 1rem;margin:0 0 1.5rem}
+.controls fieldset{border:0;padding:0;margin:0 0 .8rem}
+.controls legend{font-weight:600;padding:0;margin:0 0 .3rem}
+.controls label{display:inline-block;margin:0 1rem .3rem 0}
+.controls .off{color:var(--muted);font-size:.85rem;margin:0}
+.controls select,.controls input{font:inherit}
+ul.field{list-style:none;padding:0;margin:0 0 1rem}
+ul.field>li{border-top:1px solid var(--rule);padding:1rem 0 .3rem}
+ul.field>li[hidden]{display:none}
+ul.field h3{font:700 1.1rem/1.3 Georgia,serif;letter-spacing:0;text-transform:none;
+  color:var(--fg);margin:0 0 .3rem}
+ul.field .why{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted);margin:0 0 .6rem}
+dl.dims{display:grid;grid-template-columns:minmax(8rem,11rem) 1fr;gap:.25rem .9rem;
+  font:.86rem/1.45 system-ui,sans-serif;margin:0 0 .6rem}
+dl.dims dt{color:var(--muted)}
+dl.dims dd{margin:0}
+dl.dims ul{list-style:none;padding:0;margin:0}
+.v-holds{border-left:3px solid #2f7d4f;padding-left:.4rem}
+.v-fails{border-left:3px solid var(--accent);padding-left:.4rem}
+.v-open{border-left:3px solid var(--rule);padding-left:.4rem}
+.none{color:var(--muted)}
+p.count{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted)}
+.opinion{border:1px dashed var(--rule);padding:.8rem 1rem;margin:0 0 1.2rem}
+.opinion .label{font:600 .75rem/1.4 system-ui,sans-serif;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .4rem}
+@media(max-width:30rem){dl.dims{grid-template-columns:1fr}dl.dims dd{margin-bottom:.4rem}}
+</style>
+<meta name="description" content="Every cookware brand in this set makes a PFAS claim on its own page. The claims are not the interesting part — who paid for the evidence behind them is. Here is each claim, its source, and the funder of every document backing it.">
+</head>
+<body>
+<header class="site"><a class="name" href="index.html">Product Review</a><a href="all-claims.html">All claims</a><a href="how-we-check.html">How we check</a></header>
+<main>
+<h1>PFAS in cookware: what the brands claim, and what they can show</h1>
+<div class="frame"><p>Every cookware brand in this set makes a PFAS claim on its own page. The claims are not the interesting part — who paid for the evidence behind them is. Here is each claim, its source, and the funder of every document backing it.</p></div>
+<h2>Caraway — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Caraway says: “We don&#x27;t just claim to be PFAS-free. We prove it—and we publish the reports.”</p><p class="src"><a href="https://www.carawayhome.com/no-forever-chemicals">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Caraway does publish its reports: the page it names embeds a lab report on its ceramic coating, with every PFAS result not detected. Caraway paid for it, and none of the PFAS results says how low the test could see.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — supports, <strong>funded by Caraway</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/154/938">https://app.lightlabs.com/comprehensive-testing-report/154/938</a></p>
+<p class="evsum">Fetched the Light Labs report embedded on Caraway&#x27;s testing page: ceramic coating, all 660 PFAS and total organic fluorine reported not detected.</p>
+<p>The report is real, published, and on the page Caraway names. Two things it does not say. First, what ‘not detected’ means in numbers: the heavy-metal and extraction results each give a limit (lead below 0.002 mg/kg, for instance), but none of the 660 PFAS results or the total-fluorine result states the level below which the lab stops seeing. Second, what was tested: the lab describes its results as an analysis of ‘submitted samples’ and never says whether they were new, used, or from which production lot. Caraway paid for the testing, which is ordinary and which is why this cannot count as independent confirmation.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — supports, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.carawayhome.com/third-party-testing">https://www.carawayhome.com/third-party-testing</a></p>
+<p class="evsum">The address the claim names redirects to Caraway&#x27;s testing page, which embeds the lab&#x27;s report as an iframe from the lab&#x27;s own domain.</p>
+<p>We got this wrong the first time, and the error is worth showing. Our 20 September check read the page Caraway named and found no reports in it. The reports were never in that page: it loads them from the lab&#x27;s own site, so they appear in a browser and nowhere in the page&#x27;s own code. Our search could not see them, and we said at the time that a browser might. We should have looked for exactly that before publishing a finding.</p>
+</li>
+</ul>
+<p>CORRECTION, 23 September 2026. An earlier version of this record said we found no reports on the page Caraway names. That was wrong. The page embeds them from the testing lab&#x27;s own site, which our check could not see. The verdict has changed from unsubstantiated to supported.</p>
+<p>What still matters, and did before the correction: ‘not detected’ is not the same sentence as ‘zero’. An assay that stops looking at 100 parts per billion and one that stops at 1 will both print ‘not detected’, and they are not the same result. This report gives that number for heavy metals and for the extraction tests. For the PFAS, which are what the claim is about, it does not.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Retrieved 2026-09-23 from the lab&#x27;s own domain, the address Caraway&#x27;s testing page loads in an iframe. The report covers Caraway&#x27;s ceramic non-stick coating in eight test groups dated 22 January to 2 March 2026: 2 named PFAS (PTFE and PFOA) and 658 others, total organic fluorine, 2 bisphenols, 11 phthalates and 36 PAHs, all reported ‘Not detected’ with no number attached; and 25 heavy metals and 6 total-extractives tests in food simulants, each reported below a stated limit. As a completeness check we counted result lines group by group in the page the lab serves: 710 ‘Not detected’ results and 31 with a numeric limit, which together account for every result line in the eight groups.</p></li>
+<li><p class="methhead">our own desk check — carawayhome.com</p>
+<p>On 2026-09-23 the address the claim gives, carawayhome.com/third-party-testing, redirected to carawayhome.com/pages/third-party-testing. That page contains an iframe whose source is the Light Labs report above. The page&#x27;s own content data dates that section to 11 June 2026, before our first check. Our first check on 2026-09-20 searched the page&#x27;s HTML for the lab&#x27;s name spelled with a space, for result wording and for PDF links, and found none. That search was sound as far as it went and blind to the one thing that mattered: the results live on the lab&#x27;s domain, and the page only points to them.</p></li>
+</ul>
+<p class="more"><a href="claims/c-caraway-publishes-the-reports.html">The full record for this claim →</a></p>
+<h2>Cuisinart Chef&#x27;s Classic Nonstick Hard Anodized skillets with PURELYCERAMIC interior (12-inch 622C-30H shown) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Cuisinart says: “PURELYCERAMIC™ nonstick interior. PFAS-Free.”</p><p class="src"><a href="https://www.cuisinart.com/chef%E2%80%99s-classic-nonstick-hard-anodized-12-skillet/622C-30H.html">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Cuisinart calls its Chef&#x27;s Classic ceramic nonstick PFAS-free. Its disclosure for a pan in that line lists nothing fluorinated, and its older nonstick lists three. That holds, but the exact 10- and 12-inch pans are missing from its lookup.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by Cuisinart</strong></p>
+<p class="evurl"><a href="https://www.cuisinart.com/chemical-disclosure">https://www.cuisinart.com/chemical-disclosure</a></p>
+<p class="evsum">Cuisinart&#x27;s disclosure record for the 12-inch skillet with glass cover (622C-30G), same coating and same claim: nine substances, none fluorinated.</p>
+<p>California&#x27;s cookware law makes a maker list certain chemicals intentionally added to a pan&#x27;s handle or cooking surface, and PFAS are on that list. Cuisinart&#x27;s record for a pan from the same ceramic line, sold with the same wording, lists metals and no PFAS.</p>
+</li>
+<li>
+<p class="evhead">document — supports, <strong>funded by Cuisinart</strong></p>
+<p class="evurl"><a href="https://www.cuisinart.com/chemical-disclosure">https://www.cuisinart.com/chemical-disclosure</a></p>
+<p class="evsum">For comparison, the record for the older 622-30G, a conventional nonstick pan: it lists PTFE, PFA and FEP.</p>
+<p>This is what gives the ceramic record&#x27;s silence weight. Where Cuisinart used fluoropolymers, its lookup names all three. The model numbers differ by one letter, and the one with the &#x27;C&#x27; lists none.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.cuisinart.com/chemical-disclosure">https://www.cuisinart.com/chemical-disclosure</a></p>
+<p class="evsum">The exact 12-inch and 10-inch pans carrying the claim return &#x27;No Records Found&#x27; in Cuisinart&#x27;s lookup; other models, entered the same way, return records.</p>
+<p>The pans a shopper is most likely to buy from this line are not in Cuisinart&#x27;s own lookup. That is a gap in the paperwork, not evidence of PFAS: the sibling pan with the same coating and the same claim is on file and lists none. A shopper checking the 12-inch or 10-inch pan by its model number will find nothing, and has to know to look up the lidded version instead.</p>
+</li>
+</ul>
+<p>This checks out on Cuisinart&#x27;s own paperwork, with one gap worth knowing about.</p>
+<p>Cuisinart files chemical disclosures model by model. The record for the 12-inch pan with a glass cover, which carries the same &#x27;PURELYCERAMIC&#x27; coating and the same &#x27;PFAS-Free&#x27; line, lists nine substances and no PFAS. The record for the older conventional nonstick pan, 622-30G, names three fluoropolymers. So Cuisinart does list PFAS where it uses them, and lists none here.</p>
+<p>The gap: the 12-inch skillet without a lid and the 10-inch skillet, both sold with the same claim, return &#x27;No Records Found&#x27; in the lookup. We checked that the lookup was working by entering other models the same way. A shopper who looks up the pan they are holding will find nothing.</p>
+<p>As with every disclosure, this describes what goes into the pan, not a test of what comes out.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — cuisinart.com</p>
+<p>Cuisinart&#x27;s site turns away automated requests, so we read it in an ordinary browser on 2026-09-27. The disclosure lookup is a search box that takes one model number at a time. For 622C-30G, the Chef&#x27;s Classic Nonstick Hard Anodized 12-inch skillet with glass cover, whose product page carries the same line, &#x27;PURELYCERAMIC™ nonstick interior. PFAS-Free.&#x27;, the lookup lists zinc, manganese and manganese compounds, copper, iron, total chromium, chromium compounds, phosphorus, aluminum, and nickel and nickel compounds. No fluoropolymer or other PFAS appears.</p></li>
+<li><p class="methhead">document — cuisinart.com</p>
+<p>Cuisinart&#x27;s site turns away automated requests, so we read it in an ordinary browser on 2026-09-27. The disclosure lookup is a search box that takes one model number at a time. For 622-30G the lookup lists twelve substances, including polytetrafluoroethylene (PTFE), perfluoroalkoxy alkane polymer (PFA) and fluorinated ethylene and propylene (FEP), each linked to California&#x27;s PFAS biomonitoring page.</p></li>
+<li><p class="methhead">our own desk check — cuisinart.com</p>
+<p>Cuisinart&#x27;s site turns away automated requests, so we read it in an ordinary browser on 2026-09-27. The disclosure lookup is a search box that takes one model number at a time. &#x27;622C-30H&#x27; (the 12-inch skillet this claim is read from) and &#x27;622C-24&#x27; (the 10-inch, same wording) both return &#x27;No Records Found&#x27;, as do &#x27;622C-30&#x27; and &#x27;622C&#x27;. In the same session, typed the same way, FPS22-30H, 622-30G and 622C-30G each returned a full record, so the lookup was working. The 12-inch product page shows the claim live under Features, along with &#x27;Oven safe to 500°F&#x27; and &#x27;Lifetime warranty&#x27;, at $69.95. We could not sweep the site for a published test report, and a web search found none.</p></li>
+</ul>
+<p class="more"><a href="claims/c-cuisinart-chefs-classic-ceramic-pfas-free.html">The full record for this claim →</a></p>
+<h2>Cuisinart FusionPlus Hybrid Stainless Steel 12-inch Skillet (FPS22-30H) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Cuisinart says: “PFAS-free* ceramic nonstick interior offers highly durable, scratch-resistant cooking surface … * No intentionally added PFAS”</p><p class="src"><a href="https://www.cuisinart.com/fusionplus-hybrid-stainless-steel-12-skillet-with-helper/FPS22-30H.html">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Cuisinart says FusionPlus has &#x27;no intentionally added PFAS&#x27;. Its own disclosure for the pan lists nothing fluorinated. That holds, and the footnote says exactly what the paperwork can show.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by Cuisinart</strong></p>
+<p class="evurl"><a href="https://www.cuisinart.com/chemical-disclosure">https://www.cuisinart.com/chemical-disclosure</a></p>
+<p class="evsum">Cuisinart&#x27;s disclosure record for FPS22-30H, read in full: nine substances, none fluorinated.</p>
+<p>The claim is carefully worded: its footnote says &#x27;No intentionally added PFAS&#x27;, which is exactly what a state disclosure can check, since the law asks for chemicals added on purpose. Cuisinart&#x27;s record for this pan lists stainless-steel and aluminum metals and nothing fluorinated.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — supports, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.cuisinart.com/fusionplus-hybrid-stainless-steel-12-skillet-with-helper/FPS22-30H.html">https://www.cuisinart.com/fusionplus-hybrid-stainless-steel-12-skillet-with-helper/FPS22-30H.html</a></p>
+<p class="evsum">The FusionPlus 12-inch product page read in full: the claim and its footnote are live; no test report is linked.</p>
+<p>The footnote narrows the claim to what was put in, not what a test might find, and says so on the page. That is the honest version of a PFAS-free claim.</p>
+</li>
+</ul>
+<p>This checks out. The claim is qualified by its own footnote, &#x27;No intentionally added PFAS&#x27;, which is the question a state chemical disclosure answers. Cuisinart&#x27;s record for this pan lists nine substances, all metals, and none of them PFAS, while its record for an older conventional nonstick pan names three fluoropolymers.</p>
+<p>As with every disclosure, this describes what goes into the pan, not a test of what comes out, and we could not sweep Cuisinart&#x27;s site for a published test report because it blocks automated reading.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — cuisinart.com</p>
+<p>Cuisinart&#x27;s site turns away automated requests, so we read it in an ordinary browser on 2026-09-27. The disclosure lookup is a search box that takes one model number at a time. For FPS22-30H the lookup lists zinc, phosphorus, iron, chromium compounds, copper, manganese and manganese compounds, aluminum, nickel and nickel compounds, and total chromium. No fluoropolymer or other PFAS appears. By contrast, the record for the older conventional nonstick 622-30G lists PTFE, PFA and FEP.</p></li>
+<li><p class="methhead">our own desk check — cuisinart.com</p>
+<p>Cuisinart&#x27;s site turns away automated requests, so we read it in an ordinary browser on 2026-09-27. The disclosure lookup is a search box that takes one model number at a time. The claim appears in the Features list with the footnote &#x27;* No intentionally added PFAS&#x27;. The page describes &#x27;PURELYSEAR™ Ceramic Nonstick Technology&#x27; and an &#x27;ArmorGuard® Cooking Surface&#x27; where &#x27;Stainless steel shields the nonstick interior&#x27;, lists the pan at $59.99, and links no test report.</p></li>
+</ul>
+<p class="more"><a href="claims/c-cuisinart-fusionplus-no-added-pfas.html">The full record for this claim →</a></p>
+<h2>Cuisinart Chemical Disclosures page — Does not hold up</h2>
+<blockquote class="claim"><p>Cuisinart says: “PFAS, used in cookware due to its high performance as a non-stick surface, is authorized by the FDA for use in paper/paperboard food packaging, nonstick cookware and other food contact applications.”</p><p class="src"><a href="https://www.cuisinart.com/chemical-disclosure">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Cuisinart says PFAS are FDA-authorized for paper food packaging, nonstick cookware and other uses. The FDA page it cites says the paper authorizations were withdrawn in January 2025. The nonstick part holds.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.fda.gov/food/process-contaminants-food/authorized-uses-pfas-food-contact-applications">https://www.fda.gov/food/process-contaminants-food/authorized-uses-pfas-food-contact-applications</a></p>
+<p class="evsum">The FDA page Cuisinart cites, read in full (current as of 3 January 2025): PFAS authorizations for paper packaging are no longer effective.</p>
+<p>Cuisinart links this page as its source. The page supports half the sentence: PFAS are authorized for nonstick cookware and some other food-contact uses. It contradicts the other half. The paper and paperboard authorizations the sentence leads with have been withdrawn, and the page says so.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — refutes, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.cuisinart.com/chemical-disclosure">https://www.cuisinart.com/chemical-disclosure</a></p>
+<p class="evsum">Cuisinart&#x27;s Chemical Disclosures page read in full: the sentence is live and links the FDA page above.</p>
+<p>The sentence may have been accurate when it was written: before 2024 the paper authorizations were in force. The page carries no date, and the sentence was live on 27 September 2026, well after the FDA withdrew them.</p>
+</li>
+</ul>
+<p>This sentence is mostly background, but it is wrong in a way a reader can check from Cuisinart&#x27;s own link. The FDA page it cites says PFAS grease-proofers for paper and paperboard stopped being sold in the US in 2024, and that the FDA declared their authorizations no longer effective in January 2025. The rest of the sentence holds: the FDA does authorize certain PFAS in nonstick coatings.</p>
+<p>It matters because of where it sits. The sentence introduces Cuisinart&#x27;s chemical disclosures, and its job is to reassure. Leading with an authorization the regulator has withdrawn makes PFAS sound more settled than the FDA&#x27;s own page does. It is not a claim about any Cuisinart pan, and it says nothing about whether any pan is safe.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — fda.gov</p>
+<p>Read on 2026-09-27. The page says: &#x27;In February 2024, the FDA announced that substances containing PFAS used as grease-proofing agents on paper and paperboard for food contact use are no longer being sold by manufacturers into the U.S. market.&#x27; It adds that in January 2025 the FDA announced &#x27;that the 35 food contact notifications (FCNs) related to PFAS-containing food contact substances as grease-proofers applied to paper and paperboard food packaging are no longer effective based on the abandonment of these uses&#x27;, and a note says those authorizations &#x27;have been revoked by the FDA due to abandonment&#x27;. The same page lists nonstick coatings among the PFAS uses the FDA has authorized.</p></li>
+<li><p class="methhead">our own desk check — cuisinart.com</p>
+<p>Cuisinart&#x27;s site turns away automated requests, so we read it in an ordinary browser on 2026-09-27. The sentence appears in the page&#x27;s introduction, after &#x27;some nonstick coatings may contain certain per- and poly-fluoroalkyl substances (PFAS) that require public disclosure&#x27;, and is followed by the FDA page&#x27;s address. The page is not dated.</p></li>
+</ul>
+<p class="more"><a href="claims/c-cuisinart-pfas-fda-authorized-packaging.html">The full record for this claim →</a></p>
+<h2>GreenPan — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>GreenPan says: “Lastly, as part of our compliance with California’s AB1200 bill, any of the 3,000+ designated substances of concern that need to be disclosed are done so and listed openly on our website, GreenPan.us, meaning that, contrary to what some articles allege, GreenPan provides a high level of disclosure.”</p><p class="src"><a href="https://www.greenpan.us/pages/safety-of-our-product">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> GreenPan says it lists its California-required chemical disclosures openly on its site, and it does — a live page names them, product line by product line. Whether that list is complete is not something reading it can settle.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by GreenPan (The Cookware Company (USA), LLC)</strong></p>
+<p class="evurl"><a href="https://www.greenpan.us/pages/california-ab1200-disclosure">https://www.greenpan.us/pages/california-ab1200-disclosure</a></p>
+<p class="evsum">The full disclosure page with all ten of its tables, readable in the HTML the server sends without browser scripting.</p>
+<p>The disclosure is published by the brand itself, which is exactly what the law asks for and exactly why it cannot carry this record to the top tier. A company&#x27;s own statement about its own products can be accurate and still be the company&#x27;s own statement. What raises it above an unsupported assertion is that it is specific, itemised and checkable: it names substances rather than reassurances, and it cites the regulatory list behind each one, so a reader who disagrees has something concrete to disagree with.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — supports, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.greenpan.us/pages/california-ab1200-disclosure">https://www.greenpan.us/pages/california-ab1200-disclosure</a></p>
+<p class="evsum">Our own search for the page: address guessing proved nothing and was discarded; the site&#x27;s own footer link is what locates it.</p>
+<p>The claim names a place, so the check is to go to it. Two commands reproduce the whole finding:</p>
+<pre><code>curl -sL &#x27;https://www.greenpan.us/&#x27; | grep -c &#x27;california-ab1200-disclosure&#x27;
+1
+
+curl -sL &#x27;https://www.greenpan.us/pages/california-ab1200-disclosure&#x27; | grep -c &#x27;&lt;table&#x27;
+10</code></pre>
+<p>The first says the disclosure is one link from the front page, in the footer that appears on every page of the site. That is the most findable place it could be — not search-only, not buried in a support article. The second says what is behind the link.</p>
+<p>What we found is not a gesture at transparency. It is ten separate tables, one per product line, each naming chemicals and the regulatory list each one appears on — aluminium, total chromium and chromium compounds, nickel and nickel compounds, iron, manganese compounds, copper, zinc, lead, tin, cobalt (II) oxide, cadmium compounds, antimony compounds and others, each tied to the list that flags it, several linking through to the state&#x27;s own chemical records.</p>
+<p>The page also draws a line we would have drawn ourselves: it states that the food-contact surface of the ceramic nonstick contains none of these chemicals, and that what it is disclosing are chemicals that may be present in the layers beneath that surface and in the stainless-steel handles. That distinction is the useful part. A reader who wants to know what touches the food and a reader who wants to know what is in the object are asking different questions, and the page answers both separately instead of blurring them.</p>
+</li>
+</ul>
+<p>This is the first claim we have checked that survived the check, and it is worth saying plainly why that matters. The usual outcome when a brand points at its own receipts is that the receipts are not there. Here they were. A reader can reach them in one click from the footer of any page on the site, and what they find names chemicals rather than describing a commitment to safety.</p>
+<p>What we verified is that the disclosure exists, is public, is itemised per product line, and separates the food-contact surface from the layers and handles beneath it. What we did not verify, and could not verify by reading, is the part of the sentence doing the heaviest lifting: that everything which needs disclosing has been disclosed. Completeness is a claim about what is absent from a list, and no amount of reading a list establishes that. Settling it would take composition testing of the products themselves, which is a different and far more expensive exercise than the one we did here.</p>
+<p>So the fair reading is narrower than the sentence and still favourable to it: the brand said the disclosure is there, and the disclosure is there.</p>
+<p>One thing that will date this. California added microplastics to the same candidate-chemical list on 18 June 2026, with the listing taking effect on 1 October 2026, and several law firms tracking the rule read that as pulling microplastics into the cookware disclosure duty this autumn. We were not able to confirm those dates against the department&#x27;s own pages — every request we sent to its site was refused by its firewall — so they are reported here as the firms state them, not as we checked them. The consequence for the page above is straightforward: a disclosure that is complete in September may not be complete in October, and this record should be read again after that date.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — greenpan.us</p>
+<p>Read end to end on 2026-09-20: the full page, all ten disclosure tables, retrieved from the address above and readable in the HTML the server sends — no browser scripting required to see it.</p></li>
+<li><p class="methhead">our own desk check — greenpan.us</p>
+<p>We went looking for the disclosure the way a reader would, on 2026-09-20. Guessing addresses is worth nothing as a test and we threw that attempt away — four plausible guesses returned 404, which says only that the guesses were wrong. What actually locates the page is the site&#x27;s own footer: the link sits at the bottom of every page on the site, including the page carrying the claim. It loads over ordinary HTTP at https://www.greenpan.us/pages/california-ab1200-disclosure, with all ten disclosure tables present in what the server sends — no browser scripting needed to see them.</p></li>
+</ul>
+<p class="more"><a href="claims/c-greenpan-ab1200-disclosure.html">The full record for this claim →</a></p>
+<h2>Le Creuset Essential Non-stick Ceramic Fry Pan, 10-inch — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Le Creuset says: “All-over ceramic coating is made without PFAS”</p><p class="src"><a href="https://www.lecreuset.com/essential-nonstick-ceramic-fry-pan-10-in/51314026001001.html">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Le Creuset says its Essential ceramic coating is made without PFAS. Its own filing for the pan lists nothing fluorinated, while its conventional nonstick pan&#x27;s filing names PTFE. That holds, on the brand&#x27;s paperwork.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by Le Creuset</strong></p>
+<p class="evurl"><a href="https://app.salsify.com/catalogs/998c54a9-7db5-4124-9dd8-8a7a6047a6c5/products/51314260010098">https://app.salsify.com/catalogs/998c54a9-7db5-4124-9dd8-8a7a6047a6c5/products/51314260010098</a></p>
+<p class="evsum">Le Creuset&#x27;s own California chemical disclosure for this exact pan (10-inch, SKU 51314026001001), read in full.</p>
+<p>California&#x27;s cookware law makes a maker list certain chemicals intentionally added to a pan&#x27;s handle or cooking surface, and PFAS are on that list. Le Creuset&#x27;s filing for this pan names seven substances and no PFAS. The metals it lists are the ones in stainless steel, which this pan has in its handle, base and rim. The filing does not name the coating&#x27;s ingredients as such, and we have not tried to work out which listed substance comes from which part. There is no Colorado entry, which is what a pan with no PFAS to report would be expected to show, but the page does not say so.</p>
+</li>
+<li>
+<p class="evhead">document — supports, <strong>funded by Le Creuset</strong></p>
+<p class="evurl"><a href="https://app.salsify.com/catalogs/998c54a9-7db5-4124-9dd8-8a7a6047a6c5/products/51112260012100">https://app.salsify.com/catalogs/998c54a9-7db5-4124-9dd8-8a7a6047a6c5/products/51112260012100</a></p>
+<p class="evsum">For comparison, Le Creuset&#x27;s disclosure for its Toughened Non-stick PRO 10-inch pan, read in full: it has a PFAS section naming PTFE, FEP and PFA.</p>
+<p>This is what makes the ceramic pan&#x27;s filing worth more than its silence. Le Creuset does declare PFAS where it uses them: its conventional nonstick pan carries a PFAS section on the same site and on its own product page. The ceramic pan, filed the same way, has none. A brand that labels fluoropolymers where they are, and not where they aren&#x27;t, is telling a consistent story.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — supports, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.lecreuset.com/essential-nonstick-ceramic-fry-pan-10-in/51314026001001.html">https://www.lecreuset.com/essential-nonstick-ceramic-fry-pan-10-in/51314026001001.html</a></p>
+<p class="evsum">The 10-inch pan&#x27;s product page read in full: the claim is live, the coating is unnamed, and no test report is linked.</p>
+<p>The claim is narrow and specific: the coating, all over the pan, is made without PFAS. That is the kind of claim a disclosure filing can check, because it is about what goes into the pan. The page names no coating brand or chemistry beyond &#x27;ceramic&#x27;.</p>
+</li>
+</ul>
+<p>This checks out on the brand&#x27;s own paperwork. Le Creuset files a chemical disclosure for each pan, as California requires, and the filing for this one lists seven substances with no PFAS among them. That is the same kind of support we accepted for Lodge&#x27;s cast iron and Misen&#x27;s carbon steel. And the filing&#x27;s silence means something here: Le Creuset&#x27;s conventional nonstick pan, filed on the same site, carries a separate section naming PTFE, FEP and PFA. The ceramic pan has no such section.</p>
+<p>Three limits. The disclosure describes what goes into the pan; nobody has published a test of what is in the finished coating. The filing lists stainless-steel metals without saying which part of the pan each comes from, and it does not name the coating&#x27;s own ingredients. And Le Creuset&#x27;s site blocks automated reading, so we read these pages in an ordinary browser and could not sweep the whole site for a test report the way we do for other brands. A web search found none.</p>
+<p>The contrast with Made In is worth drawing. Made In&#x27;s ceramic pan makes the same kind of claim, but Made In&#x27;s disclosure does not mention that pan at all. Le Creuset&#x27;s covers this exact pan by SKU.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — app.salsify.com</p>
+<p>Le Creuset&#x27;s site turns away automated requests, so these pages were opened in an ordinary browser on 2026-09-27 and saved whole; we read the saved copies. The same wall meant we could not sweep the rest of the site for a published test report the way we do for other brands. The disclosure is hosted for Le Creuset on Salsify, a product-data service, and is reached from the &#x27;HERE&#x27; link on Le Creuset&#x27;s Chemical Disclosures page. For the Essential Non-Stick Ceramic Round Fry Pan, 10 in. (USA SKU 51314026001001, UPC 630870350846; primary material aluminum, handle stainless steel) it lists, under California AB 1200, both for the whole pan and for food-contact surfaces: isopropanol, iron, total chromium, copper, manganese, nickel and phosphorus. Nothing fluorinated is listed. The Chemical Disclosures page says the same search also covers Colorado&#x27;s PFAS disclosure law (HB 22-1345); no Colorado section appeared on this pan&#x27;s record, and none appeared when we re-read it live later the same day.</p></li>
+<li><p class="methhead">document — app.salsify.com</p>
+<p>Read on 2026-09-27 in an ordinary browser, from the same Salsify-hosted disclosure search. For the Toughened Non-Stick Pro Round Frying Pan, 10 in. (USA SKU 51131026001001) the California list names the same stainless-steel metals plus five solvents, and below it a separate heading: &#x27;This Product Contains Chemicals from the PFAS Family&#x27;, followed by &#x27;PTFE, FEP and PFA (to create the nonstick cooking surface)&#x27;. The product page for that pan says &#x27;This product contains PFAS for its non-stick properties.&#x27; The Essential ceramic pan&#x27;s record has no such heading.</p></li>
+<li><p class="methhead">our own desk check — lecreuset.com</p>
+<p>Le Creuset&#x27;s site turns away automated requests, so these pages were opened in an ordinary browser on 2026-09-27 and saved whole; we read the saved copies. The same wall meant we could not sweep the rest of the site for a published test report the way we do for other brands. The claim appears in the Features list. The page lists the 10-inch pan at $125.00, in stock, made in China, oven-safe to 550°F and &#x27;Safe for metal utensils&#x27;, with a 10-year warranty. It calls the surface an &#x27;advanced ceramic coating&#x27; and names it only as &#x27;Essential Non-stick Ceramic&#x27;. It links no test report. A web search on 2026-09-27 for a published Le Creuset PFAS test of this coating found none.</p></li>
+</ul>
+<p class="more"><a href="claims/c-lecreuset-essential-ceramic-made-without-pfas.html">The full record for this claim →</a></p>
+<h2>Lodge Seasoned cast iron (Classic Cast Iron Skillet and the seasoned line) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Lodge says: “Just like all Lodge Cast Iron, this skillet is nontoxic, naturally seasoned, and made without PFAS”</p><p class="src"><a href="https://www.lodgecastiron.com/products/round-cast-iron-classic-skillet">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Lodge says its cast iron is made without PFAS. Its disclosure lists every material in the seasoned line, iron, trace elements and soybean oil, with nothing fluorinated. That holds; &#x27;nontoxic&#x27;, in the same sentence, is not a checkable claim.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by Lodge Cast Iron</strong></p>
+<p class="evurl"><a href="https://www.lodgecastiron.com/pages/california-disclosure">https://www.lodgecastiron.com/pages/california-disclosure</a></p>
+<p class="evsum">Lodge&#x27;s California disclosure page read in full, including its chart of every material in every product type.</p>
+<p>Lodge&#x27;s disclosure goes further than the law asks. California requires a list of certain chemicals intentionally added to handles and cooking surfaces, and Lodge instead lists everything in each product, marking the ingredients that are not on the state&#x27;s list. For seasoned cast iron that is iron, a handful of elements found in iron and steel, and soybean oil. Nothing fluorinated appears anywhere in the chart, for any product.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — supports, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.lodgecastiron.com/products/round-cast-iron-classic-skillet">https://www.lodgecastiron.com/products/round-cast-iron-classic-skillet</a></p>
+<p class="evsum">The Classic Cast Iron Skillet page read in full; it repeats the claim in its feature list and links the disclosure.</p>
+<p>Seasoned cast iron is about as simple as a pan gets: cast iron and baked-on oil. Lodge links its full ingredient chart from the product page itself, which is the right place for it.</p>
+</li>
+</ul>
+<p>This checks out, and Lodge makes it easy to check. Its California disclosure lists every material in each product line, not just the chemicals the law asks about, and the seasoned cast iron is iron and soybean oil. There is no coating, and nothing in the chart could be PFAS.</p>
+<p>Two limits. First, a disclosure describes what goes into the pan, and nobody has published a test of what comes out of one. For a bare iron pan there is no obvious route for PFAS to get in. Second, the same sentence calls the skillet &#x27;nontoxic&#x27;, a word with no definition and no threshold. We have not rated that part. The PFAS part is the claim a shopper can use, and it holds.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — lodgecastiron.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page says &#x27;Our cookware is made without PFOA and PTFE&#x27; and then gives a chart of every material in each product type, including ones California does not list. Seasoned cast iron (Classic, Bakeware, Blacklock, Chef Collection, Lodge BOLD, Grilling &amp; Outdoors): iron, phosphorus, manganese and manganese compounds, strontium, carbon, silicon, sulfur, steel, and soybean-oil seasoning. Seasoned carbon steel: steel and soybean-oil seasoning. Enameled cast iron adds antimony compounds, steel, nickel and nickel compounds, copper and chromium compounds, and, for &#x27;Red and Orange items only&#x27;, cadmium compounds and sulfate. Glass lids: manganese.</p></li>
+<li><p class="methhead">our own desk check — lodgecastiron.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The claim appears in the description and again in the feature list as &#x27;Nontoxic cookware made without PFAS&#x27;. The page links &#x27;California AB 1200 Disclosure&#x27; directly. We swept Lodge&#x27;s site for a published test report (1,071 addresses in its sitemap, 9 pages fetched) and found none.</p></li>
+</ul>
+<p class="more"><a href="claims/c-lodge-cast-iron-made-without-pfas.html">The full record for this claim →</a></p>
+<h2>Made In Non Stick Frying Pan (and the Non Stick line) — Holds up</h2>
+<blockquote class="claim"><p>Made In says: “FDA-Approved Coating”</p><p class="src"><a href="https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Made In calls its nonstick coating FDA-approved. Its disclosed materials, PTFE, FEP and PFA, are resins an FDA regulation clears for food contact, so that holds. The product page never says the coating is PTFE.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1550">https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1550</a></p>
+<p class="evsum">The FDA regulation on perfluorocarbon resins in food-contact articles, read from the official electronic Code of Federal Regulations.</p>
+<p>The regulation says these resins &#x27;may be safely used as articles or components of articles intended to contact food&#x27;, subject to limits on what can be extracted from them. All three chemicals Made In discloses for its nonstick coating, PTFE, FEP and PFA, are resins this regulation covers. That is what &#x27;FDA-approved&#x27; can truthfully mean here. The FDA has cleared the materials by regulation. It has not examined or approved Made In&#x27;s coating as a product, because it does not do that for any pan.</p>
+</li>
+<li>
+<p class="evhead">document — supports, <strong>funded by Made In</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/pages/AB-1200">https://madeincookware.com/pages/AB-1200</a></p>
+<p class="evsum">Made In&#x27;s California chemical disclosure, read in full: it names the three fluoropolymers intentionally added to its nonstick line.</p>
+<p>This is what connects the claim to the regulation. The product page never says what the coating is made of. This page does, and those are the materials the regulation covers.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite">https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite</a></p>
+<p class="evsum">The nonstick frying pan&#x27;s product page read in full: &#x27;FDA-approved&#x27; appears five times, and the words PTFE, PFAS and PFOA not at all.</p>
+<p>The claim holds up, but notice what the page does with it. &#x27;FDA-approved&#x27; is the only thing a shopper is told about the coating&#x27;s chemistry. Someone searching for a pan without PTFE would not learn from this page that this one has it. They would need to find the California disclosure, one footer link away.</p>
+</li>
+</ul>
+<p>Supported, and worth reading closely anyway.</p>
+<p>The FDA does not approve pans, or coatings as finished products. What it does is write regulations saying which materials may be used in contact with food, and under what limits. For nonstick coatings the relevant one covers PTFE and two related fluoropolymers, FEP and PFA, which are exactly the three chemicals Made In&#x27;s own California disclosure lists for its nonstick line. &#x27;FDA-approved&#x27; is shorthand for that, and it is fair shorthand: a regulation does permit these materials. We have not checked whether Made In&#x27;s coating meets the regulation&#x27;s extraction limits, which would take a lab.</p>
+<p>The more useful finding for a shopper is what the phrase stands in for. On the product page, &#x27;FDA-approved&#x27; is the entire description of the coating&#x27;s chemistry. The words PTFE and PFAS do not appear on it. Made In&#x27;s own disclosure, one link away, says the coating is PTFE. For a buyer who is fine with PTFE, nothing here is wrong. For a buyer trying to avoid it, the product page tells them nothing they need to know.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — ecfr.gov</p>
+<p>Read on 2026-09-26 from the eCFR&#x27;s rendering service for 21 CFR 177.1550, &#x27;Perfluorocarbon resins&#x27;. Paragraph (a) defines the resins covered: those made by polymerising tetrafluoroethylene and hexafluoropropylene, which takes in PTFE and FEP, and by copolymerising perfluoropropylvinylether with tetrafluoroethylene, which is PFA.</p></li>
+<li><p class="methhead">document — madeincookware.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. It states that the nonstick frying pan, sauté pan, saucepan, rondeau, saucier, stock pot and nonstick pieces in sets &#x27;contain the following intentionally added chemicals: polytetrafluoroethylene (PTFE), fluorinated ethylene and propylene (FEP), and perfluoroalkoxy alkane polymer (PFA).&#x27;</p></li>
+<li><p class="methhead">our own desk check — madeincookware.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page carries &#x27;FDA-Approved Coating&#x27; in its feature list, &#x27;FDA-approved Non Stick&#x27; in its description, &#x27;Our FDA-approved coating lasts up to 70x longer&#x27; under &#x27;Crafted to Last&#x27;, and &#x27;a high quality, FDA-approved Non Stick surface&#x27; in its FAQ. A text search of the page for PTFE, PFAS and PFOA finds none. The disclosure page is linked from the site footer.</p></li>
+</ul>
+<p class="more"><a href="claims/c-madein-nonstick-fda-approved-coating.html">The full record for this claim →</a></p>
+<h2>Made In Stainless Clad cookware (12-inch Stainless Clad frying pan page) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Made In says: “All Stainless Clad pieces are made without: PFAS PFOA PTFE Lead Cadmium BPA Third-Party Tested For Safety:”</p><p class="src"><a href="https://madeincookware.com/products/stainless-steel-frying-pan/12-inch">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Made In says its stainless pans are made without PFAS, PFOA, PTFE, lead, cadmium and BPA. A lab report it publishes finds none of 30 PFAS or 3 bisphenols. It does not test lead or cadmium.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — supports, <strong>funded by Made In</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/69/1623">https://app.lightlabs.com/comprehensive-testing-report/69/1623</a></p>
+<p class="evsum">Light Labs&#x27; report on Made In&#x27;s Stainless Clad pans: 30 PFAS each below a stated limit, and 3 bisphenols not detected. No lead, cadmium or PTFE test.</p>
+<p>This is a real, readable report, which puts it ahead of most cookware claims on this page. It covers three of the six things in the claim: PFAS, PFOA and BPA. The numbers are stated limits, not bare &#x27;passes&#x27;. What the report cannot tell a reader is what the parts per billion are parts of: the pan&#x27;s surface, a rinse, or something else. It also does not say whether &#x27;within limit set by Made In&#x27; means anything more than &#x27;not found&#x27;.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/products/stainless-steel-frying-pan/12-inch">https://madeincookware.com/products/stainless-steel-frying-pan/12-inch</a></p>
+<p class="evsum">The product page lists six things the pans are made without, then &#x27;Third-Party Tested For Safety&#x27; with the lab panel. The panel tests three of the six.</p>
+<p>Laid out this way, the page reads as if all six had been tested. Lead and cadmium were not, in the report we can read. PTFE is not on the list either, but a stainless pan has no coating for it to be in, and Made In&#x27;s own disclosure puts its PTFE in the nonstick line.</p>
+</li>
+</ul>
+<p>This mostly checks out, and Made In makes it checkable. The lab report is one click from the product page, it is served from the lab&#x27;s own site, and it gives a number for every PFAS result instead of a bare &#x27;pass&#x27;. For an uncoated stainless pan, finding no PFAS is what you would expect, and the report confirms it.</p>
+<p>The page promises a little more than the report shows. It lists six things, then says &#x27;Third-Party Tested For Safety&#x27;, but the report covers three of them. Lead and cadmium are not in it. They are not usual ingredients of stainless steel, so the claim is plausible, but it is Made In&#x27;s word rather than a result. The report also leaves out what exactly was sampled, and Made In paid for it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Read on 2026-09-26 from the lab&#x27;s own domain, in the HTML its server sends. Product &#x27;Stainless Clad&#x27;, sample &#x27;Stainless Clad Pans&#x27;. Two groups, 33 results, counted one by one. Bisphenols (last tested 19 September 2025): bisphenol A, F and S, each &#x27;Not detected&#x27;. PFAS (last tested 14 February 2025): 30 compounds including PFOA (&lt; 0.02 parts per billion) and PFOS (&lt; 0.007), each reported below a limit between 0.007 and 0.1 parts per billion. Each result carries the note &#x27;Substance within limit set by Made In Cookware&#x27;. The report says: &#x27;Results reflect laboratory analysis of submitted samples at the time of testing as reported by the testing laboratory.&#x27; It does not say what the sample was or how it was prepared, or name a method.</p></li>
+<li><p class="methhead">our own desk check — madeincookware.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. Under &#x27;Safety &amp; Health&#x27; the page lists PFAS, PFOA, PTFE, lead, cadmium and BPA, followed by &#x27;Third-Party Tested For Safety:&#x27; and a Light Labs panel. The panel is chosen by the page&#x27;s address, which matches the Stainless Clad report above (not the nonstick or ceramic reports Made In also publishes). Made In&#x27;s California disclosure page names PTFE, FEP and PFA for its nonstick line only, and names no chemicals for Stainless Clad.</p></li>
+</ul>
+<p class="more"><a href="claims/c-madein-stainless-made-without-pfas.html">The full record for this claim →</a></p>
+<h2>Misen Carbon Nonstick pans — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Misen says: “No, Carbon Nonstick™ is free of PFAS, PTFE, and PFOA.”</p><p class="src"><a href="https://misen.com/products/carbon-nonstick-pan-deeper-10-inch">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Misen says Carbon Nonstick is free of PFAS. Its own state disclosures list none for carbon steel while naming PTFE for the nonstick it discontinued, and the pan is uncoated. No one has published a test of it.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — supports, <strong>funded by Misen</strong></p>
+<p class="evurl"><a href="https://misen.com/pages/disclosures">https://misen.com/pages/disclosures</a></p>
+<p class="evsum">Misen&#x27;s California and Colorado chemical disclosure page, read in full: every material table and the note on its discontinued nonstick.</p>
+<p>This is the brand&#x27;s own disclosure, filed under two state laws that require cookware makers to name certain chemicals intentionally added to the cooking surface or handle. It is useful for more than its silence. On the same page Misen does name PTFE, FEP and PFA, for the traditional nonstick line it stopped selling at the end of 2024. A brand that lists fluoropolymers where it used them, and lists none for its carbon steel, is telling a consistent story.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — supports, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://misen.com/products/carbon-nonstick-pan-deeper-10-inch">https://misen.com/products/carbon-nonstick-pan-deeper-10-inch</a></p>
+<p class="evsum">The Carbon Nonstick product page read in full, including its FAQ, for what the pan is and how it is made nonstick.</p>
+<p>The pan&#x27;s nonstick behaviour, as Misen describes it, comes from nitriding the steel and from seasoning that builds up with cooking oil, not from a coating. Nothing in that account needs a fluorinated chemical, and nothing on the page or in the disclosure mentions one.</p>
+</li>
+</ul>
+<p>A claim that checks out as far as reading can take it.</p>
+<p>The pan is nitrided carbon steel with no coating, and Misen&#x27;s legally required chemical disclosure lists no fluorinated chemicals for its carbon steel. What makes that disclosure worth trusting is the table next to it: for the PTFE nonstick line Misen discontinued in 2024, the same page lists PTFE, FEP and PFA plainly. This is a brand that has disclosed PFAS when its products contained them.</p>
+<p>The limit is worth stating. Those disclosure laws cover chemicals a maker intentionally adds. &#x27;Free of PFAS&#x27; is a slightly stronger claim, and the only way to confirm it outright is to test the pan, which neither Misen nor anyone else appears to have published. For an uncoated steel pan there is no obvious way for PFAS to get there. That is a reason to believe the claim, not a measurement confirming it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — misen.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page carries separate tables for enameled cast iron, stainless steel cookware and bakeware, traditional nonstick (discontinued as of 31 December 2024), carbon steel, prep tools, knives and spoons, and more. The carbon steel table lists iron, manganese and manganese compounds, aluminum, and phosphorus. The traditional nonstick table, and a paragraph above the tables, list PTFE, FEP and PFA.</p></li>
+<li><p class="methhead">our own desk check — misen.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The claim is the answer to the FAQ question &#x27;Does Carbon Nonstick™ contain PFAS, PTFE, or PFOA?&#x27;. The page describes the pan as &#x27;Nitrided carbon steel for a coating-free, naturally nonstick cooking surface&#x27; with an aluminum core, and says it is not pre-seasoned. We swept Misen&#x27;s site for a published test report (838 addresses in its sitemap, 32 pages fetched) and found none.</p></li>
+</ul>
+<p class="more"><a href="claims/c-misen-carbon-nonstick-free-of-pfas.html">The full record for this claim →</a></p>
+<h2>Our Place Always Pan 2.0 (ceramic nonstick) — Holds up — but only on the seller&#x27;s own evidence</h2>
+<blockquote class="claim"><p>Our Place says: “Thermakind® ceramic nonstick coating made without PFAS”</p><p class="src"><a href="https://fromourplace.com/products/always-essential-cooking-pan">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Our Place&#x27;s lab report on its ceramic coating finds none of the 689 PFAS it names and no total fluorine. Our Place paid for it, and it gives no detection limits and no description of the sample.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — supports, <strong>funded by Our Place</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/628/3916">https://app.lightlabs.com/comprehensive-testing-report/628/3916</a></p>
+<p class="evsum">The lab&#x27;s report on Our Place&#x27;s ceramic coating, read from the lab&#x27;s own site: 692 results, every one not detected, all counted.</p>
+<p>This is a real report from a named lab, and every one of its 692 results comes back not detected: PFOA, 688 other PFAS compounds, a total-fluorine screen, lead and cadmium. For a claim that the coating is made without PFAS, that is the right kind of evidence.</p>
+<p>It has limits a reader should see. It never says how low &#x27;not detected&#x27; goes: the page defines it only as &#x27;below detectable levels as defined by third-party lab tests&#x27;, with no number for any result. It names no test method. It says what was tested only as a coating sample, not whether it was a finished pan, which production run, or new or used, and its own footer calls the results an analysis of &#x27;submitted samples at the time of testing&#x27;. It carries an &#x27;ISO 17025 Accredited Lab&#x27; badge but names no accrediting body or certificate. And Our Place paid for it; the page says Our Place &#x27;partners with&#x27; the lab. None of that makes the result wrong. It makes it a result we can read but not check.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://fromourplace.com/pages/third-party-testing">https://fromourplace.com/pages/third-party-testing</a></p>
+<p class="evsum">Our read of the brand&#x27;s testing page: it loads a different product&#x27;s report first, and the ceramic results are one menu choice away.</p>
+<p>Two things we found while checking, neither of which changes the verdict.</p>
+<p>First, the brand&#x27;s testing page opens on the wrong pan for this claim. It shows the titanium range&#x27;s report by default, and a reader has to pick the ceramic line from a menu to see the results that bear on the Always Pan. The results turn out to be the same, but a reader should look at the right one.</p>
+<p>Second, PTFE, the material Teflon is made from and the one most people mean when they worry about nonstick pans, is not among the report&#x27;s named results. The product page counts PTFE as a PFAS and says the coating is made without it. The report&#x27;s total-fluorine result is not detected, and the lab describes that test as one that &#x27;screens for both known and unknown compounds that targeted tests may miss&#x27;. But with no method stated, we cannot tell you whether that screen would have picked up PTFE in this sample. So the report supports &#x27;made without PFAS&#x27; as a whole. It does not separately confirm the PTFE part by name.</p>
+</li>
+</ul>
+<p>&#x27;Made without PFAS&#x27; is a claim about what a coating is made of, and the usual problem with it is that nothing is offered to back it. Our Place offers something: a lab report, published on the lab&#x27;s own site, reached from the brand&#x27;s testing page. We read it end to end. Every one of its 692 results is not detected.</p>
+<p>That is enough to call the claim supported, and not enough to go further. The report is Our Place&#x27;s own, paid for by the company, and no one outside it has tested the pan. It also leaves out the things that would let a reader weigh a &#x27;not detected&#x27;: how low the test could see, what method was used, and what exactly went to the lab. A result of &#x27;none found&#x27; from a test that can only see large amounts means much less than the same result from one that sees traces, and this report does not say which it is.</p>
+<p>For a buyer, the fair reading is this. The brand has put a specific test result in public, where anyone can read it. It is favourable, and it is the brand&#x27;s own. If PTFE in particular is your concern, note that the report does not name it, though its total-fluorine screen came back empty.</p>
+<p>This claim also sits next to a louder one. The same page sells the pan as &#x27;non-toxic&#x27;. That word promises something about safety in use, and no report of this kind can settle it. We have not rated it here.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Retrieved 2026-09-23 from the lab&#x27;s own domain, in the HTML its server sends. The report is titled for Our Place&#x27;s Ceramic Nonstick Cookware, sample &#x27;Ceramic Nonstick Coating&#x27;, every group dated 6 May 2026. It holds four groups: heavy metals (cadmium, lead), total organic fluorine, PFAS (PFOA) and other PFAS (688 compounds). As a completeness check we counted result lines group by group: 2 + 1 + 1 + 688 = 692, each one &#x27;Not detected&#x27;, and none with a number attached. The page&#x27;s own pager agrees: 688 compounds shown five to a page is the 138 pages it says it has. The lab&#x27;s four explanatory &#x27;Not detected means…&#x27; sentences are excluded from that count.</p></li>
+<li><p class="methhead">our own desk check — fromourplace.com</p>
+<p>On 2026-09-23 the brand&#x27;s testing page contained a lab widget set to the report for Our Place&#x27;s Titanium Pro Cookware (sample &#x27;Titanium NoCo Cookware Technology&#x27;, tested 6 April 2026), not the ceramic coating. The widget&#x27;s own product menu switches to the ceramic report cited above, at a separate address on the lab&#x27;s site. Compared line by line, the two reports list the same compounds with the same result for every one; only the product, sample and test date differ. The product page carrying the claim also names PTFE: its FAQ says the coating is made without &#x27;PFAS (including PTFEs and PFOAs)&#x27;. We searched the ceramic report&#x27;s results for &#x27;PTFE&#x27;, &#x27;polytetrafluoro&#x27; and &#x27;Teflon&#x27; and found none.</p></li>
+</ul>
+<p class="more"><a href="claims/c-ourplace-always-pan-made-without-pfas.html">The full record for this claim →</a></p>
+<h2>T-fal PTFE nonstick cookware — Does not hold up</h2>
+<blockquote class="claim"><p>T-fal says: “The World Health Organization (WHO), the International Agency for Research on Cancer (IARC), and health authorities in France, Europe (EFSA), and the United States (FDA) have all confirmed that PTFE is harmless to human health.”</p><p class="src"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> T-fal says IARC confirmed PTFE is harmless. IARC put PTFE in Group 3, which by IARC&#x27;s own definition means it could not classify its cancer risk and is not a finding of safety. We checked the IARC part only.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://monographs.iarc.who.int/list-of-classifications">https://monographs.iarc.who.int/list-of-classifications</a></p>
+<p class="evsum">IARC&#x27;s list of classifications, read from the data the page loads: polytetrafluoroethylene is in Group 3, evaluated in 1987.</p>
+<p>IARC evaluates one question only: whether something can cause cancer. It looked at PTFE in a 1979 volume of its Monographs and again in its 1987 update, and placed it in Group 3. That is the group for agents it cannot classify either way. IARC has not said anything about PTFE being harmless, because that is not a question it answers.</p>
+</li>
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://monographs.iarc.who.int/wp-content/uploads/2019/07/Preamble-2019.pdf">https://monographs.iarc.who.int/wp-content/uploads/2019/07/Preamble-2019.pdf</a></p>
+<p class="evsum">IARC&#x27;s Preamble, the document that defines its groups, downloaded and read for the Group 3 definition.</p>
+<p>IARC&#x27;s own definition of Group 3 is &#x27;not classifiable as to its carcinogenicity to humans&#x27;, and the Preamble goes on: &#x27;An evaluation in Group 3 is not a determination of non-carcinogenicity or overall safety. It often means that the agent is of unknown carcinogenic potential and that there are significant gaps in research.&#x27; That is close to the opposite of the confirmation T-fal describes.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — refutes, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">https://www.t-fal.com/ptfe-nonstick-coating-explained</a></p>
+<p class="evsum">T-fal&#x27;s PTFE explainer page read in full on the same day; it describes the IARC classification twice, both times as an all-clear.</p>
+<p>T-fal cites the right volumes and the right group, then reads the group backwards. Group 3 does not recognise that PTFE is not carcinogenic. It says IARC could not classify it.</p>
+</li>
+</ul>
+<p>This is not a claim about whether PTFE nonstick pans are safe to cook with. It is a claim about what a named authority said, and that can be checked by reading what the authority said.</p>
+<p>IARC&#x27;s job is narrow. It asks whether something can cause cancer and sorts the answer into groups. It has never assessed PTFE&#x27;s overall safety, because it assesses nothing but cancer. On cancer, it placed PTFE in the group reserved for agents it cannot classify, and it says in plain words that this group is not a finding of safety. T-fal&#x27;s page cites the right volume and the right group, then presents the group as a clean bill of health.</p>
+<p>The same sentence names the WHO, which is IARC&#x27;s parent body, and food-safety regulators in France, Europe and the United States. We have not checked those. Food regulators do permit PTFE coatings in contact with food, which is a real and relevant fact, but permission to use a material is a regulatory decision, not a finding that it is harmless in every sense. Whether any of them used the word T-fal attributes to them is a separate question, and we have left it open rather than answer it by assumption.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — monographs.iarc.who.int</p>
+<p>Read on 2026-09-26. The list page builds its table in the browser from a data file IARC serves alongside it, and we read that file directly. Its entry reads: polytetrafluoroethylene, CAS 9002-84-0, Group 3, Monographs volume 19 and Supplement 7, evaluated 1987.</p></li>
+<li><p class="methhead">document — monographs.iarc.who.int</p>
+<p>Downloaded on 2026-09-26 and read for its definition of the evaluation groups. This is the current Preamble, adopted in 2019. PTFE was evaluated under an earlier one, but the Group 3 label, &#x27;not classifiable as to its carcinogenicity to humans&#x27;, is the same in both.</p></li>
+<li><p class="methhead">our own desk check — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. Besides the sentence quoted above, the same page says: &#x27;Following a study by the IARC, the WHO classified PTFE in Group 3 [Volume 19, 288 (1979) and Supplement 7.70 (1987)], recognizing that it is not carcinogenic to humans.&#x27;</p></li>
+</ul>
+<p class="more"><a href="claims/c-tfal-iarc-confirmed-ptfe-harmless.html">The full record for this claim →</a></p>
+<h2>T-fal PTFE nonstick cookware — Does not hold up</h2>
+<blockquote class="claim"><p>T-fal says: “PFOA is a short-chain PFAS.”</p><p class="src"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">SUPPORTED — evidence exists; nobody independent has measured the product · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> T-fal&#x27;s PFAS explainer calls PFOA a short-chain PFAS. It is the standard example of a long-chain one, and falls squarely inside the EPA&#x27;s long-chain definition. The error is in the explanation, not in T-fal&#x27;s claims about its pans.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — refutes, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.ecfr.gov/current/title-40/chapter-I/subchapter-R/part-721/subpart-E/section-721.10536">https://www.ecfr.gov/current/title-40/chapter-I/subchapter-R/part-721/subpart-E/section-721.10536</a></p>
+<p class="evsum">The EPA rule defining long-chain perfluoroalkyl carboxylates, read in full from the official electronic Code of Federal Regulations.</p>
+<p>The EPA&#x27;s rule for long-chain perfluoroalkyl carboxylates covers acids of the form CF3(CF2)n-COOH with n from 6 to 20. PFOA, perfluorooctanoic acid, is CF3(CF2)6-COOH: n is 6, so it is the shortest member of the long-chain class, not a short-chain one. This is not a fine point of chemistry. PFOA is the textbook example of a long-chain PFAS.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — refutes, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">https://www.t-fal.com/ptfe-nonstick-coating-explained</a></p>
+<p class="evsum">T-fal&#x27;s PTFE explainer page read in full; the sentence sits under the heading &#x27;What is PFOA?&#x27;.</p>
+<p>The error does not change what T-fal says about its own pans, which is that PFOA has not been used since 2012. It matters for a different reason. The page is teaching readers how to sort PFAS into harmful and harmless, and it gets the most famous example wrong in the definition.</p>
+</li>
+</ul>
+<p>A small error, on a page whose purpose is to explain. T-fal&#x27;s page on PTFE sets out to help readers tell the PFAS &#x27;known to be harmful&#x27;, such as PFOA, apart from fluoropolymers like the PTFE in its pans. In doing so it calls PFOA a short-chain PFAS. By the EPA&#x27;s regulatory definition, PFOA is long-chain: an eight-carbon acid, the shortest one inside the long-chain class.</p>
+<p>None of this touches T-fal&#x27;s statement that it stopped using PFOA in 2012, which we have not checked here. It is worth recording because a reader who takes the page as a primer comes away with the categories confused, and because a brand explaining the chemistry of its own coating should be expected to get the chemistry right.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — ecfr.gov</p>
+<p>Read on 2026-09-26 from the eCFR&#x27;s rendering service for 40 CFR 721.10536, &#x27;Long-chain perfluoroalkyl carboxylate chemical substances&#x27;. Paragraph (b)(1)(i) covers CF3(CF2)n-COOM where 5 &lt; n &lt; 21.</p></li>
+<li><p class="methhead">our own desk check — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The full passage: &#x27;What is PFOA? PFOA is a short-chain PFAS. It is persistent in the environment and accumulates in living organisms, where it can have harmful health effects. T-fal and its suppliers have not used PFOA in their processes since 2012.&#x27;</p></li>
+</ul>
+<p class="more"><a href="claims/c-tfal-pfoa-short-chain.html">The full record for this claim →</a></p>
+<h2>Caraway Ceramic Cookware Set — Cannot be checked as worded</h2>
+<blockquote class="claim"><p>Caraway says: “Non-Toxic Coating”</p><p class="src"><a href="https://www.carawayhome.com/products/cookware-sets">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">NOT CHECKABLE AS WORDED — no evidence could settle this either way · unfalsifiable as worded</p>
+<p class="bottom"><strong>Bottom line.</strong> “Non-toxic” is not a claim any test can check. The specific absences Caraway lists underneath it are, and each one can be checked on its own.</p>
+<p>&#x27;Non-toxic&#x27; names no substance, no exposure route, no dose and no threshold, and no US regulator defines the term for cookware. There is no measurement whose result could contradict it. Caraway&#x27;s own site does not define it either: the testing page carries the heading &#x27;What does &quot;non-toxic&quot; mean for Caraway cookware and bakeware?&#x27; and the materials page drops the word entirely, substituting a list of absences — &#x27;It&#x27;s made without PTFE, PFOA, PFAS, lead, and cadmium, and third-party tested for over 600 types of forever chemicals.&#x27; Those absences are type-A claims and each is separately checkable. &#x27;Non-toxic&#x27; is the conclusion stacked on top of them, and it does not follow: a coating can be free of five named substances, and of 600 tested ones, and still contain the 601st that nobody assayed.</p>
+<h3>Evidence</h3>
+<ul class="evidence"><li><em>None is possible. The claim names nothing a measurement could contradict.</em></li></ul>
+<p>The point of this record is not that Caraway is being dishonest. The brand tests more than most of its competitors, and the absences it lists may well all hold. The point is narrower: those absences are checkable and we will check them, while the word resting on top of them is not, and no amount of testing underneath it ever makes it so.</p>
+<p>Worth publishing because “non-toxic” is the phrase a shopper actually types into a search box. It is the part of the label doing the selling, and it is the one part that cannot be wrong — because it cannot be right either.</p>
+<p class="more"><a href="claims/c-caraway-non-toxic-coating.html">The full record for this claim →</a></p>
+<h2>Caraway Ceramic Cookware Set — Partly measured — never tested in use</h2>
+<blockquote class="claim"><p>Caraway says: “Thoughtfully crafted without PTFE, PFOA, and PFAS, our proprietary non-stick ceramic offers effortless cooking, easy cleanup, and peace of mind at every meal.”</p><p class="src"><a href="https://www.carawayhome.com/products/cookware-sets">their own page</a> · read 2026-09-23</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Caraway publishes lab results for its ceramic coating: no PFAS detected in the samples it sent. Nobody has measured what a pan sheds after years of real cooking, and no lab sells that test off the shelf.</p>
+<p><strong>What would settle it:</strong> Food-simulant migration testing on pans put through an accelerated service life — 200 heat cycles to 230 °C, 50 dishwasher cycles and standardised abrasion — assaying total organic fluorine and the 20+ heavy metals in the simulant, against unused controls from the same lot.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — mixed, <strong>funded by Caraway</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/154/938">https://app.lightlabs.com/comprehensive-testing-report/154/938</a></p>
+<p class="evsum">Fetched Caraway&#x27;s Light Labs report on its ceramic coating: PFAS not detected in submitted samples, with no statement of the samples&#x27; age or use.</p>
+<p>This is real testing and it answers half of the claim. ‘Without PTFE, PFOA, and PFAS’ is a statement about what the coating is made of, and on the samples Caraway sent, the lab found none of the 660 PFAS it looked for. ‘Peace of mind at every meal’ is a statement about years of use, and the report says in its own words that it does not reach that far: it describes a snapshot of submitted samples and disclaims future stability. The closest thing to a use test in it is a one-time soak in food simulants, which is not a pan that has been cooked on.</p>
+</li>
+</ul>
+<p>“At every meal” is a claim about a pan&#x27;s whole service life, and no test of an unused pan reaches it. That is the gap every ceramic-coating argument actually turns on, and it is the one nobody has funded — every cookware dataset we have found so far was paid for by the brand selling the pan, Caraway&#x27;s own included. It is also the measurement where a brand-funded result would be least believable, which is precisely why it stays unmade.</p>
+<p>WHAT IT WOULD COST, and why there is no single price. This is not a catalogue test. It is an accelerated-ageing step and a migration step at two different laboratories with an untested handoff between them, so no lab quotes it as one job. The figures below are assembled from published component prices — a build-up, not a quote, and we will not print it as though it were one.</p>
+<p>Build-up for 6 units (3 aged + 3 unused controls from one lot), one pan model. FX as of 2026-09-18: EUR/USD 1.1483, HKD/USD 0.127465. • Accelerated service life — SGS publishes EN 12983-1 at HK$4,700 and EN 12983-2 (ceramic cookware) at HK$3,700, 9–13 days with coating. HK$8,400 ≈ $1,071. This is a PROXY: EN 12983 is a standardised compliance battery, not the 200-heat-cycle / 50-dishwasher / abrasion protocol described above. Overlapping, not equivalent. • Migration — Measurlabs publishes ‘Migration of heavy metals from ceramics, glass, and enameled articles’ at €190/sample. 6 × €190 = €1,140 ≈ $1,309. (Its ‘specific release of elements from metals and alloys intended for repeated use’ at €771/sample may fit an aluminium-cored pan better, and would add ~$5,300 for six units.) • Total organic fluorine in the simulant — Measurlabs publishes €368–630 per sample plus a €97 per-order fee. 6 samples = €2,305–3,877 ≈ $2,647–$4,452. • Indicative total: ~$5,000–$6,800, excluding the pans, shipping, simulant preparation and any re-test.</p>
+<p>One cheaper number that does NOT apply, recorded so nobody budgets against it: the University of Arizona ALEC core facility lists total organic fluorine at $82.00/sample, about a fifth of the commercial rate — but that is internal pricing requiring a University of Arizona account, and the facility says costs differ for outside users. An academic partnership that made it reachable would change this test&#x27;s economics more than any vendor negotiation. That is a route worth chasing, not a price you can pay today.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Retrieved 2026-09-23 from the lab&#x27;s own domain, embedded on carawayhome.com/pages/third-party-testing. 660 PFAS and total organic fluorine reported ‘Not detected’ with no detection limit stated; 25 heavy metals below stated limits; 6 one-time extraction tests into food simulants below stated limits; tested 22 January to 2 March 2026. The lab&#x27;s own disclaimer: ‘Results reflect laboratory analysis of submitted samples at the time of testing… Results do not guarantee future performance, stability, or shelf life.’ Nothing in the report describes a sample as used, heated or aged.</p></li>
+</ul>
+<p class="more"><a href="claims/c-caraway-peace-of-mind-every-meal.html">The full record for this claim →</a></p>
+<h2>Carote Cashew Detachable Cookware Set, 19 pieces — Cannot be checked as worded</h2>
+<blockquote class="claim"><p>Carote says: “Cook with confidence using Carote’s nonstick cookware, made without PFOA, PFOS, or other harmful chemicals—designed for safer, easier everyday meals.”</p><p class="src"><a href="https://www.mycarote.com/products/cashew-detachable-cookware-set-19pcs">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">NOT CHECKABLE AS WORDED — no evidence could settle this either way · unfalsifiable as worded</p>
+<p class="bottom"><strong>Bottom line.</strong> Carote says the Cashew set is made without PFOA, PFOS &#x27;or other harmful chemicals&#x27;. It never says what the coating is. Its ceramic Sakura set rules out PTFE and PFAS by name; this page does not.</p>
+<p>The promise that carries the sentence is &#x27;or other harmful chemicals&#x27;, and it names neither the chemicals nor what counts as harmful. Any substance a reader worries about can be answered with &#x27;we do not consider that harmful&#x27;. The two chemicals it does name, PFOA and PFOS, could be checked by a lab test of the pan, but Carote publishes none, and the page does not say what the coating is made of, so there is not even an ingredient list to read against the claim.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.mycarote.com/products/cashew-detachable-cookware-set-19pcs">https://www.mycarote.com/products/cashew-detachable-cookware-set-19pcs</a></p>
+<p class="evsum">The Cashew set&#x27;s product page read in full: three descriptions of the coating, and no statement of what it is made of.</p>
+<p>Titanium, hybrid and ceramic are three different ways to describe one coating, and none of them is a chemical name. The page never says which chemistry sits underneath.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Carote</strong></p>
+<p class="evurl"><a href="https://www.mycarote.com/products/sakura-ceramic-cookware-set-21-pcs">https://www.mycarote.com/products/sakura-ceramic-cookware-set-21-pcs</a></p>
+<p class="evsum">Carote&#x27;s own Sakura ceramic set page, read in full: it says &#x27;no PTFE, PFOA, PFAS, lead, or cadmium&#x27;.</p>
+<p>This is the useful comparison. On one product page Carote rules out PTFE and PFAS by name. On the Cashew page it rules out only PFOA and PFOS. That does not prove the Cashew coating contains PTFE; it means Carote has chosen not to say, on a site where it does say it elsewhere.</p>
+</li>
+</ul>
+<p>The sentence names two chemicals, then leaves &#x27;other harmful chemicals&#x27; for the reader to fill in. The page calls the same coating titanium, hybrid and ceramic in different places and never gives its chemistry. We found no test report and no chemical disclosure anywhere on Carote&#x27;s site.</p>
+<p>The telling part is on Carote&#x27;s own site. Its Sakura ceramic set says &#x27;no PTFE, PFOA, PFAS, lead, or cadmium&#x27;. The Cashew page stops at PFOA and PFOS. We cannot tell from the outside whether the Cashew coating contains PTFE, and we are not saying it does. We are saying that Carote knows how to rule PTFE out when it can, and here it has not. A shopper avoiding PTFE or PFAS should read the Cashew page as silent on both.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — mycarote.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page calls the coating a &#x27;Premium titanium nonstick coating&#x27;, the set &#x27;Hybrid Nonstick&#x27;, and, further down, &#x27;Carote’s ceramic pan&#x27;, which is &#x27;PFOA, PFOS-free&#x27;. Its badges read &#x27;PFOA Free&#x27;, &#x27;PFOS Free&#x27; and &#x27;Eco-certified&#x27;, with no certifier named. Neither PTFE nor PFAS appears anywhere on the page. We also read Carote&#x27;s FAQ, which says nothing about coatings or testing, and every product description in the store&#x27;s catalogue (ten products). Our sweep of Carote&#x27;s site (205 addresses in its sitemap, 11 pages fetched) found no test report and no chemical disclosure.</p></li>
+<li><p class="methhead">document — mycarote.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The Sakura Ceramic Cookware Set page says: &#x27;Carote cookware is completely non-toxic and nonstick—no PTFE, PFOA, PFAS, lead, or cadmium—making meals healthy and cleanup effortless.&#x27; Of the ten products in Carote&#x27;s store catalogue, it is the only one whose description rules out PTFE or PFAS.</p></li>
+</ul>
+<p class="more"><a href="claims/c-carote-cashew-without-pfoa-pfos.html">The full record for this claim →</a></p>
+<h2>GreenPan Ceramic Nonstick cookware — Cannot be checked as worded</h2>
+<blockquote class="claim"><p>GreenPan says: “*Our PFAS-Free Ceramic Nonstick is Made Without Intentionally Added PFAS”</p><p class="src"><a href="https://www.greenpan.us/pages/safety-of-our-product">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">NOT CHECKABLE AS WORDED — no evidence could settle this either way · unfalsifiable as worded</p>
+<p class="bottom"><strong>Bottom line.</strong> &quot;PFAS-free&quot; and &quot;made without intentionally added PFAS&quot; are two different promises: one is about the pan, the other about what the maker meant to add. Only the first can be tested, and it is the second that carries the asterisk.</p>
+<p>The sentence describes what the manufacturer meant to put in, not what is in the pan. Intent leaves no residue. Consider two pans with identical measured fluorine content, where in one case a fluorinated substance arrived as a processing aid or a raw-material impurity and in the other it did not: both satisfy the sentence, both would fail an unqualified reading of it, and no test performed on the finished pans can tell them apart. A laboratory can measure fluorine down to a stated limit. It cannot measure what somebody meant to add, so there is no result this sentence could return that would count against it.</p>
+<h3>Evidence</h3>
+<ul class="evidence"><li><em>None is possible. The claim names nothing a measurement could contradict.</em></li></ul>
+<p>The two halves of this sentence do not say the same thing, and the asterisk is what joins them. The unqualified phrase is what a shopper meets: on the brand&#x27;s front page it appears 32 times in the page source, including in the page&#x27;s own title. The qualifier appears once, in the footer, at the bottom of every page. Count both yourself:</p>
+<pre><code>curl -sL &#x27;https://www.greenpan.us/&#x27; | grep -oiE &#x27;PFAS-Free&#x27; | wc -l
+32
+curl -sL &#x27;https://www.greenpan.us/&#x27; | grep -oiE &#x27;Made Without Intentionally Added PFAS&#x27; | wc -l
+1</code></pre>
+<p>What the qualifier does is move the claim out of reach of measurement. &quot;This pan contains no PFAS&quot; is a statement a laboratory can test and, in principle, refute. &quot;We did not intentionally add PFAS&quot; is a statement about a decision made inside a factory, and there is no assay for a decision. The second sentence can be entirely true of a pan in which fluorinated compounds are present, because processing aids, raw-material impurities and equipment carry-over are all routes by which a substance arrives without anyone adding it on purpose.</p>
+<p>Two things should be said in the brand&#x27;s favour, because the asterisk on its own would give an unfairly dark impression. The first is that this phrasing is close to industry standard: &quot;no intentionally added PFAS&quot; is the wording much of the sector and several regulators have settled on, and its use here is not a sign that something is being hidden. The second matters more. On the page carrying this footnote, GreenPan also makes the stronger, testable claim outright — it states that the coated food-contact surface is free of PFAS, including PTFE, PFOA and their replacements, and it says that accredited third-party laboratories confirmed it. That is a compositional claim, and it is the kind of sentence that could be checked against a report.</p>
+<p>Which leaves the honest summary of this record as a narrow one. It is not a finding that the pans contain PFAS; we have no evidence of that and have not suggested it. It is that the sentence printed under the asterisk, read strictly, is not the sort of sentence that evidence bears on at all — and that it sits beneath a headline phrase that is.</p>
+<p class="more"><a href="claims/c-greenpan-pfas-free-intentionally-added.html">The full record for this claim →</a></p>
+<h2>GreenPan Thermolon ceramic nonstick coating — Nobody has measured this</h2>
+<blockquote class="claim"><p>GreenPan says: “Even if heated to 850⁰F (454⁰C), our Thermolon coatings do not emit any toxic fumes.”</p><p class="src"><a href="https://www.greenpan.us/pages/safety-of-our-product">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">UNSUPPORTED — no qualifying evidence · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> GreenPan says its coating releases nothing toxic even at 850°F. We found no published measurement of what actually comes off a ceramic pan at that heat — not a contradiction, an absence, and one a single test could start to close.</p>
+<p><strong>What would settle it:</strong> Heat production-run coated pans to 454 °C (850 °F) in a controlled chamber and capture what comes off the surface: volatile and semi-volatile organic compounds speciated by thermal desorption gas chromatography–mass spectrometry, with separate capture for hydrogen fluoride and for ultrafine particles, across three production lots — and publish the resulting compound list together with the detection limit for each analyte, so that what was looked for and not found is as visible as what was found.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence"><li><em>None exists. Nobody has run the measurement described above — that is the finding.</em></li></ul>
+<p>This is the claim in the set we would most like to see measured, and the one nobody appears to have measured.</p>
+<p>It is worth being clear about why the question exists at all. The reason anyone asks what a hot pan gives off is the older problem with traditional non-stick: heat a fluoropolymer coating far enough and it begins to break down and release fumes. Ceramic coatings were brought to market as the answer to precisely that, and the sentence above is the strong form of the answer. The awkward part is that the published emissions work we could find is on fluoropolymer-coated pans, not ceramic ones. The method exists and has been applied to coated cookware — thermal desorption gas chromatography–mass spectrometry, which heats a sample and identifies what comes off it, is documented in the peer-reviewed literature for exactly this purpose. It appears not to have been turned on this kind of coating and published.</p>
+<p>Two features of the sentence make it harder to close than it looks. The first is the word &quot;any&quot;, which is an absolute: a test that finds nothing has established nothing was found above its detection limit, which is not the same as nothing being there. That gap is unavoidable, and it is why the test described below insists the limits be published alongside the results — a &quot;not detected&quot; whose threshold is hidden can mean almost anything. The second is &quot;toxic&quot;, which is not defined here and has no single technical meaning. A measurement can produce a list of compounds and their quantities; deciding which of them count as toxic, and at what exposure, is a further judgement that the compound list alone does not make.</p>
+<p>So the honest position is not that the claim is doubtful. It is that it is currently unmeasured, that a reader has been offered an absolute with no number attached, and that the measurement which would put a number on it is one we know how to specify.</p>
+<p>On price: this one is not priced, and that is a finding rather than an omission. No laboratory we found publishes a rate for this workflow. The published figures that exist nearby cover single analytical runs on prepared samples — one laboratory caps volatile-compound analysis on collection tubes at $468 a sample, and general gas chromatography–mass spectrometry work is commonly quoted between roughly $150 and $800 a sample — but none of those cover the part that makes this test what it is: heating whole pans to 454 °C in a chamber built to capture the output. Adding those numbers together would produce a figure that looks researched and is invented. Unpriced here means unquoted, and unquoted is not the same as cheap.</p>
+<p class="more"><a href="claims/c-greenpan-thermolon-no-toxic-fumes.html">The full record for this claim →</a></p>
+<h2>GreenPan Thermolon ceramic nonstick coating — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>GreenPan says: “Our Thermolon™ coating and GreenPan™ cookware undergo independent testing by highly professional, accredited third-party labs to ensure compliance with our product claims, quality standards, and numerous safety regulations.”</p><p class="src"><a href="https://www.greenpan.us/pages/safety-of-our-product">their own page</a> · read 2026-09-20</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> GreenPan says accredited third-party labs test its coating. Across all 212 pages of its site there is no report, no certificate number and no laboratory named — and unlike some rivals, it never promised to publish them.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.greenpan.us/sitemap_pages_1.xml">https://www.greenpan.us/sitemap_pages_1.xml</a></p>
+<p class="evsum">A sweep of all 212 pages in the brand&#x27;s own sitemap, every one fetched successfully, finding no report, certificate or laboratory name.</p>
+<p>The claim says testing happened. It does not say the results are published, so the check is not whether a promise was kept — it is whether a reader who wants to see the evidence can. Sweep the brand&#x27;s own sitemap and see:</p>
+<pre><code>curl -sL &#x27;https://www.greenpan.us/sitemap_pages_1.xml?from=79290859688&amp;to=122787627176&#x27; \
+  | grep -oE &#x27;&lt;loc&gt;[^&lt;]+&lt;/loc&gt;&#x27; | sed &#x27;s/&lt;[^&gt;]*&gt;//g&#x27; \
+  | while read u; do curl -sL &quot;$u&quot; | grep -oiE &#x27;href=&quot;[^&quot;]+\.pdf[^&quot;]*&quot;&#x27;; done | sort -u</code></pre>
+<p>That returns eight documents across 212 pages: cookbooks for the skillet, slow cooker, grill and ice cream maker, two care-and-use booklets, and a lifetime warranty. No test report. Searching the same 212 pages for the names of the large testing houses — Intertek, SGS, Eurofins, Bureau Veritas, TÜV, Smithers, NSF — returns nothing at all.</p>
+<p>So the position a reader is left in is this. Four specific standards are named on the site: US FDA 21 CFR 175.300, European Framework Regulation 1935/2004/EC, the German LFGB Sections 30 and 31, and elsewhere a list of four certifications covering the FDA, German LFGB, the Swiss government and KTR. Those are real, checkable standards. What is missing is the one thing that would connect the product to them — a report, a certificate number, or the name of the body that issued it. A standard named without the document that certifies against it is a citation to a library with no call number.</p>
+<p>One further detail, offered because it cuts the other way and belongs in the record. On a separate page the company says: &quot;We have a dedicated in-house testing lab that compares our innovations with other products on the market.&quot; That is a straightforward and unusually candid statement — many brands describe in-house work in language that implies independence. It is also, by definition, not third-party testing, and the two kinds of testing sit on different pages without anything telling a reader which one produced which claim.</p>
+</li>
+</ul>
+<p>This is the same test we ran on Caraway, pointed at a brand that had just passed a different one — and the result deserves to be read carefully, because the two cases are not the same and it would be easy to file them together.</p>
+<p>Caraway said, in its own words, that it publishes its reports. It names a page. We went to that page and the reports were not in what the server sends. That is a promise measured against its own terms.</p>
+<p>GreenPan makes no such promise. It says testing is done by accredited third-party laboratories, which is a claim about what happens in a factory and a laboratory, not a claim about what appears on a website. Our sweep cannot refute it, and nothing here should be read as suggesting the testing did not happen. What the sweep establishes is narrower and still worth a reader&#x27;s attention: there is no route from the claim to the evidence. A reader who wants to see for themselves has nowhere to go.</p>
+<p>Why that matters more here than it would elsewhere. This is the brand whose California chemical disclosure we checked and found genuinely published — ten itemised tables, one link from the footer of every page. So the company clearly can publish compliance documentation, has the material to publish, and has chosen to publish it in one domain where the law requires it and not in the other where it does not. That is not hypocrisy; it is the ordinary shape of disclosure everywhere, and it is exactly why a publication like this one exists. Voluntary transparency stops at the edge of the mandate with striking regularity.</p>
+<p>The honest summary: unverifiable from outside, through no broken promise. The next move is not another sweep — it is to ask the company for the reports and publish whatever comes back, including nothing.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — greenpan.us</p>
+<p>We swept the brand&#x27;s own site on 2026-09-20 — all 212 pages listed in its sitemap, every one fetched successfully — looking for a test report, a certificate, or the name of a laboratory. We found none of the three. Eight pages carry a PDF; all eight are recipe books, care-and-use booklets or a warranty. What we did NOT do is ask the company for the reports, which is a different check and a fair one that we have not yet run.</p></li>
+</ul>
+<p class="more"><a href="claims/c-greenpan-third-party-lab-testing.html">The full record for this claim →</a></p>
+<h2>Hestan all Hestan cookware (Product Disclosures page) — Cannot be checked as worded</h2>
+<blockquote class="claim"><p>Hestan says: “All Hestan cookware — including our nonstick cookware — is FDA compliant and food safe and not in violation of any federal safety regulations.”</p><p class="src"><a href="https://hestanculinary.com/pages/product-disclosures">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">NOT CHECKABLE AS WORDED — no evidence could settle this either way · unfalsifiable as worded</p>
+<p class="bottom"><strong>Bottom line.</strong> Hestan says all its cookware is &#x27;FDA compliant and food safe&#x27; and breaks no federal safety rule. An FDA rule does allow the PTFE, FEP and PFA it discloses. The rest cannot be checked as worded.</p>
+<p>The sentence makes three promises and only one can be checked. &#x27;Food safe&#x27; has no legal or technical definition. &#x27;Not in violation of any federal safety regulations&#x27; names no regulation, so there is no list to check it against. &#x27;FDA compliant&#x27; can be partly checked: the materials Hestan discloses for its nonstick are ones an FDA regulation allows in contact with food. But the FDA does not inspect or certify pans, and whether a given coating meets that regulation&#x27;s limits on what can leach out would take a lab test Hestan does not publish.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — mixed, <strong>funded by Hestan</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/pages/product-disclosures">https://hestanculinary.com/pages/product-disclosures</a></p>
+<p class="evsum">Hestan&#x27;s disclosures page, read in full: it lists PTFE, FEP and PFA for its nonstick and cites 21 CFR in general, but no specific rule or test.</p>
+<p>The page is candid about what the nonstick is made of, which is what makes the FDA half partly checkable. It cites the whole of Title 21 rather than any rule in it, and offers nothing a reader could use to check &#x27;food safe&#x27; or &#x27;any federal safety regulations&#x27;.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1550">https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-B/section-177.1550</a></p>
+<p class="evsum">The FDA rule on perfluorocarbon resins, read from the official eCFR: it covers PTFE, FEP and PFA, subject to limits on what can be extracted from them.</p>
+<p>This is the part of &#x27;FDA compliant&#x27; that holds: the three fluoropolymers Hestan names are the ones this rule allows in food-contact coatings. What it cannot show is that Hestan&#x27;s coating meets the rule&#x27;s extraction limits. That takes a test, and the FDA does not run one on any pan before it is sold.</p>
+</li>
+</ul>
+<p>This sentence sits on Hestan&#x27;s chemical disclosures page, directly after Hestan says its nonstick contains PTFE, FEP and PFA, all PFAS. Read in that place, it is an answer to a worried shopper: yes, there is PFAS, and it is allowed.</p>
+<p>The allowed part is true as far as it goes. An FDA rule permits those three materials in coatings that touch food. But the FDA does not approve or test pans, so &#x27;FDA compliant&#x27; means Hestan believes its coating meets the rule, not that anyone has checked. &#x27;Food safe&#x27; has no definition, and &#x27;not in violation of any federal safety regulations&#x27; names none. A shopper deciding whether to accept PTFE learns what the coating is from this page, which is worth something. They do not learn whether it is safe from this sentence.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — hestanculinary.com</p>
+<p>Read on 2026-09-27 in the HTML the server sends. The claim sentence follows a paragraph saying &#x27;PTFE, PFA and FEP are all fluoropolymers and are classified as PFAS substances. They are used in food contact coating because of their superior nonstick properties.&#x27; The table for &#x27;Hestan Culinary Nonstick Cookware&#x27; lists aluminum, copper, iron, manganese, chromium, nickel, phosphorus and &#x27;Polytetrafluoroethylene, fluorinated ethylene and propylene, and perfluoroalkoxy alkane polymer&#x27;. Later: &#x27;All food-contact materials used in our products comply with applicable U.S. Food and Drug Administration regulations under Title 21 of the Code of Federal Regulations (21 CFR) governing substances in contact with food&#x27;, and &#x27;adherence to FDA frameworks for food-contact materials (21 CFR/FCN program)&#x27;. No section number, test, laboratory or result is given.</p></li>
+<li><p class="methhead">document — ecfr.gov</p>
+<p>Read on 2026-09-27 from the eCFR&#x27;s rendering service for 21 CFR 177.1550, &#x27;Perfluorocarbon resins&#x27;. It opens: &#x27;Perfluorocarbon resins identified in this section may be safely used as articles or components of articles intended to contact food, subject to the provisions of this section&#x27;. Paragraph (a) covers resins made from tetrafluoroethylene and hexafluoropropylene (PTFE and FEP) and from perfluoropropylvinylether with tetrafluoroethylene (PFA), and says &#x27;The resins shall meet the extractives limitations in paragraph (d) of this section.&#x27;</p></li>
+</ul>
+<p class="more"><a href="claims/c-hestan-fda-compliant-food-safe.html">The full record for this claim →</a></p>
+<h2>Hestan NanoBond Titanium Skillets — Nobody has measured this</h2>
+<blockquote class="claim"><p>Hestan Culinary says: “Hestan&#x27;s NanoBond Titanium Skillet cooking surface is non-reactive, and made without PFAS, Nickel, Lead or Cadmium.”</p><p class="src"><a href="https://hestanculinary.com/products/nanobond-clad-skillet-fry-pan">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Hestan says NanoBond&#x27;s titanium cooking surface is made without nickel. The pan beneath it is nickel-bearing steel and Hestan&#x27;s own disclosure lists nickel, but neither contradicts a claim about the surface. Only a test could settle it.</p>
+<p><strong>What would settle it:</strong> A metal-release test on the NanoBond cooking surface: repeated fills of a mild acid food simulant on new production pans and on pans after scouring with steel wool, reporting nickel, lead and cadmium in the simulant against the European limits for food-contact metals. A surface analysis of the finish would show whether any nickel is present at the surface at all.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — mixed, <strong>funded by Hestan Culinary</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/pages/product-disclosures">https://hestanculinary.com/pages/product-disclosures</a></p>
+<p class="evsum">Hestan&#x27;s California and Colorado disclosure page, read in full: both chemical tables and the section saying which product lines each covers.</p>
+<p>This is the document that makes the claim look like a contradiction, and it is worth being exact about why it is not one. California&#x27;s cookware law asks a brand to disclose listed chemicals in the handle or the food-contact surface. Hestan files one table for every stainless line it sells, NanoBond included, and nickel is on it. The same product page tells us the pan is built on 18/10 stainless steel, the grade named for its roughly 10% nickel. So the disclosure tells a reader that nickel is in the handle or the cooking surface of something in that group: the stainless cookware lines, the ovenware, the roasters, the tools and the accessories. It does not say which part of which product. Nickel in a handle, or in any of those other lines, would put it on that table just as surely as nickel in the NanoBond cooking surface, and the claim is only about that surface.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/products/nanobond-clad-skillet-fry-pan">https://hestanculinary.com/products/nanobond-clad-skillet-fry-pan</a></p>
+<p class="evsum">The NanoBond skillet page read in full, plus a search of Hestan&#x27;s own site for any test of the cooking surface; none was found.</p>
+<p>Every time the claim appears, Hestan attaches it to the titanium surface, never to the whole pan. The badge that reads &#x27;Made without PFAS &amp; Nickel&#x27; sits directly under &#x27;Non Reactive Titanium Finish&#x27;, so even the shortest version is tied to the finish. We read it that way, because that is how the brand writes it.</p>
+<p>Read that way, the claim is about a layer of titanium thousands of nano-layers thick on top of a nickel-bearing steel. Whether nickel from the steel beneath reaches, or leaches through, that layer is a question about the surface itself. Nothing Hestan publishes, and nothing we could find anywhere else, answers it.</p>
+</li>
+</ul>
+<p>This one looked like a catch and turned out not to be. At first glance the pieces fit a contradiction neatly. A pan sold as &#x27;made without nickel&#x27; is built on 18/10 stainless steel, and the brand&#x27;s own California chemical disclosure for its stainless cookware lists nickel twice.</p>
+<p>It does not hold up, and the reason is scope. Hestan never says the pan is made without nickel. It says the titanium cooking surface is, every time. The disclosure, meanwhile, is filed once for all of its stainless lines, ovenware, tools and accessories together, and covers handles as well as cooking surfaces. The nickel on that table can come from any of those, and nothing on it places nickel in the titanium surface of this pan.</p>
+<p>That leaves a narrower question that reading cannot answer: does any nickel reach the food from a titanium surface bonded onto nickel-bearing steel, new or after years of metal utensils and dishwasher cycles? Hestan&#x27;s own description, a surface &#x27;four times harder&#x27; than stainless steel and safe for metal utensils, is a claim about exactly that durability. It is a fair question for anyone who has avoided stainless steel because of a nickel allergy, which is the reader this claim is really written for. It is also a cheap one to test, and nobody appears to have tested it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — hestanculinary.com</p>
+<p>Read on 2026-09-26 from the address above, in the HTML the server sends. The page carries two tables. The first is headed &#x27;Hestan Culinary Stainless Steel Cookware, OvenBond, Roasters, Au Gratins, Tools, and Accessories&#x27; and lists, among others, &#x27;Nickel &amp; Nickel Compounds&#x27; and &#x27;Nickel, metallic, and alloys&#x27;. The second covers the nonstick lines. A later section, &#x27;How this applies to Hestan materials and finishes&#x27;, names NanoBond as one of the brand&#x27;s stainless-steel interiors.</p></li>
+<li><p class="methhead">our own desk check — hestanculinary.com</p>
+<p>Read on 2026-09-26. The claim appears twice on the product page: once as the sentence quoted above and once in the feature list as &#x27;Titanium cooking surface is FDA-authorized as safe for food contact and made without PFAS, Nickel, Lead, or Cadmium&#x27;. A feature badge reads &#x27;Non Reactive Titanium Finish&#x27; with &#x27;Made without PFAS &amp; Nickel&#x27; on the line beneath it, inside the same badge. The page describes the construction as &#x27;thousands of titanium nano-layers&#x27; bonded &#x27;to the 18/10 stainless steel construction&#x27;. We swept Hestan&#x27;s site for a published test report (1,905 addresses in its sitemap, 31 pages fetched) and read its NanoBond story and lab-video pages: none reports a measurement of the cooking surface.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hestan-nanobond-made-without-nickel.html">The full record for this claim →</a></p>
+<h2>Hestan TITUM Fusion Nonstick Skillets — Nobody has measured this</h2>
+<blockquote class="claim"><p>Hestan says: “TITUM Nonstick interior and exterior made without PFOA&#x27;s”</p><p class="src"><a href="https://hestanculinary.com/products/nonstick-skillets">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Hestan says its TITUM nonstick is made without PFOA, and says plainly on the same page that the coating is PTFE. It publishes no test, and its own article defines the claim as &#x27;no intentionally added PFOA&#x27;.</p>
+<p><strong>What would settle it:</strong> A targeted PFAS panel on the nonstick interior and exterior of new production TITUM Fusion pans, including PFOA, reported with its detection limit.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/products/nonstick-skillets">https://hestanculinary.com/products/nonstick-skillets</a></p>
+<p class="evsum">The product page says &#x27;made without PFOA&#x27;s&#x27; and, on the same page, that the nonstick finish is PTFE-based. It links no test.</p>
+<p>Unlike most nonstick product pages we have read, this one says what the coating is. A shopper who wants to avoid PTFE has the answer on the page. The PFOA line is the part nobody can check from the outside.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Hestan</strong></p>
+<p class="evurl"><a href="https://hestanculinary.com/blogs/news/are-non-toxic-cookware-sets-also-high-performance">https://hestanculinary.com/blogs/news/are-non-toxic-cookware-sets-also-high-performance</a></p>
+<p class="evsum">Hestan&#x27;s own article defines the claim as &#x27;No intentionally added PFOA&#x27; and mentions &#x27;third-party evaluation&#x27; without naming a lab or a result.</p>
+<p>This is Hestan saying what it means: PFOA is not an ingredient. That is a statement about the recipe, not a measurement of the pan, and it is a narrower promise than &#x27;made without&#x27; may sound.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/risk-management-and-polyfluoroalkyl-substances-pfas">https://www.epa.gov/assessing-and-managing-chemicals-under-tsca/risk-management-and-polyfluoroalkyl-substances-pfas</a></p>
+<p class="evsum">EPA says eight leading PFAS makers committed in 2006 to work toward eliminating PFOA from their products by 2015, and that all met the program&#x27;s goals.</p>
+<p>This is context, not a check of Hestan&#x27;s pan. It is part of why &#x27;PFOA-free&#x27; says little about a nonstick pan bought today: the largest makers of these chemicals committed a decade ago to stop putting PFOA in their products. We do not know who supplies Hestan&#x27;s coating, so we cannot say this program covers it.</p>
+</li>
+</ul>
+<p>Hestan does something most nonstick brands here do not: it names the coating. The TITUM Fusion page says the finish is PTFE, which is a PFAS, so nobody reading the whole page is misled about that.</p>
+<p>The &#x27;made without PFOA&#x27;s&#x27; line is harder to weigh. Only a test of the pan could confirm it, and Hestan publishes none. Its own article says what the promise means: PFOA is not an ingredient in the recipe, which is not the same as a measured absence. It also says little. The largest makers of these chemicals committed with the US regulator to work PFOA out of their products by 2015, and the regulator says all of them met the program&#x27;s goals. So the line may well be true, and it tells a shopper little that the PTFE disclosure next to it does not.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — hestanculinary.com</p>
+<p>Read on 2026-09-27 in the HTML the server sends. Under &#x27;Details You&#x27;ll Love&#x27;: &#x27;TITUM Nonstick interior and exterior made without PFOA&#x27;s&#x27;. The page&#x27;s feature strip says &#x27;FDA-Approved PTFE Nonstick&#x27;, and a paragraph headed &#x27;Disclosure&#x27; reads: &#x27;Hestan TITUM® Fusion features a PTFE-based nonstick finish, engineered for outstanding durability and long-lasting performance. Unlike some alternative nonstick materials, PTFE is authorized for food contact under U.S. FDA (21 CFR) and European Union (EFSA) regulations&#x27;. The pans are described as handcrafted in Italy. Our sweep of Hestan&#x27;s site (1,905 addresses in its sitemap, 31 pages fetched) found no test report and named no laboratory.</p></li>
+<li><p class="methhead">document — hestanculinary.com</p>
+<p>Read on 2026-09-27 in the HTML the server sends. It reads: &#x27;No intentionally added PFOA: Hestan TITUM Nonstick and other premium nonstick products are not engineered using PFOA. Hestan TITUM® Nonstick features a PTFE-based nonstick finish&#x27;. Later: &#x27;we practice strict safety, migration testing and third-party evaluation of our materials&#x27;. No laboratory, report, method or result is named or linked. A web-search summary described Hestan&#x27;s nonstick as &#x27;found to be compliant by independent 3rd party laboratory testing&#x27;; that sentence is not on this article, the product page or the TITUM story pages, so we do not rely on it.</p></li>
+<li><p class="methhead">document — epa.gov</p>
+<p>Read on 2026-09-27. Under &#x27;PFOA Stewardship Program&#x27;: &#x27;In 2006, EPA invited eight major leading companies in the per- and PFAS industry to join in a global stewardship program&#x27; with the goals of a 95 percent cut in PFOA &#x27;product content levels&#x27; by 2010 and &#x27;working toward the elimination of these chemicals from emissions and products by 2015.&#x27; Participants named: Arkema, Asahi, BASF, Clariant, Daikin, 3M/Dyneon, DuPont, Solvay Solexis. &#x27;All companies have met the PFOA Stewardship Program goals.&#x27; The page does not name Hestan or its coating supplier, and the program covered only those eight companies.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hestan-titum-made-without-pfoas.html">The full record for this claim →</a></p>
+<h2>HexClad HexClad Hybrid cookware with TerraBond ceramic nonstick (10-inch Hybrid pan page) — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>HexClad says: “Test Results Verified by 3rd Party Lab Tested our pots and pans for PFAS compounds and all results were below the laboratory&#x27;s detection limits, known as &quot;Non-Detect&quot;.”</p><p class="src"><a href="https://hexclad.com/products/10-hexclad-pan">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> HexClad says a third-party lab found no PFAS in its pots and pans, and shows a table of &#x27;Non-Detect&#x27; results under a Light Labs logo. It publishes no report, no detection limits and no description of the sample.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hexclad.com/products/10-hexclad-pan">https://hexclad.com/products/10-hexclad-pan</a></p>
+<p class="evsum">HexClad&#x27;s product page shows a results table under a Light Labs logo, but links no report, and gives no detection limit, sample or date.</p>
+<p>This is more than most brands show: named compounds and a named lab. It is still HexClad&#x27;s summary of a test, not the test. Without the report a reader cannot see the detection limits, which decide what &#x27;Non-Detect&#x27; means, and cannot see which pan or coating was sampled, or when.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.lightlabs.com/anti-certification">https://www.lightlabs.com/anti-certification</a></p>
+<p class="evsum">Light Labs publishes client reports on its own domain, and did so for Our Place; we found none there for HexClad.</p>
+<p>This is not proof that no report exists. Light Labs&#x27; reports sit at addresses nobody can list, so a report could exist without us finding it. It does mean HexClad has not published one: Light Labs&#x27; tool for doing so is not on HexClad&#x27;s page, and HexClad links no report anywhere we could reach.</p>
+</li>
+</ul>
+<p>HexClad names its lab, which is Light Labs, the same lab behind the Our Place report we could read in full. And it shows results for specific compounds rather than a bare &#x27;PFAS-free&#x27;. The difference from Our Place is that Our Place&#x27;s report can be opened and HexClad&#x27;s cannot. The table is HexClad&#x27;s own page element, not the lab&#x27;s report, and it links nowhere.</p>
+<p>That matters because &#x27;Non-Detect&#x27; only means &#x27;below the limit this method could see&#x27;, and the limit is exactly what the table leaves out. The table also lists &#x27;PTFE&#x27; and &#x27;PFAS&#x27; as single results. PTFE is a plastic that standard PFAS tests do not measure directly, and &#x27;PFAS&#x27; is a family of thousands of chemicals. A report would say how each was tested. The claim may be true, and a reader who wants to check it has nothing to open.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — hexclad.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. Under the claim sits a table of eight rows, each marked &#x27;Passed&#x27; and &#x27;Non-Detect&#x27;: PFOS; PTFE; PFOA; PFAS; PFPeS; PFBS; &#x27;PFPeA, PFHpS, PFDA, 9Cl-PF3ONS, 11Cl-PF3OUdS&#x27;; PFNA. Below it: &#x27;Any potential presence is so low it can&#x27;t even be detected. We&#x27;re talking less than a drop in an Olympic-sized pool.&#x27; The only sign of the lab is a Light Labs logo image served from HexClad&#x27;s own theme files. The table is part of HexClad&#x27;s page, not an embedded Light Labs report, and it contains no links. Our sweep of HexClad&#x27;s site (1,347 addresses in its sitemap, 22 pages fetched) found the same logo on two other pages and no test report.</p></li>
+<li><p class="methhead">our own desk check — lightlabs.com</p>
+<p>Read on 2026-09-26. Light Labs sells brands a way to &#x27;Embed real lab results&#x27; on their sites, and the Our Place report we cite elsewhere is served from app.lightlabs.com. That domain has no public index: its sitemap and brand paths return 404, and a web search restricted to it found no HexClad page. The data feed behind Light Labs&#x27; embeddable panel answers by company number, so we asked it for every number from 1 to 1,615. 216 companies answered, with 1,112 products between them, and none of those products matches a HexClad page; 1,189 companies&#x27; feeds refused outside requests, and we did not try to get around that. Light Labs&#x27; marketing site (75 addresses in its sitemap) lists no brands or reports. A general web search found third-party write-ups repeating HexClad&#x27;s &#x27;Non-Detect&#x27; table, and one saying outright that HexClad does not publish the report; none linked to one.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hexclad-pfas-non-detect-3rd-party-lab.html">The full record for this claim →</a></p>
+<h2>HexClad HexClad cookware with TerraBond ceramic nonstick (homepage, product pages, FAQ) — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>HexClad says: “Our cookware features our proprietary TerraBond™ ceramic nonstick coating which is PFAS-free, ensuring a better cooking experience.”</p><p class="src"><a href="https://hexclad.com/">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> HexClad says its TerraBond ceramic coating is PFAS-free. It does not say what the coating is made of, and the only test behind the claim is a results table from a report it does not publish.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://hexclad.com/pages/faq">https://hexclad.com/pages/faq</a></p>
+<p class="evsum">Every HexClad page we read repeats that TerraBond is PFAS-free; none says what the coating is made of, and none links a test report or a chemical disclosure.</p>
+<p>&#x27;Proprietary&#x27; is doing a lot of work. A shopper is asked to accept that a coating whose ingredients are secret contains none of a family of thousands of chemicals. The only support offered is a results table from a report HexClad does not publish.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://storage.courtlistener.com/recap/gov.uscourts.cacd.889622/gov.uscourts.cacd.889622.1.0.pdf">https://storage.courtlistener.com/recap/gov.uscourts.cacd.889622/gov.uscourts.cacd.889622.1.0.pdf</a></p>
+<p class="evsum">A 2023 class action alleging HexClad sold its earlier pans as free of PFAS and PFOA while they had a PTFE coating. An allegation, not a finding.</p>
+<p>This concerns HexClad&#x27;s earlier coating, not TerraBond, and HexClad has not admitted it. It is here because it shows that HexClad has made this same kind of &#x27;free from&#x27; promise before, about a coating it also did not fully describe, and the promise was challenged in court.</p>
+</li>
+</ul>
+<p>The claim is the kind that could be checked. TerraBond is a ceramic coating, and ceramic nonsticks are generally made without the fluorinated plastics that make up traditional nonstick. HexClad calls the formula proprietary, though, and publishes no ingredient list and no chemical disclosure. The one piece of support is a table of &#x27;Non-Detect&#x27; results under a Light Labs logo, which we cover in its own record: no report, no detection limits and no description of what was tested.</p>
+<p>The history matters here. In 2023 HexClad was sued for selling its earlier pans as free of PFOA and PFAS while, the complaint says, they had a PTFE coating. That claim was never tested in court. It is a reason to ask for the report rather than take the word.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — hexclad.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The claim appears on the homepage and the 10-inch Hybrid pan page in these words. The FAQ says: &#x27;Our cookware products use our proprietary HEXCLAD TerraBond™ ceramic nonstick coating, which is PTFE-free and PFAS-free.&#x27; The Science page says the coating is &#x27;PTFE-free and free from forever chemicals&#x27;. None of them names an ingredient beyond &#x27;ceramic&#x27;. The only test evidence on the site is the unlinked &#x27;Non-Detect&#x27; table under a Light Labs logo, which we check in its own record. We found no chemical disclosure page: none is linked from the site, and none exists at the usual addresses for one. Our sweep of HexClad&#x27;s site (1,344 addresses in its sitemap, 22 pages fetched) found no test report.</p></li>
+<li><p class="methhead">document — storage.courtlistener.com</p>
+<p>Read on 2026-09-26 from CourtListener&#x27;s copy of the complaint (C.D. Cal. 2:23-cv-05110, filed 27 June 2023). Paragraph 12 alleges: &#x27;HexClad claims its cookware is &quot;non-toxic&quot; and &quot;free from PFOAs&quot; and PFAS, but the cookware has a PTFE non-stick coating&#x27;. It quotes HexClad describing that coating as a &#x27;high-grade non-toxic Japanese coating infused with diamond dust for extra toughness.&#x27; The federal case closed on 4 January 2024. A $2.5 million settlement covering pans bought from February 2022 to March 2024 has been reported, but the settlement&#x27;s own site refused our requests, so we do not rely on its terms.</p></li>
+</ul>
+<p class="more"><a href="claims/c-hexclad-terrabond-pfas-free.html">The full record for this claim →</a></p>
+<h2>Le Creuset all Le Creuset cookware (Chemical Disclosures page) — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>Le Creuset says: “Le Creuset is committed to product quality and safety, regularly conducting internal and reputable third-party laboratory evaluations. For over 100 years, our products have been consistently safe to use and comply with all federal safety regulations established by the Food &amp; Drug Administration.”</p><p class="src"><a href="https://www.lecreuset.com/chemical-disclosures-for-cookware.html">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Le Creuset says reputable third-party labs evaluate its cookware and that it meets FDA rules. It names no lab and links no result, so a reader cannot check either.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.lecreuset.com/chemical-disclosures-for-cookware.html">https://www.lecreuset.com/chemical-disclosures-for-cookware.html</a></p>
+<p class="evsum">Le Creuset&#x27;s Chemical Disclosures page read in full; it names no laboratory, links no report, and links only the disclosure search and California&#x27;s database.</p>
+<p>The sentence tells readers that outside laboratories evaluate the cookware and gives them nothing to look at: no lab, no report, no test and no product. That is not evidence the testing did not happen. It means a reader has only Le Creuset&#x27;s word that it did. The page does link real documents, but they are the state-required chemical disclosures, which list ingredients and are not lab results.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Le Creuset</strong></p>
+<p class="evurl"><a href="https://app.salsify.com/catalogs/998c54a9-7db5-4124-9dd8-8a7a6047a6c5/products/20182260900422">https://app.salsify.com/catalogs/998c54a9-7db5-4124-9dd8-8a7a6047a6c5/products/20182260900422</a></p>
+<p class="evsum">Le Creuset&#x27;s disclosures for the 10.25-inch Signature Skillet in four colours: red and orange list cadmium pigments, but not on the cooking surface.</p>
+<p>This is more than most brands tell you. Le Creuset&#x27;s filings say which colours use cadmium pigments and, by leaving them off the food-contact list, that the cadmium is in the outside enamel, not the black cooking surface. That is a clearer answer than Lodge&#x27;s chart gives for its red and orange pieces. It still does not show a test: a disclosure lists what is added on purpose, and the question the third-party testing claim invites, how much lead or cadmium can come out, is one only a published leach result can answer.</p>
+</li>
+<li>
+<p class="evhead">measurement — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://tamararubin.com/2021/10/vintage-green-and-white-enamel-le-creuset-cooking-pot-positive-for-varying-levels-of-lead-and-cadmium">https://tamararubin.com/2021/10/vintage-green-and-white-enamel-le-creuset-cooking-pot-positive-for-varying-levels-of-lead-and-cadmium</a></p>
+<p class="evsum">Posted 2021: handheld X-ray fluorescence readings of one vintage Le Creuset pot of unstated age: lead and cadmium in both enamels.</p>
+<p>This is the only independent measurement of a Le Creuset piece we found, and it says little about what Le Creuset sells today. It is one vintage pot of unknown age. XRF measures what is in the enamel, not how much leaches into food, and food-safety limits for enamel are built on leaching. What it does show is why a published leach test would mean more than a sentence saying labs have looked: lead and cadmium have been found in Le Creuset enamel, including a trace on the cooking surface of this old pot.</p>
+</li>
+</ul>
+<p>Le Creuset puts this sentence at the top of its Chemical Disclosures page, where it reads as if the page will back it up. The documents the page links are the chemical disclosures California requires: lists of ingredients by product, not laboratory results. There is no lab named, no test, no product and no result.</p>
+<p>That is the same position as GreenPan&#x27;s and Lodge&#x27;s third-party testing claims, and it deserves the same careful reading. It is not evidence the testing does not happen. It means a shopper who wants to see it has nowhere to go. The second half, compliance with FDA rules, is the kind of statement a leach test for lead and cadmium would back. Le Creuset has not published one.</p>
+<p>Le Creuset&#x27;s own filings do answer one question well. For its Signature skillet, the red and orange colours list cadmium pigments for the pan, and the food-contact list, the black enamel you cook on, does not include them. So the cadmium is on the outside.</p>
+<p>The one independent measurement we found is a consumer advocate&#x27;s handheld reading of a single vintage pot of unknown age, which found lead and cadmium in its enamel, mostly on the outside. It does not describe a pot sold today, and it measures what is in the enamel rather than what leaches out. It is a reason the missing results would be worth publishing, not a finding against current products.</p>
+<p>One limit on our side: Le Creuset&#x27;s site blocks automated reading, so we read its pages in an ordinary browser and could not sweep the whole site for a report. A web search found none.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — lecreuset.com</p>
+<p>Le Creuset&#x27;s site turns away automated requests, so these pages were opened in an ordinary browser on 2026-09-27 and saved whole; we read the saved copies. The same wall meant we could not sweep the rest of the site for a published test report the way we do for other brands. The claim is live on the page word for word. The page names no laboratory, test method, product or result. Its only links are to the per-product disclosure search (hosted on Salsify) and to California&#x27;s chemical database, calsafer.dtsc.ca.gov. A web search on 2026-09-27 for a published Le Creuset laboratory report on lead, cadmium or PFAS found none published by Le Creuset.</p></li>
+<li><p class="methhead">document — app.salsify.com</p>
+<p>Read on 2026-09-27 in an ordinary browser, from Le Creuset&#x27;s Salsify-hosted disclosure search. Enameled Cast Iron Signature Round Skillet, 10.25 in., black interior. Licorice (20182260000422) and Azure (20182262200422): silica dust (quartz), boric acid and disodium tetraborate, for the whole pan and for the food-contact surface. Flame (20182260900422) adds, for the whole pan only, &#x27;Pigment Cd Sulphoselenide Red&#x27;, &#x27;Pigment Cd Sulphoselenide Orange&#x27; and &#x27;Pigment Cd Zinc Sulphide Yellow&#x27;. Cerise (20182260600422) adds the red and orange cadmium pigments, again for the whole pan only. The food-contact list for every colour is the same three substances, with no cadmium and no lead.</p></li>
+<li><p class="methhead">measurement — tamararubin.com</p>
+<p>Read on 2026-09-27. The post, dated 1 October 2021 and described by its author as a placeholder carrying only the XRF data, reports two 60-second readings of a &#x27;vintage&#x27; green and white enamel Le Creuset pot. White interior (food surface): lead 24 ± 8 ppm, cadmium 38 ± 5 ppm. Green exterior (bottom): lead 35 ± 9 ppm, cadmium 2,815 ± 68 ppm. The post gives no year of manufacture.</p></li>
+</ul>
+<p class="more"><a href="claims/c-lecreuset-third-party-lab-comply-federal.html">The full record for this claim →</a></p>
+<h2>Lodge all Lodge cookware — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>Lodge says: “We know that our cookware has been nontoxic since the very beginning, but we also lean on vetted, third-party labs to verify that our cookware is free not only of PFAS, but also dangerous levels of Lead and Cadmium.”</p><p class="src"><a href="https://www.lodgecastiron.com/blogs/story/non-toxic-cookware-cast-iron-made-without-pfas">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Lodge says third-party labs verify its cookware is free of dangerous levels of lead and cadmium. It names no lab and shows no result. Its own disclosure lists cadmium compounds in red and orange enameled pieces.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.lodgecastiron.com/blogs/story/non-toxic-cookware-cast-iron-made-without-pfas">https://www.lodgecastiron.com/blogs/story/non-toxic-cookware-cast-iron-made-without-pfas</a></p>
+<p class="evsum">Lodge&#x27;s blog post read in full, plus a sweep of its site for any published lab report; the post names no lab and links no result.</p>
+<p>The claim tells readers that labs have checked, and gives them nothing to check. There is no lab name, no report and no figure for what &#x27;dangerous&#x27; means. That is not evidence the testing did not happen. It means a reader has only Lodge&#x27;s word that it did.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Lodge Cast Iron</strong></p>
+<p class="evurl"><a href="https://www.lodgecastiron.com/pages/california-disclosure">https://www.lodgecastiron.com/pages/california-disclosure</a></p>
+<p class="evsum">Lodge&#x27;s California disclosure page read in full: its enameled cast iron lists cadmium compounds for red and orange pieces.</p>
+<p>Lodge&#x27;s own disclosure is what gives the word &#x27;dangerous&#x27; weight. For its enameled cast iron, red and orange pieces only, the chart lists cadmium compounds, which are used to make those colours. California&#x27;s disclosure law covers handles and food-contact surfaces, so the cadmium is somewhere on the pan a person touches or cooks on, and the page does not say where. Lead does not appear anywhere in the chart. So the sentence is not a promise that Lodge cookware contains no cadmium. For some of it, Lodge&#x27;s own paperwork says it does. The promise is that the amount is not dangerous, and that is exactly what an unpublished test cannot show a reader.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Lodge</strong></p>
+<p class="evurl"><a href="https://web.archive.org/web/20191019110833/https://www.lodgemfg.com/use-and-care/frequently-asked-questions">https://web.archive.org/web/20191019110833/https://www.lodgemfg.com/use-and-care/frequently-asked-questions</a></p>
+<p class="evsum">Lodge&#x27;s old FAQ, archived 2019, named the FDA leach test for lead and cadmium in glazed surfaces, with no results. It is gone from the current site.</p>
+<p>This is the test that would answer the question: it measures how much lead and cadmium an acid solution draws out of the enamel, which is what matters for a red or orange pot. So Lodge has, at least in the past, said which test it relies on. It never published a result, a lab or a date, and the statement is no longer on its site.</p>
+</li>
+<li>
+<p class="evhead">measurement — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://tamararubin.com/2019/01/light-blue-white-lodge-cast-iron-enameled-dutch-oven-48-ppm-lead-35-ppm-arsenic">https://tamararubin.com/2019/01/light-blue-white-lodge-cast-iron-enameled-dutch-oven-48-ppm-lead-35-ppm-arsenic</a></p>
+<p class="evsum">Posted in 2019: a 2015 handheld X-ray fluorescence reading of one Lodge enameled Dutch oven lid, read on the tester&#x27;s own site.</p>
+<p>This is one of two independent measurements we found, from the same tester, and it needs reading with care. It is one lid, of unknown age, tested in 2015. An XRF reading measures what is in the surface, not how much of it can leach into food, which is what food-safety limits for enamel are built on. It does not measure cadmium on a red or orange piece, which is the question the disclosure raises. And the tester is an advocate who believes enameled cast iron should always be avoided, which she says plainly. What it does show is that lead has been found in the food-contact enamel of a Lodge piece, even though lead does not appear in Lodge&#x27;s current materials chart. That chart lists what Lodge adds on purpose, so the two are not necessarily in conflict. They do show why a published leach test would be worth more than a sentence saying one exists.</p>
+</li>
+<li>
+<p class="evhead">measurement — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://tamararubin.com/2019/01/dark-blue-white-lodge-cast-iron-enameled-dutch-oven-1693-ppm-lead-555-ppm-arsenic">https://tamararubin.com/2019/01/dark-blue-white-lodge-cast-iron-enameled-dutch-oven-1693-ppm-lead-555-ppm-arsenic</a></p>
+<p class="evsum">Posted in 2019: a 2016 handheld X-ray fluorescence reading of one Lodge enameled Dutch oven bought around 2006: 1,693 ppm lead in the interior.</p>
+<p>This is a much higher lead reading than the other piece, and it is on the cooking surface. The same limits apply: one pan, about twenty years old, measured for what is in the enamel rather than what leaches out, by a tester who opposes enameled cast iron in general. It does not show that a Dutch oven Lodge sells today has lead in it. It does show that lead has been found in Lodge&#x27;s interior enamel more than once, which is exactly what a published leach result would speak to.</p>
+</li>
+</ul>
+<p>The sentence is carefully worded, and the wording matters. It does not say Lodge cookware contains no cadmium. It says labs have verified there are no &#x27;dangerous levels&#x27; of it. Lodge&#x27;s own California disclosure explains the care: its red and orange enameled cast iron is listed as containing cadmium compounds, the pigments that give those colours.</p>
+<p>Cadmium in a coloured enamel is not unusual, and a well-fired enamel can hold it tightly. Whether it does is a question about how much leaches out into food, and that is what the lab testing Lodge describes would answer. Until 2019 Lodge&#x27;s FAQ named the right kind of test: the FDA method that measures how much lead and cadmium leaches from a glazed surface. It never published a result, named the lab, or said what threshold it treats as dangerous, and the FAQ is gone from its current site. The disclosure says where to look. The test that would settle it is one Lodge says it runs and has not shown.</p>
+<p>Two independent readings add to the question without settling it. A consumer advocate&#x27;s handheld tests in 2015 and 2016 found lead in the white interior enamel of two Lodge enameled pieces: 48 parts per million in a lid of unknown age, and 1,693 in a Dutch oven bought around 2006. They measured what is in the enamel, not what leaches out, on two older pieces.</p>
+<p>For a shopper the practical reading is narrow. Lodge&#x27;s bare seasoned cast iron lists no cadmium or lead at all, and independent testing of it has come back clean. The open question is about the enameled pieces, and it would take a published leach test to close it.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — lodgecastiron.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends (post dated 19 August 2025). The sentence names no laboratory, no test method, no product and no threshold for &#x27;dangerous levels&#x27;, and the post links no report. We swept Lodge&#x27;s site for a published test report (1,071 addresses in its sitemap, 8 to 9 pages fetched per run) and found none, and a web search for a Lodge lab report on lead and cadmium turned up none published by Lodge.</p></li>
+<li><p class="methhead">document — lodgecastiron.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page says &#x27;Our cookware is made without PFOA and PTFE&#x27; and then gives a chart of every material in each product type, including ones California does not list. Seasoned cast iron (Classic, Bakeware, Blacklock, Chef Collection, Lodge BOLD, Grilling &amp; Outdoors): iron, phosphorus, manganese and manganese compounds, strontium, carbon, silicon, sulfur, steel, and soybean-oil seasoning. Seasoned carbon steel: steel and soybean-oil seasoning. Enameled cast iron adds antimony compounds, steel, nickel and nickel compounds, copper and chromium compounds, and, for &#x27;Red and Orange items only&#x27;, cadmium compounds and sulfate. Glass lids: manganese.</p></li>
+<li><p class="methhead">document — web.archive.org</p>
+<p>Read on 2026-09-26 from the Internet Archive&#x27;s capture of 19 October 2019 (the page was captured from 2016 to 2019 at this address, and in 2013 at an older one). Under &#x27;Are Lodge Enamel products tested for lead safety?&#x27; it said: &#x27;Lodge utilizes the U.S. Food and Drug Administration Test Procedure 7.5.1.4a Leachability of Lead and Cadmium for Glazed Ceramic Surfaces. The FDA Division of Compliance Programs uses ASTM-C738 as the Standard Method of Test for glazed ceramic. In addition to information provided by vendors, Lodge Manufacturing Company uses third-party testing to ensure that products with the Lodge name comply with standards set forth by the United States Food &amp; Drug Administration.&#x27; It also claimed compliance with California&#x27;s Proposition 65. A sweep of 105 pages on Lodge&#x27;s current site found no mention of the method; the only cadmium on the current site is the disclosure chart.</p></li>
+<li><p class="methhead">measurement — tamararubin.com</p>
+<p>Read on 2026-09-26. The post, dated 14 January 2019, says: &#x27;I tested this light blue Lodge enameled cast iron dutch oven lid back in 2015&#x27;, and that &#x27;I did not record the estimated year of manufacture for this piece.&#x27; Readings from an XRF instrument: blue exterior enamel, lead non-detect and arsenic 35 ppm; white interior food-surface enamel, lead 48 ppm and arsenic non-detect. The same author reports Lodge&#x27;s plain, unenameled cast iron as consistently free of lead, cadmium, arsenic and mercury in her testing since 2015. Corrected 2026-09-27: this item previously described the reading as a 2019 test of a Dutch oven; the post says it was a lid, tested in 2015.</p></li>
+<li><p class="methhead">measurement — tamararubin.com</p>
+<p>Read on 2026-09-27. The post, dated 14 January 2019, says: &#x27;I tested this Lodge enameled cast iron dutch oven back in 2016&#x27; and &#x27;The owner of this piece told me they had purchased it around 2006.&#x27; Readings from an XRF instrument: blue enamel (outside), lead non-detect and arsenic 555 ppm; white enamel (inside food surface), lead 1,693 ppm and arsenic 508 ppm. The author adds that &#x27;with this one I just captured the following two sets of readings&#x27;, and states her view that enameled cast iron &#x27;should always be avoided&#x27;.</p></li>
+</ul>
+<p class="more"><a href="claims/c-lodge-third-party-labs-lead-cadmium.html">The full record for this claim →</a></p>
+<h2>Made In CeramiClad 2.0 Non Stick Frying Pan (10-inch page) — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>Made In says: “All CeramiClad™ pieces are made without: PFAS PFOA PTFE Lead Cadmium BPA Third-Party Tested For Safety:”</p><p class="src"><a href="https://madeincookware.com/products/ceramic-frying-pan/10-inch">their own page</a> · read 2026-09-27</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Made In says CeramiClad is made without PFAS, PTFE, PFOA, lead, cadmium and BPA, &#x27;third-party tested&#x27;. Its lab report checks only 30 PFAS, and predates the current &#x27;2.0&#x27; coating by seven months.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — mixed, <strong>funded by Made In</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/69/244">https://app.lightlabs.com/comprehensive-testing-report/69/244</a></p>
+<p class="evsum">Light Labs&#x27; CeramiClad report: 30 PFAS, each below a limit per square inch of surface. It has no PTFE, lead, cadmium or BPA result.</p>
+<p>The PFAS results are real and specific, and reported per area of surface, which suits a coated pan. But the 30 compounds are small PFAS molecules. PTFE, the plastic in traditional nonstick, is not one of the 30, and a test for small molecules is not built to find a large polymer, and PTFE is the thing a ceramic-pan buyer is usually trying to avoid. Lead, cadmium and BPA are not tested at all.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/products/ceramic-frying-pan/10-inch">https://madeincookware.com/products/ceramic-frying-pan/10-inch</a></p>
+<p class="evsum">The page sells &#x27;CeramiClad 2.0&#x27; with &#x27;a completely reimagined ceramic coating&#x27;, lists six things it is made without, then shows the lab panel.</p>
+<p>Laid out this way, a reader would take all six items as tested. The report covers one of them. The page also does not say which coating the report tested. Made In announced the &#x27;2.0&#x27; coating in April 2026, seven months after the test (see the launch post below).</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Made In</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/blogs/introducing-ceramiclad-2-0-made-in-ceramic-pans">https://madeincookware.com/blogs/introducing-ceramiclad-2-0-made-in-ceramic-pans</a></p>
+<p class="evsum">Made In&#x27;s CeramiClad 2.0 launch post is dated 15 April 2026, seven months after the lab test. Archived product pages first say &#x27;2.0&#x27; in spring 2026.</p>
+<p>The lab report shown on the 2.0 page was &#x27;last tested&#x27; on 22 September 2025. That is seven months before Made In announced the new coating, and the product page still sold the original then. Unless Made In sent the lab early samples of the new coating, which the report does not say, the test is of the coating Made In says it rebuilt. The post also says 2.0 was tested for lead, cadmium and arsenic, but none of those results are published.</p>
+</li>
+</ul>
+<p>Made In publishes a readable lab report for its ceramic pans, one click from the product page, and that is more than most ceramic brands on this page do. It finds none of 30 PFAS chemicals above small stated limits.</p>
+<p>The trouble is what the page stacks on top of it. It lists six things the coating is made without, then &#x27;Third-Party Tested For Safety&#x27;, and the report covers only the PFAS. The question most people buying a ceramic pan are asking is whether it has PTFE, and a test for small PFAS molecules is not built to answer that. Lead and cadmium, which matter for ceramic glazes, are not tested either. The product page does not name the coating; Made In&#x27;s launch post calls it &#x27;silica-alumina&#x27;. And the report was run in September 2025, seven months before Made In announced &#x27;2.0&#x27; with a rebuilt coating, so it most likely tested the old one. So the absence claims may well be true, but for five of the six, Made In&#x27;s word is the only evidence.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Read on 2026-09-27 from the lab&#x27;s own domain, in the HTML its server sends. Product &#x27;CeramiClad®&#x27;. One group, PFAS, &#x27;Last tested Sep 22, 2025&#x27;: 30 compounds, counted one by one, each reported below a limit of 0.005, 0.01 or 0.09 nanograms per square inch, including PFOA (&lt; 0.01) and PFOS (&lt; 0.005). Each carries the note &#x27;Substance within limit set by Made In Cookware&#x27;. There is no bisphenol, metals or fluoropolymer group. The report says: &#x27;Results reflect laboratory analysis of submitted samples at the time of testing as reported by the testing laboratory.&#x27; It does not describe the sample or name a method. The page&#x27;s Light Labs panel is chosen by the page&#x27;s address; &#x27;ceramic-frying-pan&#x27; is one of this report&#x27;s matching addresses in Light Labs&#x27; own product feed for Made In.</p></li>
+<li><p class="methhead">our own desk check — madeincookware.com</p>
+<p>Read on 2026-09-27 in the HTML the server sends. The product is titled &#x27;CeramiClad® 2.0 Non Stick Frying Pan&#x27; ($149, 10 inch), &#x27;Made in Italy&#x27;, with &#x27;a completely reimagined ceramic coating&#x27; that is &#x27;43% more durable than the original CeramiClad®&#x27;. It says &#x27;Made without PFAS, PTFE, PFOA, lead, or cadmium&#x27; and &#x27;Our super-durable proprietary coating is free of PFAS, PTFE, PFOA, lead, and cadmium&#x27;, and under &#x27;Safety &amp; Health&#x27; lists PFAS, PFOA, PTFE, lead, cadmium and BPA followed by &#x27;Third-Party Tested For Safety:&#x27; and the Light Labs panel. The coating&#x27;s chemistry is not named. Made In&#x27;s California disclosure page lists PTFE, FEP and PFA for its nonstick line and does not mention CeramiClad.</p></li>
+<li><p class="methhead">document — madeincookware.com</p>
+<p>Read on 2026-09-27 on Made In&#x27;s own site, in the HTML its server sends; the page&#x27;s metadata gives &#x27;datePublished&#x27; 2026-04-15. The post says: &#x27;We rebuilt our ceramic non-stick coating from the surface down. Not a new color, not a new handle, not a marketing refresh — a new coating architecture with a reinforced bond layer that didn&#x27;t exist in the original CeramiClad®.&#x27; It names the chemistry: &#x27;CeramiClad® 2.0 uses silica-alumina chemistry. The same clean foundation as the original.&#x27; It says &#x27;we have the extraction data to back it&#x27; and ends &#x27;no PFAS, PFOA, lead, cadmium, or arsenic detected&#x27;, but links no report, lab or result for lead, cadmium or arsenic. The same text is in the Internet Archive&#x27;s capture of 19 May 2026, its only capture of the post. To check the date, we read the Internet Archive&#x27;s captures of the product page: the ones of 28 October 2025 and 10 March 2026 never mention &#x27;2.0&#x27;; the one of 15 May 2026 mentions it 86 times.</p></li>
+</ul>
+<p class="more"><a href="claims/c-madein-ceramiclad-made-without-pfas.html">The full record for this claim →</a></p>
+<h2>Made In ProCoat Non Stick Frying Pan (10-inch page; all Non Stick pieces) — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>Made In says: “All Non Stick pieces are made without: Lead Cadmium BPA Third-Party Tested For Safety:”</p><p class="src"><a href="https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite">their own page</a> · read 2026-09-28</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> Made In says its nonstick is made without lead, cadmium and BPA, and shows a &#x27;Third-Party Tested For Safety&#x27; lab report beneath. The report tests 30 PFAS chemicals and none of those three.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">measurement — mixed, <strong>funded by Made In</strong></p>
+<p class="evurl"><a href="https://app.lightlabs.com/comprehensive-testing-report/69/1622">https://app.lightlabs.com/comprehensive-testing-report/69/1622</a></p>
+<p class="evsum">Light Labs&#x27; ProCoat Non Stick report: 30 PFAS, each below a limit in parts per billion. It has no lead, cadmium or BPA result.</p>
+<p>The report is real, readable and one click from the product page. It is simply about something else. The three things the page lists right above &#x27;Third-Party Tested For Safety&#x27; are lead, cadmium and BPA, and the report tests none of them. What it does test is 30 small PFAS molecules, which is a fair thing to check in a pan whose coating is itself made of PFAS polymers (see Made In&#x27;s own disclosure below), but it is not what the badge sits under.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite">https://madeincookware.com/products/non-stick-frying-pan/10-inch-graphite</a></p>
+<p class="evsum">The product page lists three things the nonstick is made without, lead, cadmium and BPA, then &#x27;Third-Party Tested For Safety:&#x27; and the lab panel.</p>
+<p>Laid out this way, a reader would take the three items above the badge as the things that were tested. None of them were. The page also never says what the coating is, so the one list of chemicals on it is a list of things the pan does not contain.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by Made In</strong></p>
+<p class="evurl"><a href="https://madeincookware.com/pages/AB-1200">https://madeincookware.com/pages/AB-1200</a></p>
+<p class="evsum">Made In&#x27;s California chemical disclosure names three fluoropolymers intentionally added to its nonstick line: PTFE, FEP and PFA.</p>
+<p>This is why the product page&#x27;s &#x27;made without&#x27; list stops at lead, cadmium and BPA: the coating is PTFE, and California&#x27;s law counts PTFE as a PFAS. It also explains what the lab report is for. A PFAS panel on a PTFE pan checks for leftover small PFAS molecules such as PFOA, not for the coating itself.</p>
+</li>
+</ul>
+<p>Made In publishes a readable third-party lab report for its ProCoat nonstick, linked from the product page, and it finds none of 30 PFAS chemicals above small stated limits. Many brands on this page publish nothing at all.</p>
+<p>The issue is placement. The page lists three things the nonstick is made without, lead, cadmium and BPA, and puts &#x27;Third-Party Tested For Safety&#x27; directly under them. The report behind that badge does not test any of the three. It tests PFAS, which makes sense for this pan: Made In&#x27;s own California disclosure says the coating is PTFE, with two related fluoropolymers, and a PFAS panel checks for leftover small molecules like PFOA. But a reader of the product page is shown a list of three chemicals and a testing badge, and would reasonably think one backs the other.</p>
+<p>None of this suggests lead, cadmium or BPA is in the pan. They are not expected in a PTFE-coated stainless pan. It means that for those three, the published testing says nothing, and Made In&#x27;s word is the only evidence.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">measurement — app.lightlabs.com</p>
+<p>Read on 2026-09-28 from the lab&#x27;s own domain, in the HTML its server sends. Product &#x27;ProCoat Non Stick&#x27;, variant &#x27;Procoat Nonstick&#x27;. One test group, PFAS, &#x27;Last tested Feb 14, 2025&#x27;: 30 compounds, counted one by one, each reported below a limit of 0.1, 0.4 or 3 parts per billion, including PFOA (&lt; 0.4) and PFOS (&lt; 0.1). Each carries the note &#x27;Substance within limit set by Made In Cookware&#x27;. There is no metals, bisphenol or fluoropolymer group; the words lead, cadmium, BPA and PTFE do not appear. The report does not say what the parts per billion are measured in, describe the sample or name a method. It is signed &#x27;Results approved by Lev Spivak-Birndorf, Lab Director&#x27;, marked &#x27;Accredited lab&#x27;, and says: &#x27;Results reflect laboratory analysis of submitted samples at the time of testing as reported by the testing laboratory.&#x27; The page&#x27;s panel is chosen by the page&#x27;s address; &#x27;non-stick-frying-pan&#x27; is one of this report&#x27;s matching addresses in Light Labs&#x27; own product feed for Made In (product 1622, 30 tests, 30 passed).</p></li>
+<li><p class="methhead">our own desk check — madeincookware.com</p>
+<p>Read on 2026-09-27 and again on 2026-09-28 in the HTML the server sends. The &#x27;ProCoat Non Stick Frying Pan&#x27; ($149, 10 inch) has a &#x27;Safety &amp; Health&#x27; block: &#x27;All Non Stick pieces are made without:&#x27; followed by &#x27;Lead&#x27;, &#x27;Cadmium&#x27;, &#x27;BPA&#x27;, then &#x27;Third-Party Tested For Safety:&#x27; and the Light Labs panel. The page does not name the coating. Internet Archive captures of the page show the ProCoat name from January 2025, before the lab test; the &#x27;Third-Party Tested&#x27; wording and the Light Labs panel are absent from the captures of January, May and August 2025 and present in the one of 17 November 2025.</p></li>
+<li><p class="methhead">document — madeincookware.com</p>
+<p>Read on 2026-09-24 in the HTML the server sends (the page cited by our &#x27;FDA-approved&#x27; record for the same pan). It says: &#x27;This disclosure is being provided to comply with the AB 1200 regulations: Our Non Stick Products - Non Stick Frying Pan, Non Stick Saute Pan, Non Stick Saucepan, Non Stick Rondeau, Non Stick Saucier, Non Stick Stock Pot and non stick products contained in sets - contain the following intentionally added chemicals: polytetrafluoroethylene (PTFE), fluorinated ethylene and propylene (FEP), and perfluoroalkoxy alkane polymer (PFA).&#x27;</p></li>
+</ul>
+<p class="more"><a href="claims/c-madein-nonstick-third-party-tested-lead-cadmium-bpa.html">The full record for this claim →</a></p>
+<h2>T-fal all T-fal products — Cannot be checked as worded</h2>
+<blockquote class="claim"><p>T-fal says: “T-fal products do not contain PFAS that are considered harmful to health or the environment by health authorities.”</p><p class="src"><a href="https://www.t-fal.com/ptfe-nonstick-coating-explained">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">NOT CHECKABLE AS WORDED — no evidence could settle this either way · unfalsifiable as worded</p>
+<p class="bottom"><strong>Bottom line.</strong> T-fal says its products contain no PFAS that health authorities consider harmful. Its own disclosures say its nonstick pans contain PFAS and are off sale in three states that ban PFAS in cookware. The sentence defines neither term.</p>
+<p>The sentence is true or false depending on which authorities count and what &#x27;considered harmful&#x27; means, and it names neither. T-fal&#x27;s own disclosure page says its PTFE-coated pans contain PFAS and that 26 of its cookware ranges have been withdrawn from sale in Minnesota, Maine and Colorado under laws banning cookware with intentionally added PFAS. A reader could take those laws as governments considering PTFE harmful enough to ban from pans. T-fal can answer that they are legislatures, not health authorities, and that the laws ban a whole class of chemicals rather than finding PTFE itself harmful. Both readings are available, the sentence does not choose between them, and no document or measurement can choose for it.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — mixed, <strong>funded by T-fal (Groupe SEB)</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/aboutnonstick">https://www.t-fal.com/aboutnonstick</a></p>
+<p class="evsum">T-fal&#x27;s own nonstick disclosure page, read in full: the PFAS statement and the list of ranges withdrawn in three states.</p>
+<p>This is T-fal&#x27;s own page, and it settles the first half of the question plainly: the nonstick pans contain PFAS. What the explainer page adds is that these particular PFAS are not the harmful kind. The disclosure page shows three states have decided, for cookware, not to make that distinction.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>independent</strong></p>
+<p class="evurl"><a href="https://www.revisor.mn.gov/statutes/cite/116.943">https://www.revisor.mn.gov/statutes/cite/116.943</a></p>
+<p class="evsum">Minnesota Statutes section 116.943, read from the state&#x27;s official statute site: the PFAS definition and the cookware ban.</p>
+<p>Minnesota&#x27;s law does not single out PTFE or find it harmful on its own terms. It treats PFAS as a class, defined broadly enough to include PTFE, and bans the class from cookware. So the law does not directly contradict T-fal&#x27;s sentence. It does show that a government has declined to draw the line T-fal draws between harmful PFAS and fluoropolymers, at least for pans.</p>
+</li>
+</ul>
+<p>T-fal&#x27;s argument, set out at length on its explainer page, is that PTFE belongs to the PFAS family by definition but not by behaviour: that the harmful PFAS are the small, mobile ones like PFOA, and that PTFE is an inert plastic. That is a real position held by real scientists, and the sentence above is T-fal&#x27;s one-line version of it.</p>
+<p>The trouble with the one-line version is that it cannot be checked. It does not say which health authorities it means, and &#x27;considered harmful&#x27; has no threshold. What can be checked is what sits around it. T-fal&#x27;s own disclosure says its nonstick pans contain PFAS. The same page lists 26 cookware ranges pulled from sale in Minnesota, Maine and Colorado, which have each banned cookware containing intentionally added PFAS without exempting PTFE. Two pages on the same site, one saying the pans contain nothing the authorities consider harmful and one listing the states where they can no longer be sold, is the useful thing to know. We are not in a position to settle the scientific argument, and the sentence is written so that nobody else can settle it either.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. It states: &#x27;PTFE coated products contain PFAS chemicals (polytetrafluoroethylene (PTFE), perfluoroalkoxy alkane (PFA), fluorinated ethylene propylene (FEP)), which are used for their non-stick properties.&#x27; It then lists 26 T-fal cookware ranges, plus several kitchen electrics, that &#x27;will not be sold in Minnesota beginning Jan 1, 2025&#x27; and, from 1 January 2026, not in Maine or Colorado.</p></li>
+<li><p class="methhead">document — revisor.mn.gov</p>
+<p>Read on 2026-09-26. Subdivision 1(q) defines PFAS as &#x27;a class of fluorinated organic chemicals containing at least one fully fluorinated carbon atom&#x27;, which includes PTFE. Subdivision 5(a): &#x27;Beginning January 1, 2025, a person may not sell, offer for sale, or distribute for sale in this state the following products if the product contains intentionally added PFAS&#x27;, and the list includes cookware.</p></li>
+</ul>
+<p class="more"><a href="claims/c-tfal-no-pfas-considered-harmful.html">The full record for this claim →</a></p>
+<h2>T-fal all T-fal nonstick cookware (FAQ on the Professional VX3 Platinum 12-inch fry pan page) — Nothing published that a reader could check</h2>
+<blockquote class="claim"><p>T-fal says: “NO. Cookware items with T-fal non-stick coating do not contain PFOA. This is regularly checked by independent laboratories, which verify the absence of PFOA in the finished products. Since 2003, tests have regularly been performed by these independent laboratories in many countries (Aromalyse and Ianesco in France, TüvSud in Hong Kong and SGS in China). These tests have systematically proven the absence of PFOA in products with T-fal non-stick coating.”</p><p class="src"><a href="https://www.t-fal.com/professional-vx3-platinum-non-stick-12-inch-frypan.html">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable by reading a document</p>
+<p class="bottom"><strong>Bottom line.</strong> T-fal says independent labs have confirmed since 2003 that its nonstick pans contain no PFOA, and names four of them. It publishes none of their reports. Its own disclosure says the coating is made of other PFAS.</p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/professional-vx3-platinum-non-stick-12-inch-frypan.html">https://www.t-fal.com/professional-vx3-platinum-non-stick-12-inch-frypan.html</a></p>
+<p class="evsum">The product page and T-fal&#x27;s two nonstick pages read in full; four labs are named and no report from any of them is linked.</p>
+<p>Naming four laboratories is more than Lodge or GreenPan offer for their own lab claims. It is still a list of names, not results: no report, no date, no product, no detection limit. &#x27;Absence&#x27; in a lab test means &#x27;below what the method could detect&#x27;, and without the reports a reader cannot know what that limit was.</p>
+</li>
+<li>
+<p class="evhead">document — mixed, <strong>funded by T-fal (Groupe SEB)</strong></p>
+<p class="evurl"><a href="https://www.t-fal.com/aboutnonstick">https://www.t-fal.com/aboutnonstick</a></p>
+<p class="evsum">T-fal&#x27;s own nonstick disclosure page, read in full: its nonstick pans contain PTFE, PFA and FEP, all of them PFAS.</p>
+<p>This does not bear on PFOA either way. It is here because it is the other half of the picture: &#x27;no PFOA&#x27; is a statement about one chemical, and T-fal&#x27;s own disclosure says the coating is made of others in the same family.</p>
+</li>
+</ul>
+<p>T-fal goes further than most. It names four laboratories and says they have tested its pans for PFOA since 2003. We looked for the results and found none: not on the product page, the PTFE explainer or the disclosure page, and not anywhere else on T-fal&#x27;s site that our sweep reached. So the claim rests on T-fal&#x27;s word that the tests exist and came back clean.</p>
+<p>The claim may well be true, and it is also narrower than it sounds. T-fal&#x27;s explainer says it and its suppliers have not used PFOA in their processes since 2012, which is to say they did before then. T-fal&#x27;s own disclosure says the coating itself is PTFE, PFA and FEP, which are all PFAS. A shopper trying to avoid PFAS will not get there from this claim, and a shopper who wants to see the PFOA tests cannot.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">our own desk check — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The claim sits in the FAQ on the Professional VX3 Platinum 12-inch fry pan page and names four laboratories: Aromalyse and Ianesco in France, TÜV SÜD in Hong Kong and SGS in China. The only document the page links is a use-and-care leaflet, which says nothing about lab tests. T-fal&#x27;s PTFE explainer repeats the claim without naming any lab (&#x27;Independent laboratories regularly test our cookware, consistently confirming the absence of PFOA&#x27;), and its nonstick disclosure page does not mention PFOA. Our sweep of T-fal&#x27;s site (1,111 addresses in its sitemap, 17 pages fetched) found no published test report.</p></li>
+<li><p class="methhead">document — t-fal.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. It states: &#x27;PTFE coated products contain PFAS chemicals (polytetrafluoroethylene (PTFE), perfluoroalkoxy alkane (PFA), fluorinated ethylene propylene (FEP)), which are used for their non-stick properties.&#x27;</p></li>
+</ul>
+<p class="more"><a href="claims/c-tfal-pfoa-checked-by-independent-labs.html">The full record for this claim →</a></p>
+<h2>Tramontina 3 Pk Fry Pans with Nonstick Interior (SKU 80124/043DS) — Nobody has measured this</h2>
+<blockquote class="claim"><p>Tramontina says: “You can rest easy knowing these fry pans are PFOA free.”</p><p class="src"><a href="https://www.tramontina.com/products/3-pk-fry-pans-with-nonstick-interior">their own page</a> · read 2026-09-26</p></blockquote>
+<p class="tier">UNSUPPORTED — we went and checked; here is what we found · checkable only by a new independent measurement</p>
+<p class="bottom"><strong>Bottom line.</strong> Tramontina says these nonstick pans are PFOA free, and publishes no test. Its own disclosure, linked from the same page, says its cookware has PFAS added for nonstick properties, without saying which products.</p>
+<p><strong>What would settle it:</strong> A lab analysis of the nonstick interior from new production pans: a targeted PFAS panel that includes PFOA, reported with its detection limit, plus a total-fluorine measurement of the coating, which would show whether the &#x27;premium nonstick interior finish&#x27; is a fluoropolymer at all.<br>Estimated cost: <strong>not yet priced</strong></p>
+<h3>Evidence</h3>
+<ul class="evidence">
+<li>
+<p class="evhead">document — mixed, <strong>funded by Tramontina USA</strong></p>
+<p class="evurl"><a href="https://tramontina.zendesk.com/hc/en-us/articles/12403339967763-Chemicals-Disclosure">https://tramontina.zendesk.com/hc/en-us/articles/12403339967763-Chemicals-Disclosure</a></p>
+<p class="evsum">Tramontina&#x27;s chemicals disclosure, linked from every product page, read in full: its cookware has intentionally added PFAS.</p>
+<p>This is the whole disclosure. It confirms that Tramontina adds PFAS to cookware for nonstick properties, but it does not say which products or which PFAS, so it cannot tell a reader what is in this particular pan. It says nothing about PFOA.</p>
+</li>
+<li>
+<p class="evhead">our own desk check — mixed, <strong>we are not a neutral party here</strong></p>
+<p class="evurl"><a href="https://www.tramontina.com/products/3-pk-fry-pans-with-nonstick-interior">https://www.tramontina.com/products/3-pk-fry-pans-with-nonstick-interior</a></p>
+<p class="evsum">The product page read in full: &#x27;PFOA free&#x27;, a &#x27;Premium nonstick interior finish&#x27;, and no word on what that finish is.</p>
+<p>The product page names the one chemical it can say is absent and is silent on what the nonstick interior is actually made of.</p>
+</li>
+</ul>
+<p>&#x27;PFOA free&#x27; can only be checked by testing the pan, and Tramontina publishes no test, so we cannot say whether it is true. What we can say is how little it tells a shopper. The product page does not say what the &#x27;premium nonstick interior finish&#x27; is. The chemicals disclosure linked from its footer says Tramontina adds PFAS to its cookware to make it nonstick, but it names no products and no chemicals.</p>
+<p>So a shopper who reads &#x27;PFOA free&#x27; as &#x27;free of forever chemicals&#x27; is being given the narrowest possible answer to a broader question. The disclosure does not say this particular pan contains PFAS, and we are not saying so either. The page could settle it in one line, and does not.</p>
+<h3>How we checked</h3>
+<ul class="method">
+<li><p class="methhead">document — tramontina.zendesk.com</p>
+<p>Read on 2026-09-26 through the help centre&#x27;s public article feed (the article page itself refuses automated requests); the text was last updated 2026-09-13. It reads, in full apart from a Spanish translation: &#x27;In compliance with enacted right-to-know legislation, the following information provides information for consumers on certain ingredients used in the manufacture or processing of applicable Tramontina products. As a member of the Cookware &amp; Bakeware Alliance, we are committed to creating safe consumer products and welcome any questions from our customers. For our Colorado consumers: Intentionally added PFAS chemicals present in our cookware products are added to give these products nonstick properties, increased wear resistance, and increased corrosion and chemical resistance.&#x27; It has no table and names no product and no chemical.</p></li>
+<li><p class="methhead">our own desk check — tramontina.com</p>
+<p>Read on 2026-09-26 in the HTML the server sends. The page lists &#x27;Premium nonstick interior finish&#x27; and &#x27;Designed in USA, made in India&#x27;, and its footer links the chemicals disclosure above. Neither PTFE nor PFAS appears on the page. Our sweep of Tramontina&#x27;s site (1,663 addresses in its sitemap, 31 pages fetched) found no test report; the only laboratory the site names is NSF, in blog posts about NSF food-equipment certification, which is not a PFOA test.</p></li>
+</ul>
+<p class="more"><a href="claims/c-tramontina-3pk-pfoa-free.html">The full record for this claim →</a></p>
+</main>
+<footer class="site"><p>Product Review — Brand claims, checked against the documents that decide them. Every verdict links to the documents behind it.</p></footer>
+</body>
+</html>
